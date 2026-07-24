@@ -1,0 +1,307 @@
+{
+  "title": "Bedienungsanleitung",
+  "updated": "Stand: Juli 2026",
+  "back": "‹ Home",
+  "toc": [
+    "Überblick",
+    "Einkaufspreise",
+    "Artikelkalkulation",
+    "Sicherung",
+    "Einstellungen",
+    "Abonnement",
+    "Tipps & Hinweise"
+  ],
+  "overview": {
+    "title": "Überblick",
+    "desc": "Die Artikelkalkulation-App ermöglicht die zentrale Verwaltung von EK-Preisen, Kalkulationsfaktoren und Verkaufspreisen für alle Produkte im Shopify-Store. Die App besteht aus vier Bereichen, die über das Seitenmenü oder die Tabs am oberen Rand erreichbar sind.",
+    "tableHead": [
+      "Bereich",
+      "Funktion"
+    ],
+    "tableRows": [
+      [
+        "💶 Einkaufspreise",
+        "EK-Preise (Unit Cost) anzeigen und aktualisieren"
+      ],
+      [
+        "🏷 Artikelkalkulation",
+        "Faktor verwalten, Verkaufspreis berechnen und in Shopify setzen"
+      ],
+      [
+        "💾 Sicherung",
+        "Datensicherung exportieren oder wiederherstellen"
+      ],
+      [
+        "⚙ Einstellungen",
+        "Autosave, Preisrundung, MwSt, Datensicherung und Sprache konfigurieren"
+      ]
+    ],
+    "warn": "Alle Änderungen werden <strong>dauerhaft in Shopify gespeichert</strong>. Vor größeren Batch-Änderungen immer eine Sicherung erstellen.",
+    "onboardingTitle": "Erststart-Assistent",
+    "onboardingDesc": "Beim ersten Start der App erscheint ein Einrichtungsassistent, der in 6 Schritten durch die wichtigsten Einstellungen führt: Datensicherung, Autosave (inkl. Verzögerung), Mehrwertsteuer, Preisrundung und Haftungsausschluss. Der Assistent kann über 'Überspringen' direkt zum Haftungsausschluss-Schritt springen – dieser muss mit einem Haken bestätigt werden, bevor die App genutzt werden kann."
+  },
+  "ek": {
+    "title": "Einkaufspreise",
+    "desc": "Zeigt alle Produkte und deren Varianten mit dem aktuellen Einkaufspreis (Unit Cost) aus Shopify. Der EK-Preis wird im Inventar jeder Variante gespeichert (<em>inventoryItem.unitCost</em>).",
+    "disclaimerNote": "Beim ersten Aufruf erscheint ein Hinweisfenster zur Batch-Preisänderung: Es weist auf das Risiko dauerhafter Shopify-Änderungen hin und muss einmalig pro Browser-Session bestätigt werden.",
+    "loadTitle": "Daten laden",
+    "loadDesc": "Beim ersten Öffnen des Tabs werden automatisch die ersten 25 Produkte geladen (Standard). Das Lade-Limit ist im Filterbereich direkt einstellbar. Ein Fortschrittsbalken zeigt den Ladestand an. Der Tab merkt sich geladene Daten – ein erneutes Laden erfolgt nur wenn sich Daten in einem anderen Tab geändert haben.",
+    "paginationTitle": "Lade-Limit",
+    "paginationDesc": "Das Dropdown 'Lade-Limit' rechts im Filterbereich legt fest, wie viele Produkte initial geladen werden: 25 / 50 / 100 / 250 / Alle. Standard: 25 – gut für schnelles Laden bei großen Sortimenten. Bei aktivem Kollektions- oder Tag-Filter werden stets alle Treffer aus Shopify geladen, unabhängig vom Limit. Ein Hinweistext unter den Filtern zeigt an ob das Limit greift, ein Filter aktiv ist oder alle Produkte geladen wurden.",
+    "filterTitle": "Filter & Suche",
+    "filter1": "Suchfeld – filtert Produkte nach Name (lokal, nur auf geladene Produkte)",
+    "filter2": "Alle / Mit EK / Ohne EK – Schnellfilter für Datenvollständigkeit",
+    "filter3": "Kollektion – lädt alle Produkte der Kollektion direkt von Shopify (ignoriert Lade-Limit)",
+    "filter4": "Hersteller – lädt alle Produkte des gewählten Herstellers direkt von Shopify (ignoriert Lade-Limit)",
+    "filter5": "Tag – lädt alle Produkte mit dem gewählten Tag direkt von Shopify (ignoriert Lade-Limit)",
+    "expandDesc": "Die Buttons ⊞ (Alle ausklappen) und ⊟ (Alle einklappen) rechts im Filterbereich öffnen bzw. schließen alle sichtbaren Produkte auf einmal.",
+    "editTitle": "Preise bearbeiten",
+    "editDesc": "Produkt aufklappen, dann EK-Preis direkt im Eingabefeld ändern. Geänderte Felder werden farbig hervorgehoben (orange Umrandung).",
+    "tipTitle": "Prozentuale Anpassung:",
+    "tipDesc": "Zwei Ebenen: Der globale Prozentwert (Steuerleiste oben) wird auf alle sichtbaren Produkte gleichzeitig angewendet. Der Prozentwert im aufgeklappten Produkt gilt nur für dessen Varianten. Eingabe z. B. +5 oder -10.",
+    "badgeTitle": "Status-Badges",
+    "badgeDesc": "Jedes Produkt zeigt im Titel-Balken Badges, die den Status der Varianten auf einen Blick anzeigen – auch im zugeklappten Zustand.",
+    "badgeNoPrice": "<strong style=\"color:#C0392B\">Rot – Ohne Preis:</strong> Mindestens eine Variante hat keinen EK-Preis. Zahl = Anzahl betroffener Varianten.",
+    "badgeChanged": "<strong style=\"color:#C96A00\">Orange – Geändert:</strong> Mindestens eine Variante wurde bearbeitet, aber noch nicht gespeichert.",
+    "badgeHasPrice": "Kein Badge = alle Varianten haben einen gespeicherten EK-Preis und keine offenen Änderungen.",
+    "saveTitle": "Speichern",
+    "saveDesc": "<strong>Alle speichern</strong> (Leiste unten, ab dem <strong>Basic-Plan</strong>) speichert alle geänderten EK-Preise in einem Batch. Vorher erscheint eine Sicherheitsabfrage, die bestätigt oder abgebrochen werden kann. Alternativ kann pro Produkt einzeln gespeichert werden (Free-Plan und höher). Der Button <strong>Abbrechen</strong> neben Alle speichern verwirft alle offenen Änderungen sofort und stellt den zuletzt gespeicherten Stand wieder her – in allen Plänen verfügbar. Jedes gespeicherte Produkt zählt als ein Verbrauch auf das Monatskontingent.",
+    "warnSave": "Vor dem Klick auf <strong>Alle speichern</strong> unbedingt eine Sicherung erstellen – die Abfrage bietet dazu den Button „Daten jetzt sichern“ an.",
+    "zeroPriceWarnTitle": "Null-Preis-Warnung",
+    "zeroPriceWarnDesc": "Enthält die Auswahl mindestens eine Variante mit EK-Preis 0, erscheint vor dem Speichern ein Warndialog. Speichern kann bestätigt oder abgebrochen werden – ein EK-Preis von 0 ist technisch möglich, sollte aber bewusst gesetzt werden.",
+    "autosaveBackupTitle": "Automatische Vorablage",
+    "autosaveBackupDesc": "Der Browser kann vor Speichervorgängen automatisch eine JSON-Datei mit den Originalwerten herunterladen. Dieses Verhalten ist in den Einstellungen unter \"Automatische Datensicherung\" konfigurierbar (Nie / Nur bei Batch-Speichern / Immer). Gesicherte Dateien können über die Sicherung wiederhergestellt werden.",
+    "autosaveTitle": "Automatisches Speichern (Autosave)",
+    "autosaveDesc": "Wenn Autosave aktiv ist, werden geänderte EK-Preise nach der konfigurierten Verzögerung automatisch gespeichert – ohne manuellen Klick auf Speichern. Ob Autosave eingeschaltet ist und welche Verzögerung gilt, lässt sich direkt in der Statusleiste ablesen und ändern. Jedes automatisch gespeicherte Produkt zählt als ein Verbrauch auf das Monatskontingent.",
+    "autosavePlan": "Autosave ist ab dem <strong>Premium-Plan</strong> verfügbar.",
+    "sortTitle": "Sortierung",
+    "sortDesc": "Rechts neben dem Lade-Limit steht ein Dropdown 'Sortieren' mit den Optionen Name, Hersteller, EK-Status und Variantenanzahl. Sobald eine Option gewählt ist, erscheinen zwei Buttons ↑ (aufsteigend) und ↓ (absteigend). Die Sortierung wird nach dem aktiven Filter angewendet.",
+    "statusbarTitle": "Statusleiste",
+    "statusbarDesc": "Im sticky Filterbereich, links neben der Session-Zeile, befindet sich eine kompakte Statusleiste. Sie zeigt, ob Autosave aktiv ist, die gewählte Verzögerung und den aktuellen Status (ausstehend / wird gespeichert / zuletzt gespeichert um HH:MM:SS). Toggle und Verzögerung lassen sich direkt in der Leiste ändern, ohne die Einstellungen zu öffnen.",
+    "factorHintTitle": "Kalkulationsfaktor im Überblick",
+    "factorHintDesc": "Im zugeklappten Produktkopf wird der gespeicherte Kalkulationsfaktor oder die erweiterten Prozentwerte einzeilig angezeigt – z. B. Faktor: 2.50 oder BK: 5% · GZ: 20%. So ist der Kalkulations-Stand auf einen Blick sichtbar, ohne das Produkt aufzuklappen.",
+    "excelTitle": "Excel Export / Import",
+    "excelDesc": "Im Einkaufspreise-Tab stehen zwei Buttons bereit: <strong>Excel Export</strong> erstellt eine .xlsx-Datei mit allen aktuell sichtbaren Varianten. Spalten A–D (Varianten-ID, Produkt, Variante, SKU) sind gesperrt und grau hinterlegt; Spalte E (EK-Preis) ist editierbar und grün markiert.",
+    "excelImportDesc": "Bearbeitete Datei wieder importieren: Die App liest Spalte E aus, vergleicht jeden Wert mit dem aktuell angezeigten EK-Preis und übernimmt nur Zeilen mit tatsächlichen Änderungen. Ergebnis: <em>X übernommen · X ohne Änderung übersprungen · X Fehler</em>. Zeilen mit Fehlern werden im Fehler-Modal aufgelistet und in der Variantenliste mit einem roten X markiert; betroffene Produkte klappen automatisch auf.",
+    "excelImportNote": "Übersprungene Zeilen (leere EK-Spalte oder Wert identisch) werden nicht in Shopify geschrieben. Das Protokoll kann bei Bedarf aus dem Fehler-Modal heruntergeladen werden.",
+    "excelPlan": "Excel Export / Import ist ab dem <strong>Premium-Plan</strong> verfügbar.",
+    "sortStatus": "EK-Status",
+    "sortVariants": "Varianten"
+  },
+  "artikelkalk": {
+    "title": "Artikelkalkulation",
+    "desc": "Berechnet aus EK-Preis und Faktor den neuen Verkaufspreis und schreibt ihn direkt in Shopify. Zusätzlich werden der Faktor und ein gesicherter Referenzpreis als Metafelder gespeichert.",
+    "disclaimerNote": "Beim ersten Wechsel auf diesen Tab erscheint ein Hinweisfenster. Es erinnert daran, vor dem Einsatz eine Datensicherung zu erstellen und Kalkulationsfaktoren zunächst an einzelnen Produkten zu prüfen. Das Fenster erscheint einmalig pro Browser-Session.",
+    "calcTitle": "Preisberechnung",
+    "calcDesc": "Neuer Preis = <strong>EK × Faktor</strong>, gerundet auf den in den Einstellungen konfigurierten Schritt (Standard: 0,05 €). Beispiel: EK 12,00 € × Faktor 2,30 = 27,60 € → gerundet auf <strong>27,60 €</strong>. Der Faktor kann direkt per Eingabe oder mit den −/+ Schaltflächen angepasst werden.",
+    "statusTitle": "Produkt-Status",
+    "statusRows": [
+      [
+        "green",
+        "Bereit",
+        "EK und Faktor vorhanden, Preis stimmt mit Kalkulation überein"
+      ],
+      [
+        "orange",
+        "EK geändert",
+        "EK-Preis hat sich verändert – Preis muss neu berechnet werden"
+      ],
+      [
+        "orange",
+        "⚠ Preis",
+        "Aktueller Shopify-Preis weicht vom kalkulierten Preis ab"
+      ],
+      [
+        "red",
+        "Kein Faktor",
+        "Kein Kalkulationsfaktor hinterlegt"
+      ],
+      [
+        "red",
+        "Kein EK",
+        "Kein Einkaufspreis vorhanden"
+      ],
+      [
+        "blue",
+        "Gesichert",
+        "Preis wurde berechnet und als Referenz gespeichert"
+      ]
+    ],
+    "filterTitle": "Status-Filter",
+    "filterDesc": "Über die Filter-Buttons lassen sich Produkte nach Status eingrenzen:",
+    "filterRows": [
+      [
+        "Alle",
+        "Alle Produkte anzeigen"
+      ],
+      [
+        "Bereit",
+        "Produkte bei denen EK und Faktor stimmen"
+      ],
+      [
+        "Konflikt",
+        "Produkte mit EK-Änderung oder abweichendem Preis – Handlungsbedarf"
+      ],
+      [
+        "Kein Faktor",
+        "Produkte ohne gesetzten Kalkulationsfaktor"
+      ]
+    ],
+    "collFilterDesc": "Zusätzlich zum Status-Filter stehen Dropdowns für Kollektion, Hersteller und Tag zur Verfügung. Alle drei lösen einen serverseitigen Reload aus und laden alle Treffer des gewählten Filters direkt von Shopify – unabhängig vom konfigurierten Lade-Limit.",
+    "paginationTitle": "Lade-Limit",
+    "paginationDesc": "Das Dropdown rechts im Filterbereich begrenzt die Anzahl initial geladener Produkte (25 / 50 / 100 / 250 / Alle). Bei aktivem Kollektions- oder Tag-Filter wird das Limit ignoriert.",
+    "expandDesc": "Die Buttons ⊞ (Alle ausklappen) und ⊟ (Alle einklappen) rechts im Filterbereich öffnen bzw. schließen alle sichtbaren Produkte auf einmal.",
+    "factorInlineTitle": "Faktor-Anzeige im Produktkopf",
+    "factorInlineDesc": "Der aktuell gespeicherte Faktor (Einfachmodus: Faktor: 2.50, Erweiterter Modus: BK: 5% · HK: 3% · GZ: 20%) wird direkt im zugeklappten Produktkopf einzeilig angezeigt.",
+    "advTitle": "Erweiterte Kalkulation",
+    "advDesc": "Im erweiterten Modus (ab dem Premium-Plan) wird der einfache Faktor durch eine Formelkette ersetzt: EK → Einstand (+ Bezugskosten %) → Barpreis (+ Handlungskosten %) → + Gewinnzuschlag % → Nettopreis (÷ Skonto-Puffer %) → Bruttopreis (+ MwSt %). Jeder Prozentwert wird direkt in der Formelzeile der aufgeklappten Produkttabelle eingegeben. Die MwSt-Einstellung (Normal / Ermäßigt) wird pro Produkt gespeichert.",
+    "saveTitle": "Speichern",
+    "saveDesc": "Drei Ebenen stehen zur Verfügung: <strong>Pro Variante</strong> – Speichern-Button in der Variantenzeile (alle Pläne). <strong>Pro Produkt</strong> – Speichern-Button im Produktkopf (alle Pläne). Speichert Faktor, Referenzpreis und Verkaufspreis. <strong>Alle speichern</strong> – über die Leiste unten (ab dem Basic-Plan).",
+    "bulkTitle": "Massenbearbeitung",
+    "bulkDesc": "Oberhalb der Produktliste steht eine Massenbearbeitung zur Verfügung. Wähle ein Feld aus dem Dropdown (Kalkulationsfaktor, MwSt; im erweiterten Modus zusätzlich Bezugskosten, Handlungskosten, Gewinnzuschlag und Puffer), gib einen Wert ein und klicke 'Auf sichtbare anwenden'. Der Wert wird sofort für alle aktuell gefilterten Produkte gesetzt und als geändert markiert.",
+    "saveAllTitle": "Alle speichern",
+    "saveAllDesc": "Alle speichern in der Leiste unten speichert alle Produkte mit offenen Änderungen auf einmal. Ab dem <strong>Basic-Plan</strong> verfügbar; die Nutzung wird pro gespeichertem Produkt gezählt. Der Button <strong>Abbrechen</strong> daneben verwirft alle lokalen Änderungen und stellt den zuletzt gespeicherten Stand wieder her – ohne Serveraufruf, in allen Plänen verfügbar.",
+    "autosaveTitle": "Autosave",
+    "autosaveDesc": "Ist Autosave aktiv, werden Änderungen an Kalkulationsfaktoren und erweiterten Feldern automatisch nach der gewählten Verzögerung gespeichert – ohne manuellen Speicher-Klick. Jedes automatisch gespeicherte Produkt zählt als ein Verbrauch auf das Monatskontingent.",
+    "autosavePlan": "Autosave ist ab dem <strong>Premium-Plan</strong> verfügbar.",
+    "sortTitle": "Sortierung",
+    "sortDesc": "Rechts neben dem Lade-Limit steht ein Dropdown 'Sortieren' mit den Optionen Name, Hersteller, Status und Kalkulationsfaktor. Sobald eine Option gewählt ist, erscheinen zwei Buttons ↑ (aufsteigend) und ↓ (absteigend). Die Sortierung wird nach dem aktiven Filter angewendet.",
+    "statusbarTitle": "Statusleiste",
+    "statusbarDesc": "Im sticky Filterbereich, links neben der Session-Zeile, befindet sich eine kompakte Statusleiste. Sie zeigt den Autosave-Status und erlaubt das schnelle Ein-/Ausschalten sowie die Wahl der Verzögerung (2 Sek. / 10 Sek. / Tab-Wechsel) direkt im Tab.",
+    "factorInputTitle": "Faktor eingeben",
+    "factorInput1": "Produkt aufklappen – Faktor direkt im Zahlenfeld eingeben",
+    "factorInput2": "− / + Buttons ändern den Wert in 0,01-Schritten",
+    "derivedTitle": "Abgeleiteter Faktor",
+    "derivedDesc": "Wenn für eine Variante kein Faktor gespeichert ist, aber EK-Preis und Verkaufspreis vorhanden sind, wird der Faktor automatisch berechnet (<em>Verkaufspreis ÷ EK</em>). Ein gelber Banner bietet an, diesen abgeleiteten Faktor zu übernehmen.",
+    "ekChangeTitle": "EK-Änderungs-Erkennung",
+    "ekChangeTip": "Die App prüft beim Laden, ob sich der EK-Preis seit der letzten Kalkulation verändert hat. Kriterium: |Faktor × EK − gesicherter Preis| > 0,02 €. Betroffene Produkte werden mit dem Status \"EK geändert\" markiert."
+  },
+  "sicherung": {
+    "title": "Sicherung",
+    "desc": "Ermöglicht Export und Import aller relevanten Preisdaten als JSON-Datei. Vor jeder größeren Änderung sollte eine <strong>Gesamtsicherung</strong> erstellt werden.",
+    "exportTitle": "Exportieren",
+    "exportIntro": "Vier Exportarten stehen zur Verfügung:",
+    "export1": "<strong>Gesamtsicherung</strong> – EK-Preis, Verkaufspreis und Faktor aller Varianten (empfohlen)",
+    "export2": "<strong>Einkaufspreise</strong> – nur Unit Cost",
+    "export3": "<strong>Verkaufspreise</strong> – nur Shopify-Preise",
+    "export4": "<strong>Kalkulationsfaktoren</strong> – nur Faktoren",
+    "exportTip": "Die Datei enthält Exporttyp, Zeitstempel und alle Varianten-IDs, sortiert alphabetisch nach Produkttitel – direkt importierbar.",
+    "exportPlan": "Gesamtsicherung ist ab dem <strong>Basic-Plan</strong> verfügbar. Einzelsicherungen (EK-Preise, Verkaufspreise, Faktoren) erfordern den <strong>Premium-Plan</strong>. Rücksicherung ab dem <strong>Basic-Plan</strong>.",
+    "restoreTitle": "Rücksicherung",
+    "restore1": "Sicherungsdatei auswählen (JSON)",
+    "restore2": "App vergleicht Datei mit aktuellen Shopify-Daten",
+    "restore3": "Alle Unterschiede werden in einer Tabelle angezeigt",
+    "restore4": "Einzelne Änderungen können per Checkbox ab- oder angewählt werden",
+    "restore5": "„OK – Änderungen übernehmen“ schreibt nur die ausgewählten Werte zurück",
+    "restoreWarn": "Daten müssen vollständig geladen sein, bevor eine Sicherungsdatei importiert werden kann.",
+    "restorePlan": "Rücksicherung ist ab dem <strong>Basic-Plan</strong> verfügbar. Ohne passenden Plan erscheint beim Klick ein Upgrade-Hinweis. Eine Rücksicherung wird nicht auf das Monatskontingent angerechnet und läuft immer vollständig durch – unabhängig davon, wie viele Produkte betroffen sind."
+  },
+  "tips": {
+    "title": "Tipps & Hinweise",
+    "workflowTitle": "Empfohlener Arbeitsablauf",
+    "workflow1": "<strong>Sicherung</strong> erstellen (Gesamtsicherung)",
+    "workflow2": "<strong>Einkaufspreise</strong> aktualisieren",
+    "workflow3": "<strong>Kalkulationsfaktoren</strong> prüfen / anpassen",
+    "workflow4": "<strong>Artikelkalkulation</strong> aufrufen – EK-geänderte Produkte prüfen",
+    "workflow5": "Neue Preise speichern",
+    "planTitle": "Pläne & Aktionslimits",
+    "planDesc": "Die App verwendet ein Aktionssystem. Im Tab Einkaufspreise entspricht eine Aktion einem Klick auf Speichern. Im Tab Artikelkalkulation zählt \"Alle speichern\" eine Aktion pro gespeichertem Produkt.",
+    "planTableHead": [
+      "Plan",
+      "Limit",
+      "Funktionen"
+    ],
+    "planRows": [
+      [
+        "Free",
+        "20 Aktionen / Monat",
+        "Einzelspeichern, EK-Preise & Shopify-Preise"
+      ],
+      [
+        "Basic",
+        "150 Aktionen / Monat",
+        "Alle speichern, 5-stufige Kalkulation, Preisrundung, Gesamtsicherung & Rücksicherung"
+      ],
+      [
+        "Premium",
+        "500 Aktionen / Monat",
+        "Autosave, Selektive Sicherung, Excel Export/Import"
+      ],
+      [
+        "Unlimited",
+        "Unbegrenzt",
+        "Arbeitssessions"
+      ]
+    ],
+    "planNote": "Den aktuellen Plan und Verbrauch findest du unter Abonnement im Seitenmenü.",
+    "faqTitle": "Häufige Fragen",
+    "faq": [
+      [
+        "Warum sind manche Produkte orange markiert?",
+        "Der EK-Preis hat sich seit der letzten Kalkulation geändert. Den Faktor prüfen und den Preis neu berechnen."
+      ],
+      [
+        "Was ist der gesicherte Referenzpreis?",
+        "Nach dem Speichern in der Artikelkalkulation wird der berechnete Preis als Metafeld gespeichert (custom.sicherung_preis). Dieser Wert dient der EK-Änderungs-Erkennung."
+      ],
+      [
+        "Kann ich nur einzelne Varianten wiederherstellen?",
+        "Ja – in der Rücksicherungsansicht können einzelne Zeilen per Checkbox abgewählt werden."
+      ],
+      [
+        "Was passiert wenn ich im Bestätigungs-Dialog Abbruch klicke?",
+        "Nichts wird gespeichert, alle lokalen Änderungen bleiben erhalten und können weiter bearbeitet werden."
+      ],
+      [
+        "Was macht der Abbrechen-Button in der unteren Leiste?",
+        "Er verwirft alle nicht gespeicherten Änderungen im aktuellen Tab und stellt den Stand der letzten Speicherung wieder her. Im Gegensatz zum Dialog-Abbruch werden hier tatsächlich Daten zurückgesetzt. Der Button ist in allen Plänen aktiv und sichtbar, sobald Änderungen vorliegen."
+      ]
+    ],
+    "footer": "Artikelkalkulation · Unabhängige Shopify-App · Nicht offiziell von Shopify"
+  },
+  "einstellungen": {
+    "title": "Einstellungen",
+    "desc": "Im Tab Einstellungen & Abonnement werden globale Optionen konfiguriert und das aktive Abonnement verwaltet. Die Einstellungen gelten für alle Tabs und werden im Browser gespeichert (localStorage).",
+    "autosaveTitle": "Autosave",
+    "autosaveDesc": "Zwei separate Schalter aktivieren den Autosave je für den Einkaufspreise- und den Artikelkalkulations-Tab. Darunter wählt man die Verzögerung: 2 Sek. und 10 Sek. starten einen Timer nach der letzten Eingabe; 'Tab-Wechsel' speichert alle ausstehenden Änderungen beim Verlassen des Tabs. Toggle und Verzögerung sind auch direkt in der Statusleiste des jeweiligen Tabs zugänglich.",
+    "autosavePlan": "Autosave ist ab dem <strong>Premium-Plan</strong> verfügbar und wird in den Einstellungen pro Tab aktiviert.",
+    "roundingTitle": "Preisrundung",
+    "roundingDesc": "Legt fest, auf welchen Schritt der berechnete Verkaufspreis gerundet wird. Verfügbare Schritte: 1,00 € · 0,50 € · 0,10 € · 0,05 € · Keine Rundung.",
+    "roundingPlan": "Preisrundung ist ab dem <strong>Premium-Plan</strong> verfügbar.",
+    "roundingNote": "Die Rundung wird in der Artikelkalkulation bei jedem Speichern angewendet: Neuer Preis = EK × Faktor, gerundet auf den gewählten Schritt. Eine Livevorschau zeigt das Ergebnis für jeden Rundungsschritt direkt bei der Auswahl.",
+    "langTitle": "Sprache",
+    "langDesc": "Die App-Sprache kann auf Deutsch oder Englisch umgestellt werden. Die Einstellung wird pro Shop gespeichert und gilt für alle Benutzer desselben Shops.",
+    "autoBackupTitle": "Automatische Datensicherung",
+    "autoBackupDesc": "Vor Speichervorgängen kann der Browser automatisch eine JSON-Sicherungsdatei herunterladen. Separat für Einkaufspreise und Artikelkalkulation konfigurierbar: 'Keine automatische Sicherung', 'Nur bei Batch-Speichern' oder 'Immer'. Standard: Immer. Beim Wechsel auf 'Keine automatische Sicherung' erscheint ein Hinweisfenster, das auf die Risiken aufmerksam macht.",
+    "productPageSizeTitle": "Lade-Limit für Produkte",
+    "productPageSizeDesc": "Die Anzahl der initial geladenen Produkte wird direkt im Filterbereich der Einkaufspreise- und Artikelkalkulations-Tabs eingestellt (25 / 50 / 100 / 250 / Alle). Die gewählte Einstellung wird gespeichert und gilt für beide Tabs.",
+    "mwstTitle": "Mehrwertsteuer",
+    "mwstDesc": "Legt die Steuersätze für Normalsatz und Ermäßigten Satz fest. Die Werte werden bei der Bruttopreisberechnung in der Artikelkalkulation verwendet und können pro Produkt individuell gewählt werden."
+  },
+  "abo": {
+    "title": "Abonnement",
+    "desc": "Der Abonnement-Bereich ist im Tab Einstellungen & Abonnement zugänglich (unterhalb der Einstellungen). Dort werden der aktive Plan, der monatliche Verbrauch und alle verfügbaren Pläne angezeigt.",
+    "selectTitle": "Plan wählen",
+    "selectDesc": "Wähle über den Toggle-Schalter zwischen monatlicher und jährlicher Abrechnung. Der Jahrestarif ist günstiger -- die Ersparnis wird direkt auf der Plan-Karte angezeigt. Ein Klick auf den gewünschten Plan leitet zur Shopify-Zahlungsseite weiter. Nach Abschluss wird der Plan automatisch aktualisiert.",
+    "usageTitle": "Verbrauch & Status",
+    "usageDesc": "Der aktuelle Plan, der monatliche Verbrauch und das Reset-Datum werden im Status-Bereich angezeigt. Ein Fortschrittsbalken zeigt den prozentualen Verbrauch. Ab 80 % erscheint eine Warnung. Als ein Verbrauch zählt jedes gespeicherte Produkt – ob Einkaufspreis, Artikelkalkulation oder Autosave, einzeln oder per „Alle speichern“. Das Verwerfen von Änderungen und die Rücksicherung zählen nicht.",
+    "cancelTitle": "Kündigung",
+    "cancelDesc": "Das Abo kann direkt in der App ohne Umweg über Shopify gekündigt werden. Klicke auf Abonnement kündigen, bestätige den Dialog -- die Kündigung wird sofort ausgeführt. Der Zugriff auf alle gebuchten Funktionen bleibt bis zum Ende des bezahlten Zeitraums erhalten. Danach wechselt die App automatisch auf den Free-Plan."
+  },
+  "session": {
+    "sectionTitle": "Arbeitssessions",
+    "sectionDesc": "Arbeitssessions ermöglichen es, den Bearbeitungsfortschritt über mehrere Sitzungen hinweg zu verfolgen. Sobald ein Produkt gespeichert wird, markiert die App es in der aktiven Session als bearbeitet. Sessions werden im Browser gespeichert und bleiben nach dem Schließen des Fensters erhalten.",
+    "howTitle": "Session erstellen und verwenden",
+    "how1": "Filter oder Kollektion setzen, dann 'Neue Session' klicken und einen Namen eingeben. Der Name wird automatisch mit dem Prefix EK_ (Einkaufspreise) oder VK_ (Artikelkalkulation) gespeichert.",
+    "how2": "Beim Speichern eines Produkts wird es automatisch als bearbeitet markiert.",
+    "how3": "Über die Pills-Buttons (Alle / Bearbeitet / Unbearbeitet) lassen sich Produkte nach Bearbeitungsstand filtern – nur Produkte aus dem Session-Scope werden gezählt.",
+    "how4": "Beenden deaktiviert die Session für diesen Tab – die Session selbst und andere Tabs bleiben unberührt.",
+    "how5": "Löschen entfernt die Session dauerhaft aus dem Browser. Eine Sicherheitsabfrage verhindert versehentliches Löschen.",
+    "multiDesc": "Mehrere Sessions können gleichzeitig existieren. Über das Dropdown lässt sich zwischen ihnen wechseln. Eine EK-Session aktiviert sich automatisch auch im Kalk-Tab, wenn dort noch keine Session läuft.",
+    "scopeTitle": "Session-Scope",
+    "scopeDesc": "Beim Erstellen einer Session speichert die App den aktuell aktiven Filter (Kollektion, Tag) und die Produkt-IDs der sichtbaren Artikel als Scope. Der Fortschrittszähler zeigt 'bearbeitet / Scope-Größe' statt 'bearbeitet / alle geladenen Produkte'.",
+    "scopeBannerTitle": "Scope-Banner",
+    "scopeBannerDesc": "Wechselt man in einen Tab, in dem die aktive Session einen anderen Filter hat als aktuell geladen ist, erscheint ein blauer Hinweisbalken mit dem Scope-Filter und der Scope-Größe. Ein Klick auf 'Jetzt laden' stellt den passenden Filter automatisch wieder her. Das × schließt den Hinweis ohne Reload.",
+    "planNote": "Arbeitssessions sind ab dem <strong>Unlimited-Plan</strong> verfügbar."
+  }
+}

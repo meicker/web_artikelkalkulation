@@ -1,0 +1,307 @@
+{
+  "title": "User Manual",
+  "updated": "Updated: July 2026",
+  "back": "‹ Home",
+  "toc": [
+    "Overview",
+    "Purchase Prices",
+    "Article Calculation",
+    "Backup",
+    "Settings",
+    "Subscription",
+    "Tips & Notes"
+  ],
+  "overview": {
+    "title": "Overview",
+    "desc": "The Artikelkalkulation app enables central management of purchase prices, calculation factors, and selling prices for all products in your Shopify store. The app consists of four areas accessible via the sidebar menu or the tabs at the top.",
+    "tableHead": [
+      "Area",
+      "Function"
+    ],
+    "tableRows": [
+      [
+        "💶 Purchase Prices",
+        "View and update purchase prices (unit cost)"
+      ],
+      [
+        "🏷 Article Calculation",
+        "Manage factors, calculate selling price and push to Shopify"
+      ],
+      [
+        "💾 Backup",
+        "Export or restore a data backup"
+      ],
+      [
+        "⚙ Settings",
+        "Configure autosave, price rounding, VAT, auto-backup and language"
+      ]
+    ],
+    "warn": "All changes are <strong>permanently saved in Shopify</strong>. Always create a backup before making large batch changes.",
+    "onboardingTitle": "First-Run Setup Wizard",
+    "onboardingDesc": "On first launch the app shows a setup wizard that walks through 6 steps: backup settings, autosave (including delay), VAT rates, price rounding, and the disclaimer. The wizard can be skipped ahead to the disclaimer step via 'Skip' — the disclaimer must be confirmed with a checkbox before the app can be used."
+  },
+  "ek": {
+    "title": "Purchase Prices",
+    "desc": "Shows all products and their variants with the current purchase price (unit cost) from Shopify. The cost price is stored in each variant's inventory (<em>inventoryItem.unitCost</em>).",
+    "disclaimerNote": "On first use a notice appears warning that batch price changes are permanent in Shopify. It must be confirmed once per browser session.",
+    "loadTitle": "Loading Data",
+    "loadDesc": "On first opening the tab the first 25 products are loaded automatically (default). The load limit can be adjusted directly in the filter row. A progress bar shows the loading status. The tab caches loaded data – a reload only occurs when data has changed in another tab.",
+    "paginationTitle": "Load Limit",
+    "paginationDesc": "The 'Load limit' dropdown on the right side of the filter row controls how many products are loaded initially: 25 / 50 / 100 / 250 / All. Default is 25 — ideal for large catalogs. When a collection or tag filter is active, all matching products are always fetched from Shopify regardless of the limit. A hint below the filters shows whether a limit is active, a filter loaded all matches, or all products are loaded.",
+    "filterTitle": "Filter & Search",
+    "filter1": "Search field – filters products by name (local, only on loaded products)",
+    "filter2": "All / With cost / Without cost – quick filters for data completeness",
+    "filter3": "Collection – loads all products in the collection from Shopify (ignores load limit)",
+    "filter4": "Vendor – loads all products from the selected vendor directly from Shopify (ignores load limit)",
+    "filter5": "Tag – loads all products with the selected tag from Shopify (ignores load limit)",
+    "expandDesc": "The ⊞ (expand all) and ⊟ (collapse all) buttons on the right side of the filter bar open or close all visible products at once.",
+    "editTitle": "Editing Prices",
+    "editDesc": "Expand a product, then change the cost price directly in the input field. Changed fields are highlighted in orange.",
+    "tipTitle": "Percentage Adjustment:",
+    "tipDesc": "Two levels: The global percentage (top toolbar) is applied to all visible products at once. The per-product percentage (inside an expanded product row) applies only to that product's variants. Enter e.g. +5 or -10.",
+    "badgeTitle": "Status badges",
+    "badgeDesc": "Each product shows badges in its title bar indicating the status of its variants at a glance — even when the product is collapsed.",
+    "badgeNoPrice": "<strong style=\"color:#C0392B\">Red – No price:</strong> At least one variant has no purchase price. The number shows how many variants are affected.",
+    "badgeChanged": "<strong style=\"color:#C96A00\">Orange – Changed:</strong> At least one variant has been edited but not yet saved.",
+    "badgeHasPrice": "No badge = all variants have a saved purchase price and no pending changes.",
+    "saveTitle": "Saving",
+    "saveDesc": "<strong>Save all</strong> (bar at the bottom, from the <strong>Basic plan</strong>) saves all changed unit costs in one batch. A confirmation dialog appears first. Individual products can also be saved one by one (Free plan and above). The <strong>Cancel</strong> button next to Save all discards all pending changes and restores the last saved state — available on all plans. Each saved product counts as one unit against your monthly quota.",
+    "warnSave": "Before clicking <strong>Save All</strong>, always create a backup first – the dialog provides a \"Backup now\" button.",
+    "zeroPriceWarnTitle": "Zero-price warning",
+    "zeroPriceWarnDesc": "If at least one variant in the selection has a unit cost of 0, a warning dialog appears before saving. You can confirm or cancel — a unit cost of 0 is technically valid but should be set intentionally.",
+    "autosaveTitle": "Automatic Saving (Autosave)",
+    "autosaveDesc": "When autosave is active, changed cost prices are saved automatically after the configured delay — without clicking Save manually. Whether autosave is on and which delay is active can be read and changed directly in the status bar. Each automatically saved product counts as one unit against your monthly quota.",
+    "autosavePlan": "Autosave is available from the <strong>Premium plan</strong> onwards.",
+    "sortTitle": "Sorting",
+    "sortDesc": "A 'Sort by' dropdown to the right of the load-limit control lets you sort by Name, Vendor, Cost status, or Variant count. Once a sort option is selected, two buttons ↑ (ascending) and ↓ (descending) appear. Sorting is applied after the active filters.",
+    "statusbarTitle": "Status bar",
+    "statusbarDesc": "A compact status bar is embedded in the sticky filter area, to the left of the session row. It shows whether autosave is active, the selected delay, and the current state (pending / saving / last saved HH:MM:SS). Toggle and delay can be changed directly in the bar without opening settings.",
+    "autosaveBackupTitle": "Automatic Pre-Save Backup",
+    "autosaveBackupDesc": "The browser can automatically download a JSON file with the original values before save operations. This behaviour is configurable in Settings under 'Automatic backup' (Never / On batch save only / Always). Downloaded files can be restored via the Backup tab.",
+    "factorHintTitle": "Calculation Factor at a Glance",
+    "factorHintDesc": "The saved calculation factor or advanced percentage values are shown inline in the collapsed product header — e.g. Factor: 2.50 or BK: 5% · GZ: 20%. This lets you see the calculation status without expanding the product.",
+    "excelTitle": "Excel Export / Import",
+    "excelDesc": "Two buttons in the Purchase Prices tab enable Excel-based workflows: <strong>Excel Export</strong> creates a .xlsx file with all currently visible variants. Columns A–D (Variant ID, Product, Variant, SKU) are locked and shaded grey; column E (unit cost) is editable and highlighted green.",
+    "excelImportDesc": "Re-import the edited file: the app reads column E, compares each value to the currently displayed cost price, and only applies rows with actual changes. Result summary: <em>X applied · X skipped (no change) · X errors</em>. Rows with errors are listed in an error modal and marked with a red X in the variant list; affected products expand automatically.",
+    "excelImportNote": "Skipped rows (empty cost column or value already matches) are never written to Shopify. The error log can be downloaded from the error modal if needed.",
+    "excelPlan": "Excel Export / Import is available from the <strong>Premium plan</strong>.",
+    "sortStatus": "Cost status",
+    "sortVariants": "Variants"
+  },
+  "artikelkalk": {
+    "title": "Article Calculation",
+    "desc": "Calculates a new selling price from cost and factor and writes it directly to Shopify. The factor and a saved reference price are also stored as metafields.",
+    "disclaimerNote": "On your first visit to this tab a notice appears reminding you to create a backup first and to test calculation factors on individual products. The notice is shown once per browser session.",
+    "calcTitle": "Price Calculation",
+    "calcDesc": "New price = <strong>cost × factor</strong>, rounded to the step configured in Settings (default: €0.05). Example: cost €12.00 × factor 2.30 = €27.60 → rounded to <strong>€27.60</strong>. The factor can be adjusted directly with the input field or the −/+ buttons.",
+    "statusTitle": "Product Status",
+    "statusRows": [
+      [
+        "green",
+        "Ready",
+        "Cost and factor present, price matches calculation"
+      ],
+      [
+        "orange",
+        "Cost changed",
+        "Cost price has changed – price must be recalculated"
+      ],
+      [
+        "orange",
+        "⚠ Price",
+        "Current Shopify price differs from the calculated price"
+      ],
+      [
+        "red",
+        "No factor",
+        "No calculation factor set"
+      ],
+      [
+        "red",
+        "No cost",
+        "No purchase price available"
+      ],
+      [
+        "blue",
+        "Saved",
+        "Price has been calculated and saved as reference"
+      ]
+    ],
+    "saveTitle": "Saving",
+    "saveDesc": "Three levels are available: <strong>Per variant</strong> – Save button in the variant row (all plans). <strong>Per product</strong> – Save button in the product header (all plans). Saves factor, reference price and selling price. <strong>Save all</strong> – via the bottom bar (from the Basic plan).",
+    "bulkTitle": "Bulk edit",
+    "bulkDesc": "A bulk-edit row sits above the product list. Select a field from the dropdown (calculation factor, VAT; in advanced mode also procurement costs, handling costs, markup and buffer), enter a value, and click 'Apply to visible'. The value is immediately applied to all currently filtered products and marked as changed.",
+    "saveAllTitle": "Save all",
+    "saveAllDesc": "Save all in the bottom bar saves all products with pending changes at once. Available from the <strong>Basic plan</strong>; usage is counted per saved product. The <strong>Cancel</strong> button next to it discards all local changes and restores the last saved state — no server call, available on all plans.",
+    "autosaveTitle": "Autosave",
+    "autosaveDesc": "When autosave is active, changes to calculation factors and advanced fields are saved automatically after the configured delay — no manual save needed. Each automatically saved product counts as one unit against your monthly quota.",
+    "autosavePlan": "Autosave is available from the <strong>Premium plan</strong>.",
+    "sortTitle": "Sorting",
+    "sortDesc": "A 'Sort by' dropdown to the right of the load-limit control lets you sort by Name, Vendor, Status, or Calculation factor. Once a sort option is selected, ↑ (ascending) and ↓ (descending) buttons appear. Sorting is applied after the active filters.",
+    "statusbarTitle": "Status bar",
+    "statusbarDesc": "A compact status bar is embedded in the sticky filter area, to the left of the session row. It shows the autosave state and lets you toggle it on/off and change the delay (2 s / 10 s / tab switch) directly in the tab.",
+    "filterTitle": "Status Filters",
+    "filterDesc": "Use the filter buttons to narrow down products by status:",
+    "filterRows": [
+      [
+        "All",
+        "Show all products"
+      ],
+      [
+        "Ready",
+        "Products where cost and factor are consistent"
+      ],
+      [
+        "Conflict",
+        "Products with a cost change or price mismatch — action required"
+      ],
+      [
+        "No factor",
+        "Products that have no calculation factor set"
+      ]
+    ],
+    "collFilterDesc": "In addition to the status filter, dropdowns for collection, vendor and tag are available. All three trigger a server-side reload and fetch all matching products directly from Shopify — regardless of the configured load limit.",
+    "paginationTitle": "Load Limit",
+    "paginationDesc": "The dropdown on the right of the filter row limits how many products are loaded initially (25 / 50 / 100 / 250 / All). The limit is ignored when a collection or tag filter is active.",
+    "expandDesc": "The ⊞ (expand all) and ⊟ (collapse all) buttons on the right of the filter bar open or close all visible products at once.",
+    "factorInlineTitle": "Factor Display in the Product Header",
+    "factorInlineDesc": "The saved factor (simple mode: Factor: 2.50, advanced mode: BK: 5% · HK: 3% · GZ: 20%) is shown inline in the collapsed product header for a quick overview.",
+    "advTitle": "Advanced Calculation",
+    "advDesc": "In advanced mode (from the Premium plan) the simple factor is replaced by a formula chain: cost → landed cost (+ procurement %) → bar price (+ handling %) → + markup % → net price (÷ discount buffer %) → gross price (+ VAT %). Each percentage is entered directly in the formula header row of the expanded product table. The VAT setting (standard / reduced) is saved per product.",
+    "factorInputTitle": "Entering a Factor",
+    "factorInput1": "Expand a product – enter the factor directly in the number field",
+    "factorInput2": "− / + buttons change the value in 0.01 increments",
+    "derivedTitle": "Derived Factor",
+    "derivedDesc": "If no factor is saved for a variant but both cost and selling price exist, the factor is calculated automatically (<em>selling price ÷ cost</em>). A yellow banner offers to adopt this derived factor.",
+    "ekChangeTitle": "Cost-Change Detection",
+    "ekChangeTip": "The app checks on load whether the cost price has changed since the last calculation. Criterion: |factor × cost − saved reference price| > €0.02. Affected products are marked with the status 'Cost changed'."
+  },
+  "sicherung": {
+    "title": "Backup",
+    "desc": "Allows export and import of all relevant price data as a JSON file. Before every major change a <strong>Full Backup</strong> should be created.",
+    "exportTitle": "Exporting",
+    "exportIntro": "Four export types are available:",
+    "export1": "<strong>Full Backup</strong> – cost, selling price and factor for all variants (recommended)",
+    "export2": "<strong>Purchase Prices</strong> – unit cost only",
+    "export3": "<strong>Selling Prices</strong> – Shopify prices only",
+    "export4": "<strong>Calculation Factors</strong> – factors only",
+    "exportTip": "The file contains the export type, timestamp and all variant IDs, sorted alphabetically by product title – ready to import directly.",
+    "exportPlan": "Full Backup is available from the <strong>Basic plan</strong>. Selective backups (purchase prices, selling prices, factors) require the <strong>Premium plan</strong>. Restoring requires the <strong>Basic plan</strong>.",
+    "restoreTitle": "Restoring",
+    "restore1": "Select backup file (JSON)",
+    "restore2": "App compares the file with current Shopify data",
+    "restore3": "All differences are shown in a table",
+    "restore4": "Individual changes can be selected or deselected via checkbox",
+    "restore5": "\"OK – Apply changes\" writes only the selected values back",
+    "restoreWarn": "Data must be fully loaded before a backup file can be imported.",
+    "restorePlan": "Restore is available from the <strong>Basic plan</strong>. Without an eligible plan, clicking the button shows an upgrade prompt. A restore is not counted against your monthly quota and always completes in full, regardless of how many products are affected."
+  },
+  "tips": {
+    "title": "Tips & Notes",
+    "workflowTitle": "Recommended Workflow",
+    "workflow1": "Create a <strong>backup</strong> (full backup)",
+    "workflow2": "Update <strong>purchase prices</strong>",
+    "workflow3": "Check / adjust <strong>calculation factors</strong>",
+    "workflow4": "Open <strong>Article Calculation</strong> – review cost-changed products",
+    "workflow5": "Save new prices",
+    "faqTitle": "Frequently Asked Questions",
+    "faq": [
+      [
+        "Why are some products marked orange?",
+        "The cost price has changed since the last calculation. Check the factor and recalculate the price."
+      ],
+      [
+        "What is the saved reference price?",
+        "After saving in Article Calculation the calculated price is stored as a metafield (custom.sicherung_preis). This value is used for cost-change detection."
+      ],
+      [
+        "Can I restore only individual variants?",
+        "Yes – in the restore view individual rows can be deselected via checkbox."
+      ],
+      [
+        "What happens when I click Cancel in the confirmation dialog?",
+        "Nothing is saved; all local changes are retained and can continue to be edited."
+      ],
+      [
+        "What does the Cancel button in the bottom bar do?",
+        "It discards all unsaved changes in the current tab and restores the last saved state. Unlike the dialog cancel, this actually resets data. The button is available on all plans and is visible as soon as there are pending changes."
+      ]
+    ],
+    "planTitle": "Plans & Action Limits",
+    "planDesc": "The app uses an action system. In the Purchase Prices tab, one action equals one click on Save. In the Article Calculation tab, 'Save all' counts one action per saved product.",
+    "planRows": [
+      [
+        "Free",
+        "20 actions / month",
+        "Single save, unit costs & Shopify prices"
+      ],
+      [
+        "Basic",
+        "150 actions / month",
+        "Save all, 5-step calculation, price rounding, full backup & restore"
+      ],
+      [
+        "Premium",
+        "500 actions / month",
+        "Autosave, selective backup, Excel export/import"
+      ],
+      [
+        "Unlimited",
+        "Unlimited",
+        "Work sessions"
+      ]
+    ],
+    "planTableHead": [
+      "Plan",
+      "Limit",
+      "Features"
+    ],
+    "planNote": "Your current plan and usage can be found under Subscription in the sidebar.",
+    "footer": "Artikelkalkulation · Independent Shopify App · Not officially by Shopify"
+  },
+  "einstellungen": {
+    "title": "Settings",
+    "desc": "The Settings & Subscription tab configures global options for the app and provides access to subscription management. Settings apply to all tabs and are stored in your browser (localStorage).",
+    "autosaveTitle": "Autosave",
+    "autosaveDesc": "Two separate toggles enable autosave for the purchase prices tab and the article calculation tab independently. Below each toggle, choose the delay: 2 s and 10 s start a timer after the last input; 'Tab switch' saves all pending changes when leaving the tab. Toggle and delay are also accessible directly in the status bar of each tab.",
+    "autosavePlan": "Autosave is available from the <strong>Premium plan</strong> and is enabled per tab in settings.",
+    "roundingTitle": "Price Rounding",
+    "roundingDesc": "Sets which step the calculated selling price is rounded to. Available steps: €1.00 · €0.50 · €0.10 · €0.05 · No rounding.",
+    "roundingPlan": "Price rounding is available from the <strong>Premium plan</strong>.",
+    "roundingNote": "Rounding is applied in Article Calculation on every save: new price = cost × factor, rounded to the chosen step. A live preview shows the result for each rounding step directly in the selection.",
+    "langTitle": "Language",
+    "langDesc": "The app language can be switched to German or English. The setting is stored per shop and applies to all users of the same shop.",
+    "autoBackupTitle": "Automatic backup",
+    "autoBackupDesc": "Before save operations, the browser can automatically download a JSON backup file. Configurable separately for purchase prices and article calculation: 'No automatic backup', 'On batch save only', or 'Always'. Default: Always. Switching to 'No automatic backup' shows a warning dialog highlighting the risk.",
+    "productPageSizeTitle": "Product load limit",
+    "productPageSizeDesc": "The number of products loaded initially is set directly in the filter row of the Purchase Prices and Article Calculation tabs (25 / 50 / 100 / 250 / All). The setting is saved and applies to both tabs.",
+    "mwstTitle": "VAT rates",
+    "mwstDesc": "Sets the standard and reduced VAT rates used in article calculation. The rate is selected per product and applied to gross price calculations."
+  },
+  "abo": {
+    "title": "Subscription",
+    "desc": "Subscription management is part of the Settings & Subscription tab (below the settings section). It shows your active plan, monthly usage, and all available plans.",
+    "selectTitle": "Choosing a plan",
+    "selectDesc": "Use the toggle above the plan cards to switch between monthly and annual billing. The annual rate is cheaper -- the savings percentage is shown directly on each plan card. Click the desired plan to be taken to Shopify's payment page. Your plan is updated automatically after checkout.",
+    "usageTitle": "Usage & Status",
+    "usageDesc": "Your current plan, monthly usage, and the next reset date are shown in the status area. A progress bar visualises usage. A warning appears when usage exceeds 80%. One unit of usage is counted per saved product – whether a purchase price, an article calculation, or autosave, saved individually or via 'Save all'. Discarding changes and restoring a backup do not count.",
+    "cancelTitle": "Cancellation",
+    "cancelDesc": "Your subscription can be cancelled directly in the app without leaving to Shopify. Click 'Cancel subscription', confirm the dialog -- the cancellation takes effect immediately. You retain access to all features until the end of the current billing period. After that, the app automatically switches to the Free plan."
+  },
+  "session": {
+    "sectionTitle": "Work Sessions",
+    "sectionDesc": "Work sessions let you track editing progress across multiple sittings. Whenever a product is saved, the app marks it as processed in the active session. Sessions are stored in the browser and persist after the window is closed.",
+    "howTitle": "Creating and Using a Session",
+    "how1": "Set a filter or collection first, then click New Session and enter a name. The name is automatically prefixed with EK_ (Purchase Prices) or VK_ (Article Calculation).",
+    "how2": "Saving a product automatically marks it as processed in the active session.",
+    "how3": "Use the pill buttons (All / Processed / Unprocessed) to filter products by status — only products within the session scope are counted.",
+    "how4": "End deactivates the session for this tab only – the session and other tabs remain unaffected.",
+    "how5": "Delete permanently removes the session from the browser. A confirmation dialog prevents accidental deletion.",
+    "multiDesc": "Multiple sessions can exist simultaneously. The dropdown lets you switch between them. An EK session also activates automatically in the Kalk tab if no session is running there yet.",
+    "scopeTitle": "Session Scope",
+    "scopeDesc": "When a session is created, the app stores the active filter (collection, tag) and the IDs of visible products as its scope. The progress counter shows processed / scope size instead of processed / all loaded products.",
+    "scopeBannerTitle": "Scope Banner",
+    "scopeBannerDesc": "When switching to a tab where the active session has a different filter than currently loaded, a blue banner appears showing the scope filter and size. Clicking Load now restores the matching filter automatically. The × closes the banner without reloading.",
+    "planNote": "Work sessions are available from the <strong>Unlimited plan</strong>."
+  }
+}
