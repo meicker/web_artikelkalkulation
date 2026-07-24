@@ -1,0 +1,10 @@
+node_modules/
+out/
+.remotion/
+.tokensave/
+.playwright-mcp/
+.DS_Store
+*.log
+
+# Local source screenshots (already copied into docs/assets/img for the site)
+Screenshot*.png

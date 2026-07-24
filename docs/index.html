@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PriceCalc Pro – Preiskalkulation & Einkaufspreise für Shopify</title>
+  <meta name="description" content="PriceCalc Pro ist die Shopify-App für saubere Preiskalkulation: Einkaufspreise verwalten, Kalkulationsfaktoren setzen und Verkaufspreise 5-stufig berechnen – mit Excel-Import, Autosave und vollständiger Datensicherung." />
+  <link rel="canonical" href="https://pricecalcpro.de/" />
+  <meta name="theme-color" content="#0E1B2E" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="PriceCalc Pro" />
+  <meta property="og:title" content="PriceCalc Pro – Preiskalkulation, die in Shopify rechnet" />
+  <meta property="og:description" content="Einkaufspreise, Kalkulationsfaktoren & 5-stufige Verkaufspreis-Kalkulation direkt im Shopify Admin – mit vollständiger Datensicherung." />
+  <meta property="og:url" content="https://pricecalcpro.de/" />
+  <meta property="og:image" content="https://pricecalcpro.de/assets/img/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="de_DE" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="PriceCalc Pro – Preiskalkulation für Shopify" />
+  <meta name="twitter:description" content="Vom Einkaufspreis zum richtigen Verkaufspreis – 5-stufige Kalkulation direkt in Shopify." />
+  <meta name="twitter:image" content="https://pricecalcpro.de/assets/img/og.png" />
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/img/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "PriceCalc Pro",
+        "operatingSystem": "Shopify",
+        "applicationCategory": "BusinessApplication",
+        "applicationSubCategory": "Preiskalkulation",
+        "description": "Shopify-App zur Verwaltung von Einkaufspreisen, Kalkulationsfaktoren und Verkaufspreisen mit 5-stufiger Kalkulation, Excel-Import/-Export und vollständiger Datensicherung.",
+        "url": "https://pricecalcpro.de/",
+        "image": "https://pricecalcpro.de/assets/img/og.png",
+        "inLanguage": ["de", "en"],
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "EUR",
+          "description": "Free-Plan mit 20 Aktionen pro Monat, kostenpflichtige Pläne über Shopify Billing."
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "JRMedia",
+          "url": "https://jrmedia.software",
+          "email": "support@jrmedia.software"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Was macht PriceCalc Pro?", "acceptedAnswer": { "@type": "Answer", "text": "PriceCalc Pro verwaltet Einkaufspreise (Unit Cost) und berechnet daraus Verkaufspreise – entweder mit einem einfachen Kalkulationsfaktor oder mit einer 5-stufigen Kalkulation aus Bezugskosten, Handlungskosten, Gewinnzuschlag, Puffer und Mehrwertsteuer. Die Preise werden direkt in Shopify gespeichert." } },
+          { "@type": "Question", "name": "Werden meine Preise dauerhaft geändert?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Gespeicherte Preise und Metafelder werden dauerhaft in den Shopify-Store geschrieben. Deshalb bietet die App vor jeder Massenänderung eine automatische Datensicherung sowie eine Rücksicherungs-Funktion mit Diff-Ansicht." } },
+          { "@type": "Question", "name": "Ist PriceCalc Pro DSGVO-konform?", "acceptedAnswer": { "@type": "Answer", "text": "Die App verarbeitet ausschließlich Geschäftsdaten (Produkte, Preise) und keine Endkundendaten. Hosting erfolgt über die Gadget-Plattform mit Standardvertragsklauseln. Details stehen in der App-Datenschutzerklärung." } },
+          { "@type": "Question", "name": "Was kostet die App?", "acceptedAnswer": { "@type": "Answer", "text": "Es gibt einen kostenlosen Free-Plan mit 20 Aktionen pro Monat. Die Pläne Basic, Premium und Unlimited werden monatlich oder jährlich über Shopify Billing abgerechnet." } }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <nav class="nav" aria-label="Hauptnavigation">
+        <a class="brand" href="index.html">
+          <img src="assets/img/logo.png" alt="" width="34" height="34" />
+          <span>PriceCalc <span class="pro">Pro</span></span>
+        </a>
+        <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav-links">☰</button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#funktionen">Funktionen</a></li>
+          <li><a href="#kalkulation">Kalkulation</a></li>
+          <li><a href="#screenshots">Einblicke</a></li>
+          <li><a href="#preise">Preise</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li class="nav-cta"><a class="btn btn-primary" href="https://apps.shopify.com/" rel="noopener">Im App Store →</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap">
+        <span class="hero-badge">🧮 Shopify-App · <b>Deutsch &amp; English</b></span>
+        <h1>Vom Einkaufspreis zum <span class="accent">richtigen Verkaufspreis</span>.</h1>
+        <p class="hero-sub">PriceCalc Pro verwaltet deine Einkaufspreise und kalkuliert Verkaufspreise
+          nachvollziehbar – einfach per Faktor oder mit 5-stufiger Kalkulation. Alles direkt im Shopify Admin, mit vollständiger Datensicherung.</p>
+        <div class="hero-actions">
+          <a class="btn btn-green btn-lg" href="https://apps.shopify.com/" rel="noopener">In Shopify installieren</a>
+          <a class="btn btn-ghost on-dark btn-lg" href="#kalkulation">So rechnet die App</a>
+        </div>
+        <p class="hero-note">Kostenloser Free-Plan · Keine Endkundendaten · Jederzeit kündbar über Shopify.</p>
+
+        <figure class="hero-media">
+          <div class="browser-bar" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+          <video autoplay muted loop playsinline poster="assets/img/hero-poster.jpg" aria-label="Animierte Kalkulationskette: Einkaufspreis 15,94 € wird über Einstand, Barpreis und Nettopreis zum Bruttopreis 23,20 € berechnet.">
+            <source src="assets/media/hero-chain.webm" type="video/webm" />
+            <source src="assets/media/hero-chain.mp4" type="video/mp4" />
+          </video>
+        </figure>
+      </div>
+    </section>
+
+    <!-- STAT STRIP -->
+    <section class="stripe" aria-label="Überblick">
+      <div class="stat-strip">
+        <div class="cell"><div class="num">5<span class="g">-stufig</span></div><div class="lbl">Kalkulation je Produkt</div></div>
+        <div class="cell"><div class="num">4</div><div class="lbl">Pläne – ab kostenlos</div></div>
+        <div class="cell"><div class="num">.xlsx</div><div class="lbl">Excel-Import &amp; -Export</div></div>
+        <div class="cell"><div class="num"><span class="g">JSON</span></div><div class="lbl">Vollständige Datensicherung</div></div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="section features" id="funktionen">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Funktionen</p>
+          <h2>Alles, was zwischen Einkauf und Verkaufspreis liegt.</h2>
+          <p>Vier Bereiche, ein Ziel: konsistente, geprüfte Preise über dein ganzes Sortiment.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <div class="feature-icon">💶</div>
+            <h3>Einkaufspreise</h3>
+            <p>Unit-Cost aller Varianten übersichtlich verwalten – einzeln oder per Batch, gefiltert nach Kollektion, Hersteller, Tag oder SKU.</p>
+            <span class="tag tag-free">ab Free</span>
+          </article>
+          <article class="feature-card accent">
+            <div class="feature-icon">🏷️</div>
+            <h3>Artikelkalkulation</h3>
+            <p>Verkaufspreis aus EK × Faktor – oder erweitert über Bezugs-, Handlungskosten, Gewinnzuschlag, Puffer und MwSt.</p>
+            <span class="tag tag-basic">5-stufig ab Basic</span>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">💾</div>
+            <h3>Datensicherung</h3>
+            <p>Alle Preisdaten als JSON exportieren und selektiv zurückspielen. Vor dem Schreiben zeigt eine Diff-Ansicht jede Änderung.</p>
+            <span class="tag tag-basic">ab Basic</span>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>Excel Import &amp; Export</h3>
+            <p>Sichtbare Artikel als .xlsx exportieren, EK-Preise offline pflegen und nur echte Änderungen wieder importieren.</p>
+            <span class="tag tag-premium">ab Premium</span>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>Autosave &amp; Rundung</h3>
+            <p>Änderungen automatisch speichern nach 2 s, 10 s oder beim Tab-Wechsel – plus Preisrundung auf saubere Endbeträge.</p>
+            <span class="tag tag-premium">ab Premium</span>
+          </article>
+          <article class="feature-card accent">
+            <div class="feature-icon">🗂️</div>
+            <h3>Arbeitssessions</h3>
+            <p>Bearbeitungsfortschritt über mehrere Sitzungen verfolgen – bearbeitet / unbearbeitet je Produkt, mit eigenem Scope.</p>
+            <span class="tag tag-unlim">ab Unlimited</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALCULATION -->
+    <section class="section calc" id="kalkulation">
+      <div class="wrap">
+        <div class="section-head center">
+          <p class="eyebrow">Die 5-stufige Kalkulation</p>
+          <h2>Jeder Euro nachvollziehbar – vom EK bis zur MwSt.</h2>
+          <p>Statt einem Faktor, dem niemand traut: eine Formelkette, die zeigt, wie dein Verkaufspreis entsteht.</p>
+        </div>
+
+        <div class="calc-chain" role="img" aria-label="Kalkulationskette: EK 15,94 € plus 0,2 % Bezugskosten ergibt Einstand 15,97 €; plus 6 % Handlungskosten und 7 % Gewinnzuschlag ergibt Barpreis 18,12 €; plus 7 % Puffer ergibt Nettopreis 19,48 €; plus 19 % MwSt ergibt Bruttopreis 23,20 €.">
+          <div class="calc-node"><div class="k">EK</div><div class="v">15,94 €</div><div class="s">Einkaufspreis</div></div>
+          <div class="calc-arrow"><span class="op">+ 0,2 %</span><span class="ln">→</span><span class="s" style="font-size:.72rem;color:var(--muted)">Bezugskosten</span></div>
+          <div class="calc-node"><div class="k">Einstand</div><div class="v">15,97 €</div><div class="s">nach Bezug</div></div>
+          <div class="calc-arrow"><span class="op">+ 6 %<br>+ 7 %</span><span class="ln">→</span><span class="s" style="font-size:.72rem;color:var(--muted)">Handlung · Gewinn</span></div>
+          <div class="calc-node"><div class="k">Barpreis</div><div class="v">18,12 €</div><div class="s">kalkuliert</div></div>
+          <div class="calc-arrow"><span class="op">+ 7 %</span><span class="ln">→</span><span class="s" style="font-size:.72rem;color:var(--muted)">Puffer / Skonto</span></div>
+          <div class="calc-node"><div class="k">Nettopreis</div><div class="v">19,48 €</div><div class="s">netto</div></div>
+          <div class="calc-arrow"><span class="op">+ 19 %</span><span class="ln">→</span><span class="s" style="font-size:.72rem;color:var(--muted)">Mehrwertsteuer</span></div>
+          <div class="calc-node result"><div class="k">Bruttopreis</div><div class="v">23,20 €</div><div class="s">Verkaufspreis</div></div>
+        </div>
+
+        <div class="calc-legend">
+          <span><b>Einfach-Modus:</b> nur Faktor × EK = Verkaufspreis</span>
+          <span><b>Erweitert:</b> volle 5-Stufen-Kette pro Produkt</span>
+          <span><b>MwSt:</b> Normalsatz &amp; ermäßigter Satz, pro Produkt wählbar</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCREENSHOTS -->
+    <section class="section shots" id="screenshots">
+      <div class="wrap">
+        <div class="section-head center">
+          <p class="eyebrow">Einblicke</p>
+          <h2>Gebaut für echte Sortimente.</h2>
+          <p>Eingebettet in den Shopify Admin – vertraute Oberfläche, keine Umgewöhnung.</p>
+        </div>
+
+        <div class="shot">
+          <figure class="shot-frame">
+            <div class="browser-bar" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+            <img src="assets/img/screen-einkaufspreise.png" alt="Einkaufspreise-Tab von PriceCalc Pro mit Produktliste, Filtern, Status-Badges und Excel-Buttons." loading="lazy" />
+          </figure>
+          <div class="shot-copy">
+            <h3>Einkaufspreise im Griff</h3>
+            <p>Alle Varianten mit aktueller Unit-Cost – filtern, suchen, sortieren und in einem Batch speichern.</p>
+            <ul class="feat-list">
+              <li>Filter nach Kollektion, Hersteller, Tag &amp; SKU</li>
+              <li>Prozentuale Anpassung auf alle sichtbaren Artikel</li>
+              <li>Status-Badges: geändert, ohne Preis, gespeichert</li>
+              <li>Excel-Export &amp; -Import für Offline-Pflege</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="shot rev">
+          <div class="shot-copy">
+            <h3>Erweiterte Kalkulation, transparent</h3>
+            <p>Die volle Formelzeile pro Produkt: Bezugskosten, Handlungskosten, Gewinnzuschlag, Puffer und Mehrwertsteuer – live berechnet bis zum Bruttopreis.</p>
+            <ul class="feat-list">
+              <li>EK → Einstand → Barpreis → Nettopreis → Bruttopreis</li>
+              <li>MwSt-Satz je Produkt (Normal / ermäßigt)</li>
+              <li>Preisrundung auf 1,00 € / 0,50 € / 0,10 € / 0,05 €</li>
+            </ul>
+          </div>
+          <figure class="shot-frame">
+            <div class="browser-bar" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+            <img src="assets/img/screen-kalkulation.png" alt="Erweiterte Kalkulationszeile mit Bezugskosten, Handlungskosten, Gewinnzuschlag, Puffer und Mehrwertsteuer und den berechneten Preisstufen bis zum Bruttopreis." loading="lazy" />
+          </figure>
+        </div>
+
+        <div class="shot">
+          <figure class="shot-frame">
+            <div class="browser-bar" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+            <img src="assets/img/screen-sicherung.png" alt="Sicherungs-Tab mit Export-Optionen Gesamtsicherung, Einkaufspreise, Verkaufspreise, Kalkulationsfaktoren und der Rücksicherungs-Funktion." loading="lazy" />
+          </figure>
+          <div class="shot-copy">
+            <h3>Nichts geht verloren</h3>
+            <p>Weil Preisänderungen dauerhaft sind, steht Sicherung im Zentrum: Gesamt- oder selektiver Export als JSON – und Rücksicherung mit Prüfung jeder einzelnen Änderung.</p>
+            <ul class="feat-list">
+              <li>Automatisches Backup vor dem Speichern</li>
+              <li>Diff-Ansicht: einzelne Werte an- und abwählen</li>
+              <li>Rücksicherung zählt nicht auf dein Kontingent</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="section pricing" id="preise">
+      <div class="wrap">
+        <div class="section-head center">
+          <p class="eyebrow">Preise</p>
+          <h2>Vier Pläne, die mitwachsen.</h2>
+          <p>Eine „Aktion“ ist ein gespeichertes Produkt. Abrechnung monatlich oder jährlich über Shopify Billing.</p>
+        </div>
+        <div class="plan-grid">
+          <div class="plan free">
+            <h3>Free</h3>
+            <div class="limit">20 Aktionen / Monat</div>
+            <div class="price"><b>0 €</b> · dauerhaft kostenlos</div>
+            <ul>
+              <li>Einzelspeichern</li>
+              <li>EK- &amp; Verkaufspreise</li>
+              <li>Deutsch &amp; English</li>
+              <li class="muted">Alle speichern</li>
+              <li class="muted">Datensicherung</li>
+            </ul>
+          </div>
+          <div class="plan basic">
+            <h3>Basic</h3>
+            <div class="limit">150 Aktionen / Monat</div>
+            <div class="price">monatlich oder jährlich</div>
+            <ul>
+              <li>Alles aus Free</li>
+              <li>„Alle speichern“ (Batch)</li>
+              <li>5-stufige Kalkulation</li>
+              <li>Gesamtsicherung &amp; Rücksicherung</li>
+              <li>Preisrundung</li>
+            </ul>
+          </div>
+          <div class="plan premium featured">
+            <span class="ribbon">Beliebt</span>
+            <h3>Premium</h3>
+            <div class="limit">500 Aktionen / Monat</div>
+            <div class="price">monatlich oder jährlich</div>
+            <ul>
+              <li>Alles aus Basic</li>
+              <li>Autosave (2 s / 10 s / Tab)</li>
+              <li>Selektive Sicherung</li>
+              <li>Excel Export &amp; Import</li>
+            </ul>
+          </div>
+          <div class="plan unlim">
+            <h3>Unlimited</h3>
+            <div class="limit">Unbegrenzt</div>
+            <div class="price">monatlich oder jährlich</div>
+            <ul>
+              <li>Alles aus Premium</li>
+              <li>Unbegrenzte Aktionen</li>
+              <li>Arbeitssessions</li>
+            </ul>
+          </div>
+        </div>
+        <p class="pricing-note">Zahlung und Kündigung laufen direkt über Shopify. Die genauen Preise siehst du im Shopify App Store und in der App unter „Abonnement“.</p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq">
+      <div class="wrap">
+        <div class="section-head center">
+          <p class="eyebrow">FAQ</p>
+          <h2>Häufige Fragen</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary>Werden meine Preise wirklich dauerhaft geändert?</summary>
+            <div class="a"><p>Ja. Gespeicherte Preise und Metafelder werden direkt und dauerhaft in deinen Shopify-Store geschrieben und können von der App nicht automatisch rückgängig gemacht werden. Deshalb erstellt PriceCalc Pro auf Wunsch vor jedem Speichern ein automatisches Backup und bietet eine Rücksicherung mit Diff-Prüfung.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Wie funktioniert die 5-stufige Kalkulation?</summary>
+            <div class="a"><p>Aus dem Einkaufspreis wird über Bezugskosten der Einstand, über Handlungskosten und Gewinnzuschlag der Barpreis, über einen Puffer (Skonto/Rabatt) der Nettopreis und schließlich über die Mehrwertsteuer der Bruttopreis. Jeder Prozentwert ist pro Produkt einstellbar – oder du nutzt den einfachen Modus mit nur einem Faktor.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Verarbeitet die App personenbezogene Daten?</summary>
+            <div class="a"><p>PriceCalc Pro verarbeitet ausschließlich Geschäftsdaten (Produkte, Preise, Metafelder) und <strong>keine Endkundendaten</strong>. Einstellungen liegen lokal im Browser. Details stehen in der <a href="app-datenschutz.html">App-Datenschutzerklärung</a>.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Was zählt als „Aktion“?</summary>
+            <div class="a"><p>Jedes gespeicherte Produkt zählt als eine Aktion – egal ob Einkaufspreis, Kalkulation oder Autosave, einzeln oder per „Alle speichern“. Das Verwerfen von Änderungen und die Rücksicherung zählen nicht.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Kann ich klein anfangen?</summary>
+            <div class="a"><p>Ja. Der Free-Plan ist dauerhaft kostenlos und bietet 20 Aktionen pro Monat mit Einzelspeichern. Du kannst jederzeit über Shopify auf Basic, Premium oder Unlimited wechseln und ebenso wieder kündigen.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta">
+      <div class="wrap">
+        <h2>Bereit, sauber zu kalkulieren?</h2>
+        <p>Installiere PriceCalc Pro in deinem Shopify-Store und bring Struktur in deine Preise – kostenlos startklar.</p>
+        <div class="cta-actions">
+          <a class="btn btn-green btn-lg" href="https://apps.shopify.com/" rel="noopener">In Shopify installieren</a>
+          <a class="btn btn-ghost on-dark btn-lg" href="#funktionen">Funktionen ansehen</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">
+            <img src="assets/img/logo.png" alt="" width="34" height="34" />
+            <span>PriceCalc <span class="pro">Pro</span></span>
+          </a>
+          <p>Preiskalkulation für Shopify. Entwickelt und vertrieben von JRMedia (Janine Fabienne Eicker).</p>
+        </div>
+        <div class="footer-col">
+          <h4>Produkt</h4>
+          <ul>
+            <li><a href="#funktionen">Funktionen</a></li>
+            <li><a href="#kalkulation">Kalkulation</a></li>
+            <li><a href="#preise">Preise</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>App &amp; Recht</h4>
+          <ul>
+            <li><a href="app-datenschutz.html">App-Datenschutz</a></li>
+            <li><a href="haftungsausschluss.html">Haftungsausschluss</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Rechtliches</h4>
+          <ul>
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="datenschutz.html">Datenschutz (Website)</a></li>
+            <li><a href="https://jrmedia.software" rel="noopener">jrmedia.software</a></li>
+            <li><a href="mailto:support@jrmedia.software">support@jrmedia.software</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> JRMedia · Janine Fabienne Eicker</span>
+        <span>PriceCalc Pro ist eine unabhängige Shopify-App und steht in keiner offiziellen Verbindung zu Shopify Inc.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
