@@ -64,6 +64,8 @@ export const CONTENT = {
     ogHeadAccent: "Shopify",
     ogHeadB: " rechnet.",
     ogSub: "Einkaufspreise, Kalkulationsfaktoren & 5-stufige Verkaufspreis-Kalkulation — mit vollständiger Datensicherung.",
+    cta: "Jetzt im Shopify App Store",
+    promoHook: "Kalkulierst du noch im Kopf?",
   },
   en: {
     chain: CHAIN_EN,
@@ -78,6 +80,8 @@ export const CONTENT = {
     ogHeadAccent: "Shopify",
     ogHeadB: ".",
     ogSub: "Purchase prices, calculation factors & a 5-step sell-price calculation — with full data backup.",
+    cta: "Now on the Shopify App Store",
+    promoHook: "Still pricing in your head?",
   },
 } as const;
 
