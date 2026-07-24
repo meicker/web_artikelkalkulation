@@ -2,13 +2,14 @@ import React from "react";
 import { AbsoluteFill } from "remotion";
 import { loadFont as loadDisplay } from "@remotion/google-fonts/SpaceGrotesk";
 import { loadFont as loadMono } from "@remotion/google-fonts/SpaceMono";
-import { COLORS } from "./theme";
+import { COLORS, CONTENT, Lang } from "./theme";
 
 const { fontFamily: display } = loadDisplay();
 const { fontFamily: mono } = loadMono();
 
 // Static Open-Graph / social preview card (1200 x 630).
-export const OgCard: React.FC = () => {
+export const OgCard: React.FC<{ lang?: Lang }> = ({ lang = "de" }) => {
+  const c = CONTENT[lang];
   return (
     <AbsoluteFill
       style={{
@@ -29,19 +30,7 @@ export const OgCard: React.FC = () => {
       />
 
       <div style={{ display: "flex", alignItems: "center", gap: 18, position: "relative" }}>
-        <div
-          style={{
-            width: 60,
-            height: 60,
-            borderRadius: 15,
-            background: `linear-gradient(150deg, ${COLORS.green}, #1f7d34)`,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            fontSize: 34,
-            boxShadow: "0 8px 24px rgba(47,179,68,0.4)",
-          }}
-        >
+        <div style={{ width: 60, height: 60, borderRadius: 15, background: `linear-gradient(150deg, ${COLORS.green}, #1f7d34)`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 34, boxShadow: "0 8px 24px rgba(47,179,68,0.4)" }}>
           🧮
         </div>
         <div style={{ fontSize: 36, fontWeight: 700, color: COLORS.white, letterSpacing: -0.5 }}>
@@ -50,40 +39,21 @@ export const OgCard: React.FC = () => {
       </div>
 
       <div style={{ position: "relative" }}>
-        <div
-          style={{
-            fontSize: 74,
-            fontWeight: 700,
-            color: COLORS.white,
-            letterSpacing: -2,
-            lineHeight: 1.03,
-            maxWidth: 900,
-          }}
-        >
-          Preiskalkulation, die in{" "}
-          <span style={{ color: COLORS.blueLight }}>Shopify</span> rechnet.
+        <div style={{ fontSize: 74, fontWeight: 700, color: COLORS.white, letterSpacing: -2, lineHeight: 1.03, maxWidth: 900 }}>
+          {c.ogHeadA}
+          <span style={{ color: COLORS.blueLight }}>{c.ogHeadAccent}</span>
+          {c.ogHeadB}
         </div>
         <div style={{ fontSize: 30, color: COLORS.mist, marginTop: 22, maxWidth: 820 }}>
-          Einkaufspreise, Kalkulationsfaktoren & 5-stufige Verkaufspreis-Kalkulation — mit
-          vollständiger Datensicherung.
+          {c.ogSub}
         </div>
       </div>
 
       <div style={{ display: "flex", alignItems: "center", gap: 20, position: "relative" }}>
-        <div
-          style={{
-            fontFamily: mono,
-            fontSize: 26,
-            color: COLORS.white,
-            padding: "12px 24px",
-            borderRadius: 999,
-            border: "1.5px solid rgba(159,179,206,0.25)",
-            background: "rgba(255,255,255,0.04)",
-          }}
-        >
-          <span style={{ color: COLORS.mist }}>EK 15,94 €</span>{" "}
+        <div style={{ fontFamily: mono, fontSize: 26, color: COLORS.white, padding: "12px 24px", borderRadius: 999, border: "1.5px solid rgba(159,179,206,0.25)", background: "rgba(255,255,255,0.04)" }}>
+          <span style={{ color: COLORS.mist }}>{c.from}</span>{" "}
           <span style={{ color: COLORS.blueLight }}>→</span>{" "}
-          <span style={{ color: COLORS.greenSoft, fontWeight: 700 }}>VK 23,20 €</span>
+          <span style={{ color: COLORS.greenSoft, fontWeight: 700 }}>{c.to}</span>
         </div>
         <div style={{ fontSize: 22, color: COLORS.mist }}>jrmedia.software</div>
       </div>

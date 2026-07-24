@@ -6,6 +6,9 @@
   <title>PriceCalc Pro – Preiskalkulation & Einkaufspreise für Shopify</title>
   <meta name="description" content="PriceCalc Pro ist die Shopify-App für saubere Preiskalkulation: Einkaufspreise verwalten, Kalkulationsfaktoren setzen und Verkaufspreise 5-stufig berechnen – mit Excel-Import, Autosave und vollständiger Datensicherung." />
   <link rel="canonical" href="https://pricecalcpro.de/" />
+  <link rel="alternate" hreflang="de" href="https://pricecalcpro.de/" />
+  <link rel="alternate" hreflang="en" href="https://pricecalcpro.de/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://pricecalcpro.de/" />
   <meta name="theme-color" content="#0E1B2E" />
   <meta name="robots" content="index, follow" />
 
@@ -28,8 +31,6 @@
 
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="assets/img/logo.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="assets/css/style.css" />
 
   <script type="application/ld+json">
@@ -89,7 +90,8 @@
           <li><a href="#screenshots">Einblicke</a></li>
           <li><a href="#preise">Preise</a></li>
           <li><a href="#faq">FAQ</a></li>
-          <li class="nav-cta"><a class="btn btn-primary" href="https://apps.shopify.com/" rel="noopener">Im App Store →</a></li>
+          <li class="lang-switch"><span class="active" aria-current="true">DE</span><a href="en/" hreflang="en">EN</a></li>
+          <li class="nav-cta"><a class="btn btn-primary" href="https://apps.shopify.com/pricecalcpro" rel="noopener">Im App Store →</a></li>
         </ul>
       </nav>
     </div>
@@ -104,7 +106,7 @@
         <p class="hero-sub">PriceCalc Pro verwaltet deine Einkaufspreise und kalkuliert Verkaufspreise
           nachvollziehbar – einfach per Faktor oder mit 5-stufiger Kalkulation. Alles direkt im Shopify Admin, mit vollständiger Datensicherung.</p>
         <div class="hero-actions">
-          <a class="btn btn-green btn-lg" href="https://apps.shopify.com/" rel="noopener">In Shopify installieren</a>
+          <a class="btn btn-green btn-lg" href="https://apps.shopify.com/pricecalcpro" rel="noopener">In Shopify installieren</a>
           <a class="btn btn-ghost on-dark btn-lg" href="#kalkulation">So rechnet die App</a>
         </div>
         <p class="hero-note">Kostenloser Free-Plan · Keine Endkundendaten · Jederzeit kündbar über Shopify.</p>
@@ -189,14 +191,14 @@
 
         <div class="calc-chain" role="img" aria-label="Kalkulationskette: EK 15,94 € plus 0,2 % Bezugskosten ergibt Einstand 15,97 €; plus 6 % Handlungskosten und 7 % Gewinnzuschlag ergibt Barpreis 18,12 €; plus 7 % Puffer ergibt Nettopreis 19,48 €; plus 19 % MwSt ergibt Bruttopreis 23,20 €.">
           <div class="calc-node"><div class="k">EK</div><div class="v">15,94 €</div><div class="s">Einkaufspreis</div></div>
-          <div class="calc-arrow"><span class="op">+ 0,2 %</span><span class="ln">→</span><span class="s" style="font-size:.72rem;color:var(--muted)">Bezugskosten</span></div>
-          <div class="calc-node"><div class="k">Einstand</div><div class="v">15,97 €</div><div class="s">nach Bezug</div></div>
-          <div class="calc-arrow"><span class="op">+ 6 %<br>+ 7 %</span><span class="ln">→</span><span class="s" style="font-size:.72rem;color:var(--muted)">Handlung · Gewinn</span></div>
-          <div class="calc-node"><div class="k">Barpreis</div><div class="v">18,12 €</div><div class="s">kalkuliert</div></div>
-          <div class="calc-arrow"><span class="op">+ 7 %</span><span class="ln">→</span><span class="s" style="font-size:.72rem;color:var(--muted)">Puffer / Skonto</span></div>
-          <div class="calc-node"><div class="k">Nettopreis</div><div class="v">19,48 €</div><div class="s">netto</div></div>
-          <div class="calc-arrow"><span class="op">+ 19 %</span><span class="ln">→</span><span class="s" style="font-size:.72rem;color:var(--muted)">Mehrwertsteuer</span></div>
-          <div class="calc-node result"><div class="k">Bruttopreis</div><div class="v">23,20 €</div><div class="s">Verkaufspreis</div></div>
+          <div class="calc-arrow"><span class="op">+ 0,2 %</span><span class="ln">→</span></div>
+          <div class="calc-node"><div class="k">Einstand</div><div class="v">15,97 €</div><div class="s">+ Bezugskosten</div></div>
+          <div class="calc-arrow"><span class="op">+ 6 %<br>+ 7 %</span><span class="ln">→</span></div>
+          <div class="calc-node"><div class="k">Barpreis</div><div class="v">18,12 €</div><div class="s">+ Handlung &amp; Gewinn</div></div>
+          <div class="calc-arrow"><span class="op">+ 7 %</span><span class="ln">→</span></div>
+          <div class="calc-node"><div class="k">Nettopreis</div><div class="v">19,48 €</div><div class="s">+ Puffer / Skonto</div></div>
+          <div class="calc-arrow"><span class="op">+ 19 %</span><span class="ln">→</span></div>
+          <div class="calc-node result"><div class="k">Bruttopreis</div><div class="v">23,20 €</div><div class="s">inkl. MwSt = VK</div></div>
         </div>
 
         <div class="calc-legend">
@@ -365,7 +367,7 @@
         <h2>Bereit, sauber zu kalkulieren?</h2>
         <p>Installiere PriceCalc Pro in deinem Shopify-Store und bring Struktur in deine Preise – kostenlos startklar.</p>
         <div class="cta-actions">
-          <a class="btn btn-green btn-lg" href="https://apps.shopify.com/" rel="noopener">In Shopify installieren</a>
+          <a class="btn btn-green btn-lg" href="https://apps.shopify.com/pricecalcpro" rel="noopener">In Shopify installieren</a>
           <a class="btn btn-ghost on-dark btn-lg" href="#funktionen">Funktionen ansehen</a>
         </div>
       </div>

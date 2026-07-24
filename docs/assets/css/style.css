@@ -2,7 +2,7 @@
    PriceCalc Pro — marketing site
    Design tokens mirror the Remotion hero (theme.ts)
    ============================================================ */
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap");
+@import url("fonts.css");
 
 :root {
   --ink: #0e1b2e;
@@ -117,6 +117,10 @@ ul { margin: 0; padding: 0; }
 .nav-links a { color: var(--muted); font-weight: 500; padding: 8px 12px; border-radius: 9px; font-size: 0.96rem; }
 .nav-links a:hover { color: var(--ink); background: var(--paper-2); }
 .nav-cta { margin-left: 6px; }
+.lang-switch { display: inline-flex; align-items: center; gap: 2px; margin-left: 8px; font-family: var(--font-mono); font-size: 0.8rem; }
+.lang-switch a, .lang-switch span { padding: 5px 8px; border-radius: 7px; color: var(--muted); font-weight: 700; }
+.lang-switch .active { color: var(--ink); background: var(--paper-2); }
+.lang-switch a:hover { color: var(--ink); background: var(--paper-2); }
 .nav-toggle { display: none; margin-left: auto; background: none; border: 1.5px solid var(--line); border-radius: 10px; width: 42px; height: 42px; cursor: pointer; color: var(--ink); }
 
 /* ---------- Hero ---------- */
@@ -195,23 +199,30 @@ ul { margin: 0; padding: 0; }
 
 /* ---------- Calculation explainer ---------- */
 .calc { background: var(--white); }
-.calc-chain {
-  display: flex; align-items: stretch; gap: 0; overflow-x: auto; padding: 8px 2px 20px;
-  scroll-snap-type: x mandatory;
-}
+.calc-chain { display: flex; align-items: stretch; gap: 2px; padding: 8px 0 4px; }
 .calc-node {
-  scroll-snap-align: center; flex: 0 0 auto; min-width: 168px;
-  background: var(--paper); border: 1.5px solid var(--line); border-radius: 14px; padding: 18px 20px;
+  flex: 1 1 0; min-width: 0;
+  background: var(--paper); border: 1.5px solid var(--line); border-radius: 14px; padding: 16px 14px;
+  text-align: center;
 }
 .calc-node.result { background: linear-gradient(160deg, #e6f8ec, #d3f0dc); border-color: #a6e2b7; }
-.calc-node .k { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+.calc-node .k { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
 .calc-node.result .k { color: var(--green-ink); }
-.calc-node .v { font-family: var(--font-mono); font-weight: 700; font-size: 1.55rem; color: var(--ink); margin: 6px 0 2px; }
+.calc-node .v { font-family: var(--font-mono); font-weight: 700; font-size: clamp(1.05rem, 2vw, 1.5rem); color: var(--ink); margin: 6px 0 3px; white-space: nowrap; }
 .calc-node.result .v { color: var(--green-ink); }
-.calc-node .s { font-size: 0.82rem; color: var(--muted); }
-.calc-arrow { flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; padding: 0 10px; min-width: 84px; }
-.calc-arrow .op { font-family: var(--font-mono); font-size: 0.78rem; font-weight: 700; color: var(--blue); text-align: center; }
-.calc-arrow .ln { color: var(--blue); font-size: 1.1rem; }
+.calc-node .s { font-size: 0.78rem; color: var(--muted); line-height: 1.3; }
+.calc-arrow { flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; width: 62px; }
+.calc-arrow .op { font-family: var(--font-mono); font-size: 0.72rem; line-height: 1.15; font-weight: 700; color: var(--blue); text-align: center; }
+.calc-arrow .ln { color: var(--blue); font-size: 1.15rem; line-height: 1; }
+@media (max-width: 720px) {
+  .calc-chain { flex-direction: column; align-items: stretch; gap: 4px; }
+  .calc-node { width: 100%; display: flex; align-items: baseline; justify-content: space-between; gap: 12px; text-align: left; padding: 14px 18px; }
+  .calc-node .k { flex: 0 0 auto; }
+  .calc-node .v { flex: 1 1 auto; text-align: right; margin: 0; order: 3; }
+  .calc-node .s { display: none; }
+  .calc-arrow { width: 100%; flex-direction: row; justify-content: center; gap: 8px; padding: 2px 0; }
+  .calc-arrow .ln { transform: rotate(90deg); }
+}
 .calc-legend { display: flex; flex-wrap: wrap; gap: 10px 24px; margin-top: 20px; color: var(--muted); font-size: 0.92rem; }
 .calc-legend b { color: var(--ink); font-family: var(--font-display); }
 
