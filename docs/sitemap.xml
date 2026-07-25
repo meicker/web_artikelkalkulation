@@ -38,6 +38,18 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pricecalcpro.de/en/pricing-guide.html"/>
     <changefreq>monthly</changefreq><priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://pricecalcpro.de/ratgeber.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pricecalcpro.de/ratgeber.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pricecalcpro.de/en/guides.html"/>
+    <changefreq>weekly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pricecalcpro.de/en/guides.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pricecalcpro.de/ratgeber.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pricecalcpro.de/en/guides.html"/>
+    <changefreq>weekly</changefreq><priority>0.7</priority>
+  </url>
   <url><loc>https://pricecalcpro.de/impressum.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://pricecalcpro.de/datenschutz.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://pricecalcpro.de/app-datenschutz.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>

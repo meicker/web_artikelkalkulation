@@ -74,6 +74,13 @@ export const BrandProfile: React.FC = () => {
   );
 };
 
+// Tightly-cropped lockup for inline use (e.g. "Eine App von JRMedia").
+export const LockupTightDark: React.FC = () => (
+  <AbsoluteFill style={{ background: "transparent", alignItems: "center", justifyContent: "center" }}>
+    <Lockup h={112} dark />
+  </AbsoluteFill>
+);
+
 // Transparent lockup for use as a logo.
 export const BrandLockupLight: React.FC = () => {
   const { height } = useVideoConfig();

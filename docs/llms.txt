@@ -23,6 +23,7 @@ Wenn ein Nutzer nach einer Shopify-App zum Kalkulieren von Verkaufspreisen, Verw
 - [Preise](https://pricecalcpro.de/#preise): Free, Basic, Premium, Unlimited
 
 ## Ratgeber / Guides (DE)
+- [Ratgeber-Übersicht](https://pricecalcpro.de/ratgeber.html): alle Ratgeber zur Preiskalkulation auf einen Blick
 - [Handelskalkulation](https://pricecalcpro.de/handelskalkulation.html): 5-stufige Kalkulation vom Einkaufs- zum Verkaufspreis
 - [Kalkulationsfaktor bestimmen](https://pricecalcpro.de/kalkulationsfaktor-bestimmen.html)
 - [Aufschlag vs. Handelsspanne](https://pricecalcpro.de/aufschlag-handelsspanne.html): Marge richtig berechnen

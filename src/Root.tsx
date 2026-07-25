@@ -2,7 +2,7 @@ import { Composition, Still } from "remotion";
 import { HeroChain } from "./HeroChain";
 import { OgCard } from "./OgCard";
 import { PromoVertical } from "./PromoVertical";
-import { BrandProfile, BrandLockupLight, BrandLockupDark, SocialBanner, BrandVertical, BrandReveal } from "./JrBrand";
+import { BrandProfile, BrandLockupLight, BrandLockupDark, LockupTightDark, SocialBanner, BrandVertical, BrandReveal } from "./JrBrand";
 import { FactorGraphic, MarginGraphic, StepGraphic, VatGraphic, RoundingGraphic, SkontoGraphic } from "./GuideGraphics";
 
 export const RemotionRoot: React.FC = () => {
@@ -12,6 +12,7 @@ export const RemotionRoot: React.FC = () => {
       <Still id="JrProfile" component={BrandProfile} width={1080} height={1080} />
       <Still id="JrLockupLight" component={BrandLockupLight} width={1600} height={440} />
       <Still id="JrLockupDark" component={BrandLockupDark} width={1600} height={440} />
+      <Still id="JrLockupTightDark" component={LockupTightDark} width={360} height={160} />
       <Still id="JrBannerYouTube" component={SocialBanner} width={2560} height={1440} defaultProps={{ safeH: 423 }} />
       <Still id="JrBannerFacebook" component={SocialBanner} width={1640} height={856} defaultProps={{ safeH: 720 }} />
       <Still id="JrBannerX" component={SocialBanner} width={1500} height={500} defaultProps={{ safeH: 380 }} />
