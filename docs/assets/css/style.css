@@ -344,6 +344,17 @@ ul { margin: 0; padding: 0; }
 .legal-card .m-faq .q { font-family: var(--font-display); font-weight: 600; color: var(--ink); margin-bottom: 4px; }
 .legal-card .m-faq .a { color: var(--muted); font-size: 0.95rem; }
 
+/* ---------- Guide / SEO article ---------- */
+.legal-card .lead { font-size: 1.12rem; color: var(--text); }
+.legal-card figure.chain-fig { margin: 20px 0 6px; }
+.legal-card figure.chain-fig figcaption { font-size: 0.85rem; color: var(--muted); text-align: center; margin-top: 8px; }
+.guide-cta { background: radial-gradient(120% 140% at 20% 0%, var(--ink-3), var(--ink)); color: #fff; border-radius: 14px; padding: 26px 28px; margin: 26px 0; }
+.guide-cta h3 { color: #fff; margin: 0 0 6px; font-size: 1.25rem; }
+.guide-cta p { color: var(--mist); margin: 0 0 16px; }
+.crumb { font-family: var(--font-mono); font-size: 0.82rem; color: var(--muted); margin-bottom: 8px; }
+.crumb a { color: var(--muted); }
+.crumb a:hover { color: var(--blue); }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
   .nav-links { display: none; }
