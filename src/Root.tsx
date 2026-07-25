@@ -4,6 +4,7 @@ import { OgCard } from "./OgCard";
 import { PromoVertical } from "./PromoVertical";
 import { JrIcon, JrLockup, JrBanner, JrReveal } from "./JrLogo";
 import { JrLogoLab, Solo, SOLO_SIZES } from "./JrLogoLab";
+import { JrMixLab, MixSolo } from "./JrMix";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -18,6 +19,9 @@ export const RemotionRoot: React.FC = () => {
       {Object.entries(SOLO_SIZES).map(([id, [w, h]]) => (
         <Still key={id} id={`JrSolo${id}`} component={Solo} width={w} height={h} defaultProps={{ id }} />
       ))}
+      <Still id="JrMixLab" component={JrMixLab} width={1200} height={1000} />
+      <Still id="MixSoloLight" component={MixSolo} width={780} height={280} defaultProps={{ id: "M1", dark: false }} />
+      <Still id="MixSoloDark" component={MixSolo} width={780} height={280} defaultProps={{ id: "M1", dark: true }} />
       <Composition id="HeroChain" component={HeroChain} durationInFrames={330} fps={30} width={1920} height={1080} defaultProps={{ lang: "de" as const }} />
       <Composition id="HeroChainEN" component={HeroChain} durationInFrames={330} fps={30} width={1920} height={1080} defaultProps={{ lang: "en" as const }} />
       <Composition id="PromoVertical" component={PromoVertical} durationInFrames={400} fps={30} width={1080} height={1920} defaultProps={{ lang: "de" as const }} />
