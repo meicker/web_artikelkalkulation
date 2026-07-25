@@ -170,7 +170,10 @@ function page(lang, m) {
   <link rel="alternate" hreflang="en" href="${altEn}" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#0E1B2E" />
-  <link rel="icon" href="${u.asset}/img/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
   <link rel="stylesheet" href="${u.asset}/css/style.css" />
 </head>
 <body>

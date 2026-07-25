@@ -1,4 +1,30 @@
+# robots.txt — pricecalcpro.de
+# Alle Crawler willkommen (inkl. Suchmaschinen und KI-/LLM-Bots).
+
 User-agent: *
 Allow: /
 
+# KI-/LLM-Crawler ausdrücklich erlaubt (für ChatGPT, Claude, Perplexity, Google AI u. a.)
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-Web
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+User-agent: CCBot
+Allow: /
+
+# Maschinenlesbare Zusammenfassung für LLMs: /llms.txt
 Sitemap: https://pricecalcpro.de/sitemap.xml
