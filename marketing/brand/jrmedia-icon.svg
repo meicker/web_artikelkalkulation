@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="JRmedia">
+  <defs>
+    <linearGradient id="jrTile" x1="12%" y1="0%" x2="88%" y2="100%">
+      <stop offset="0" stop-color="#7C5CFC"/>
+      <stop offset="1" stop-color="#3B82F6"/>
+    </linearGradient>
+    <radialGradient id="jrHi" cx="22%" cy="14%" r="60%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="jrGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="512" height="512" rx="120" fill="url(#jrTile)"/>
+  <rect x="0" y="0" width="512" height="512" rx="120" fill="url(#jrHi)"/>
+  <text x="252" y="330" text-anchor="middle" font-family="'Space Grotesk', system-ui, sans-serif"
+        font-weight="700" font-size="252" letter-spacing="-6" fill="#ffffff">JR</text>
+  <path filter="url(#jrGlow)" transform="translate(352 96) scale(2.9)"
+        d="M12 0 C13 7 17 11 24 12 C17 13 13 17 12 24 C11 17 7 13 0 12 C7 11 11 7 12 0 Z" fill="#22D3EE"/>
+</svg>
