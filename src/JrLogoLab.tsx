@@ -49,18 +49,16 @@ const ConceptA: React.FC = () => (
   </Tile>
 );
 
-// B — Circle badge + wordmark
+// B — Circle badge (JR) + "media" wordmark, tucked close
 const ConceptB: React.FC = () => (
-  <div style={{ display: "flex", alignItems: "center", gap: 26 }}>
+  <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
     <div style={{ position: "relative" }}>
       <Tile size={130} grad={VB} radiusRatio={0.5}>
         <div style={{ fontFamily: display, fontWeight: 700, color: C.white, fontSize: 58, letterSpacing: -2 }}>JR</div>
       </Tile>
       <div style={{ position: "absolute", top: 8, right: 6 }}><Spark size={22} /></div>
     </div>
-    <div style={{ fontFamily: display, fontSize: 58, fontWeight: 700, letterSpacing: -2 }}>
-      <span style={{ color: C.ink }}>JR</span><span style={{ color: C.slate, fontWeight: 500 }}>media</span>
-    </div>
+    <div style={{ fontFamily: display, fontSize: 58, fontWeight: 500, letterSpacing: -1.5, color: C.ink }}>media</div>
   </div>
 );
 
@@ -82,18 +80,15 @@ const ConceptD: React.FC = () => (
   </Tile>
 );
 
-// E — Mono / tech: dark tile with cursor, mono wordmark
+// E — Mono / tech: JR + media inside the badge
 const ConceptE: React.FC = () => (
-  <div style={{ display: "flex", alignItems: "center", gap: 24 }}>
-    <Tile size={130} grad={`linear-gradient(145deg, ${C.ink2}, ${C.ink})`} radiusRatio={0.28}>
-      <div style={{ display: "flex", alignItems: "baseline", fontFamily: mono, fontWeight: 700, color: C.white, fontSize: 50 }}>
-        JR<span style={{ color: C.cyan, marginLeft: 3 }}>_</span>
-      </div>
-    </Tile>
-    <div style={{ fontFamily: mono, fontSize: 46, fontWeight: 700 }}>
-      <span style={{ color: C.ink }}>JR</span><span style={{ color: C.cyan }}>media</span>
+  <Tile size={168} grad={`linear-gradient(150deg, ${C.ink2}, ${C.ink})`} radiusRatio={0.28} hi={false}>
+    <div style={{ fontFamily: mono, fontWeight: 700, color: C.white, fontSize: 58, lineHeight: 0.95, letterSpacing: -1 }}>JR</div>
+    <div style={{ display: "flex", alignItems: "baseline", fontFamily: mono, fontWeight: 700, fontSize: 22, letterSpacing: 2, marginTop: 6 }}>
+      <span style={{ color: C.cyan }}>media</span>
+      <span style={{ color: C.cyan, marginLeft: 2 }}>_</span>
     </div>
-  </div>
+  </Tile>
 );
 
 // F — Pill "media"
@@ -135,6 +130,18 @@ const CONCEPTS = [
   { id: "G", name: "Dunkel · minimal", dark: true, el: <ConceptG /> },
   { id: "H", name: "Stacked mit Trennlinie", dark: false, el: <ConceptH /> },
 ];
+
+// Individual (transparent) render of a single concept.
+const ELS: Record<string, React.ReactNode> = Object.fromEntries(CONCEPTS.map((c) => [c.id, c.el]));
+export const SOLO_SIZES: Record<string, [number, number]> = {
+  A: [560, 560], B: [860, 340], C: [980, 340], D: [560, 560],
+  E: [560, 560], F: [820, 320], G: [560, 560], H: [560, 560],
+};
+export const Solo: React.FC<{ id?: string }> = ({ id = "A" }) => (
+  <AbsoluteFill style={{ background: "transparent", alignItems: "center", justifyContent: "center" }}>
+    {ELS[id]}
+  </AbsoluteFill>
+);
 
 export const JrLogoLab: React.FC = () => {
   return (
