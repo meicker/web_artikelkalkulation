@@ -145,9 +145,10 @@ ul { margin: 0; padding: 0; }
   color: var(--mist); background: rgba(255,255,255,0.05);
   border: 1px solid var(--line-dark); padding: 7px 14px; border-radius: 999px;
 }
-.hero-by { display: inline-flex; align-items: center; gap: 9px; font-family: var(--font-display); font-size: 0.9rem; color: var(--mist); }
-.hero-by img { height: 30px; width: auto; display: block; }
+.hero-by { display: inline-flex; align-items: center; gap: 13px; font-family: var(--font-display); font-size: 1.35rem; font-weight: 500; letter-spacing: -0.01em; color: var(--mist); }
+.hero-by img { height: 46px; width: auto; display: block; }
 .hero-by:hover { color: #fff; }
+@media (max-width: 560px) { .hero-by { font-size: 1.1rem; } .hero-by img { height: 38px; } }
 .hero-badge b { color: var(--green-soft); font-weight: 700; }
 .hero h1 { color: #fff; font-size: clamp(2.3rem, 5.6vw, 4rem); max-width: 15ch; }
 .hero h1 .accent { color: var(--blue-light); }
@@ -390,7 +391,12 @@ ul { margin: 0; padding: 0; }
 .nav-links { gap: 2px; }
 .nav-links a { padding: 8px 9px; }
 .nav-cta { margin-left: 20px; }
-.nav-cta .btn-primary { box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2); }
+/* CTA button keeps its own look (the generic .nav-links a rule must not override it) */
+.nav-cta .btn { padding: 12px 20px; }
+.nav-cta .btn-primary { color: #fff; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2); }
+.nav-cta .btn-primary:hover { color: #fff; }
+.nav-cta .btn-ghost { color: var(--ink); }
+.nav-cta .btn-ghost.on-dark { color: #fff; }
 .lang-switch { display: inline-flex; align-items: center; margin-left: 12px; border: 1px solid var(--line); border-radius: 999px; padding: 2px; gap: 0; font-family: var(--font-mono); font-size: 0.78rem; }
 .lang-switch a, .lang-switch span { padding: 4px 9px; border-radius: 999px; color: var(--muted); font-weight: 700; line-height: 1; }
 .lang-switch .active { color: var(--ink); background: var(--paper-2); }
