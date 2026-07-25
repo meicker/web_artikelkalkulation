@@ -3,6 +3,7 @@ import { HeroChain } from "./HeroChain";
 import { OgCard } from "./OgCard";
 import { PromoVertical } from "./PromoVertical";
 import { JrIcon, JrLockup, JrBanner, JrReveal } from "./JrLogo";
+import { JrLogoLab } from "./JrLogoLab";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -13,6 +14,7 @@ export const RemotionRoot: React.FC = () => {
       <Still id="JrLockupDark" component={JrLockup} width={1500} height={480} defaultProps={{ dark: true }} />
       <Still id="JrBanner" component={JrBanner} width={1584} height={396} />
       <Composition id="JrReveal" component={JrReveal} durationInFrames={130} fps={30} width={1080} height={1080} />
+      <Still id="JrLogoLab" component={JrLogoLab} width={1400} height={1480} />
       <Composition id="HeroChain" component={HeroChain} durationInFrames={330} fps={30} width={1920} height={1080} defaultProps={{ lang: "de" as const }} />
       <Composition id="HeroChainEN" component={HeroChain} durationInFrames={330} fps={30} width={1920} height={1080} defaultProps={{ lang: "en" as const }} />
       <Composition id="PromoVertical" component={PromoVertical} durationInFrames={400} fps={30} width={1080} height={1920} defaultProps={{ lang: "de" as const }} />
