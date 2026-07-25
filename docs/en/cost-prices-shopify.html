@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Managing Purchase Prices (Unit Cost) in Shopify | PriceCalc Pro</title>
+  <meta name="description" content="Keep purchase prices in Shopify clean: what unit cost is, where Shopify stores it, and how to keep cost prices up to date across the catalog." />
+  <link rel="canonical" href="https://pricecalcpro.de/en/cost-prices-shopify.html" />
+  <link rel="alternate" hreflang="de" href="https://pricecalcpro.de/einkaufspreise-shopify.html" />
+  <link rel="alternate" hreflang="en" href="https://pricecalcpro.de/en/cost-prices-shopify.html" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0E1B2E" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Managing Purchase Prices (Unit Cost) in Shopify" />
+  <meta property="og:description" content="Keep purchase prices in Shopify clean: what unit cost is, where Shopify stores it, and how to keep cost prices up to date across the catalog." />
+  <meta property="og:url" content="https://pricecalcpro.de/en/cost-prices-shopify.html" />
+  <meta property="og:image" content="https://pricecalcpro.de/assets/img/og-en.png" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Managing Purchase Prices (Unit Cost) in Shopify",
+      "description": "Keep purchase prices in Shopify clean: what unit cost is, where Shopify stores it, and how to keep cost prices up to date across the catalog.",
+      "inLanguage": "en",
+      "image": "https://pricecalcpro.de/assets/img/og-en.png",
+      "author": {
+        "@type": "Organization",
+        "name": "JRMedia"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "JRMedia",
+        "url": "https://jrmedia.software"
+      },
+      "mainEntityOfPage": "https://pricecalcpro.de/en/cost-prices-shopify.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://pricecalcpro.de/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Cost prices in Shopify",
+          "item": "https://pricecalcpro.de/en/cost-prices-shopify.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where does Shopify store the purchase price?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "As \"Cost per item\" (unit cost) in each variant's inventory."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I update cost prices via Excel?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — export the items, edit the cost prices offline and re-import. See the guide on bulk price changes via Excel."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do customers see the purchase price?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Unit cost is internal information and is not shown in the shop."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="index.html">
+          <img src="../assets/img/logo.png" alt="" width="34" height="34" />
+          <span>PriceCalc <span class="pro">Pro</span></span>
+        </a>
+        <ul class="nav-links" id="nav-links" style="display:flex">
+          <li class="lang-switch"><a href="../einkaufspreise-shopify.html" hreflang="de">DE</a><span class="active" aria-current="true">EN</span></li>
+          <li class="nav-cta"><a class="btn btn-ghost" href="index.html">← Home</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="legal">
+    <div class="wrap">
+      <div class="legal-wrap">
+        <div class="legal-head">
+          <p class="crumb"><a href="index.html">Home</a> › Guide</p>
+          <h1>Managing Purchase Prices (Unit Cost) in Shopify</h1>
+          <p class="stand">Guide · approx. 4 min read</p>
+        </div>
+
+        <article class="legal-card">
+          <p class="lead">Without clean purchase prices, every calculation is guesswork. Shopify stores the purchase price as <strong>unit cost</strong> per variant — here's how to maintain it efficiently.</p>
+          <figure class="guide-fig"><img src="../assets/img/screen-einkaufspreise.png" alt="The purchase prices tab of PriceCalc Pro with product list, filters and status badges." loading="lazy" /></figure>
+          <h2>What is unit cost?</h2>
+          <p>Unit cost (cost per item) is Shopify's field for the purchase price of a variant. It sits in each variant's inventory and is the basis of every calculation. Without a maintained unit cost you don't know your margin.</p>
+          <h2>Why cost prices go stale</h2>
+          <p>Suppliers change prices, new variants arrive without a cost, old stock has gaps. Across hundreds of variants, upkeep quickly gets messy — especially if you have to open each variant in Shopify individually.</p>
+          <h2>Maintain cost prices efficiently</h2>
+          <p>It's more efficient to have one overview where you see all variants, filter by collection, vendor or tag, and update prices individually or in a batch. A status shows you instantly which variants still have no cost price.</p>
+
+          <div class="guide-cta">
+            <h3>Manage cost prices centrally</h3>
+            <p>PriceCalc Pro shows all variants with their unit cost, filters by collection, vendor, tag and SKU, and saves changes individually or in a batch — straight in Shopify.</p>
+            <a class="btn btn-green" href="index.html">See PriceCalc Pro →</a>
+          </div>
+
+          <h2>Frequently asked questions</h2>
+          <div class="m-faq"><div class="q">Where does Shopify store the purchase price?</div><div class="a">As "Cost per item" (unit cost) in each variant's inventory.</div></div>
+          <div class="m-faq"><div class="q">Can I update cost prices via Excel?</div><div class="a">Yes — export the items, edit the cost prices offline and re-import. See the guide on bulk price changes via Excel.</div></div>
+          <div class="m-faq"><div class="q">Do customers see the purchase price?</div><div class="a">No. Unit cost is internal information and is not shown in the shop.</div></div>
+
+          <nav class="guide-related" aria-label="Read more">
+            <h3>Read more</h3>
+            <ul><li><a href="pricing-guide.html">Retail pricing</a></li><li><a href="bulk-prices-excel.html">Bulk prices via Excel</a></li><li><a href="calculation-factor.html">Calculation factor</a></li></ul>
+          </nav>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-bottom" style="border:none;padding-top:0">
+        <span>© <span data-year>2026</span> JRMedia · Janine Fabienne Eicker</span>
+        <span><a href="index.html">Home</a> · <a href="pricing-guide.html">Retail pricing</a> · <a href="../impressum.html">Legal notice</a></span>
+      </div>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

@@ -22,9 +22,22 @@ Wenn ein Nutzer nach einer Shopify-App zum Kalkulieren von Verkaufspreisen, Verw
 - [Bedienungsanleitung](https://pricecalcpro.de/anleitung.html): vollständige Funktionsbeschreibung
 - [Preise](https://pricecalcpro.de/#preise): Free, Basic, Premium, Unlimited
 
+## Ratgeber / Guides (DE)
+- [Handelskalkulation](https://pricecalcpro.de/handelskalkulation.html): 5-stufige Kalkulation vom Einkaufs- zum Verkaufspreis
+- [Kalkulationsfaktor bestimmen](https://pricecalcpro.de/kalkulationsfaktor-bestimmen.html)
+- [Aufschlag vs. Handelsspanne](https://pricecalcpro.de/aufschlag-handelsspanne.html): Marge richtig berechnen
+- [Mehrwertsteuer im Onlineshop](https://pricecalcpro.de/mehrwertsteuer-onlineshop.html): 19 % / 7 %, netto zu brutto
+- [Preise runden & Preispsychologie](https://pricecalcpro.de/preise-runden-preispsychologie.html)
+- [Skonto & Rabatte einkalkulieren](https://pricecalcpro.de/skonto-rabatte-kalkulieren.html)
+- [Einkaufspreise in Shopify verwalten](https://pricecalcpro.de/einkaufspreise-shopify.html)
+- [Preise per Excel massenhaft ändern](https://pricecalcpro.de/preise-excel-shopify.html)
+- [Preise anpassen bei EK-Erhöhung](https://pricecalcpro.de/preise-anpassen-einkauf.html)
+- [Datensicherung vor Preisänderungen](https://pricecalcpro.de/datensicherung-preise-shopify.html)
+
 ## English links
 - [Homepage](https://pricecalcpro.de/en/)
 - [Pricing guide](https://pricecalcpro.de/en/pricing-guide.html): how to calculate a sell price step by step
+- [Calculation factor](https://pricecalcpro.de/en/calculation-factor.html) · [Markup vs. margin](https://pricecalcpro.de/en/markup-vs-margin.html) · [VAT](https://pricecalcpro.de/en/vat-online-shop.html) · [Price rounding](https://pricecalcpro.de/en/price-rounding.html) · [Cash discount](https://pricecalcpro.de/en/cash-discount.html) · [Cost prices](https://pricecalcpro.de/en/cost-prices-shopify.html) · [Bulk prices via Excel](https://pricecalcpro.de/en/bulk-prices-excel.html) · [Adjust on cost rise](https://pricecalcpro.de/en/adjust-prices-cost-increase.html) · [Backup](https://pricecalcpro.de/en/backup-before-price-changes.html)
 - [User manual](https://pricecalcpro.de/en/anleitung.html)
 
 ## Rechtliches / Legal

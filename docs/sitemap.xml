@@ -46,4 +46,112 @@
   <url><loc>https://pricecalcpro.de/en/datenschutz.html</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
   <url><loc>https://pricecalcpro.de/en/app-datenschutz.html</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
   <url><loc>https://pricecalcpro.de/en/haftungsausschluss.html</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url>
+    <loc>https://pricecalcpro.de/kalkulationsfaktor-bestimmen.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pricecalcpro.de/kalkulationsfaktor-bestimmen.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pricecalcpro.de/en/calculation-factor.html"/>
+    <changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pricecalcpro.de/en/calculation-factor.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pricecalcpro.de/kalkulationsfaktor-bestimmen.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pricecalcpro.de/en/calculation-factor.html"/>
+    <changefreq>monthly</changefreq><priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pricecalcpro.de/aufschlag-handelsspanne.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pricecalcpro.de/aufschlag-handelsspanne.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pricecalcpro.de/en/markup-vs-margin.html"/>
+    <changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pricecalcpro.de/en/markup-vs-margin.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pricecalcpro.de/aufschlag-handelsspanne.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pricecalcpro.de/en/markup-vs-margin.html"/>
+    <changefreq>monthly</changefreq><priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pricecalcpro.de/mehrwertsteuer-onlineshop.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pricecalcpro.de/mehrwertsteuer-onlineshop.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pricecalcpro.de/en/vat-online-shop.html"/>
+    <changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pricecalcpro.de/en/vat-online-shop.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pricecalcpro.de/mehrwertsteuer-onlineshop.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pricecalcpro.de/en/vat-online-shop.html"/>
+    <changefreq>monthly</changefreq><priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pricecalcpro.de/preise-runden-preispsychologie.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pricecalcpro.de/preise-runden-preispsychologie.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pricecalcpro.de/en/price-rounding.html"/>
+    <changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pricecalcpro.de/en/price-rounding.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pricecalcpro.de/preise-runden-preispsychologie.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pricecalcpro.de/en/price-rounding.html"/>
+    <changefreq>monthly</changefreq><priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pricecalcpro.de/skonto-rabatte-kalkulieren.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pricecalcpro.de/skonto-rabatte-kalkulieren.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pricecalcpro.de/en/cash-discount.html"/>
+    <changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pricecalcpro.de/en/cash-discount.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pricecalcpro.de/skonto-rabatte-kalkulieren.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pricecalcpro.de/en/cash-discount.html"/>
+    <changefreq>monthly</changefreq><priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pricecalcpro.de/einkaufspreise-shopify.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pricecalcpro.de/einkaufspreise-shopify.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pricecalcpro.de/en/cost-prices-shopify.html"/>
+    <changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pricecalcpro.de/en/cost-prices-shopify.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pricecalcpro.de/einkaufspreise-shopify.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pricecalcpro.de/en/cost-prices-shopify.html"/>
+    <changefreq>monthly</changefreq><priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pricecalcpro.de/preise-excel-shopify.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pricecalcpro.de/preise-excel-shopify.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pricecalcpro.de/en/bulk-prices-excel.html"/>
+    <changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pricecalcpro.de/en/bulk-prices-excel.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pricecalcpro.de/preise-excel-shopify.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pricecalcpro.de/en/bulk-prices-excel.html"/>
+    <changefreq>monthly</changefreq><priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pricecalcpro.de/preise-anpassen-einkauf.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pricecalcpro.de/preise-anpassen-einkauf.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pricecalcpro.de/en/adjust-prices-cost-increase.html"/>
+    <changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pricecalcpro.de/en/adjust-prices-cost-increase.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pricecalcpro.de/preise-anpassen-einkauf.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pricecalcpro.de/en/adjust-prices-cost-increase.html"/>
+    <changefreq>monthly</changefreq><priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pricecalcpro.de/datensicherung-preise-shopify.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pricecalcpro.de/datensicherung-preise-shopify.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pricecalcpro.de/en/backup-before-price-changes.html"/>
+    <changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pricecalcpro.de/en/backup-before-price-changes.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pricecalcpro.de/datensicherung-preise-shopify.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pricecalcpro.de/en/backup-before-price-changes.html"/>
+    <changefreq>monthly</changefreq><priority>0.6</priority>
+  </url>
 </urlset>

@@ -294,7 +294,7 @@ ul { margin: 0; padding: 0; }
 
 /* ---------- Footer ---------- */
 .site-footer { background: var(--ink); color: var(--mist); padding: 64px 0 30px; }
-.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 34px; margin-bottom: 44px; }
+.footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr; gap: 30px; margin-bottom: 44px; }
 .footer-brand .brand { color: #fff; margin-bottom: 14px; }
 .footer-brand .brand .pro { color: var(--green-soft); }
 .footer-brand p { font-size: 0.92rem; max-width: 34ch; }
@@ -354,6 +354,14 @@ ul { margin: 0; padding: 0; }
 .crumb { font-family: var(--font-mono); font-size: 0.82rem; color: var(--muted); margin-bottom: 8px; }
 .crumb a { color: var(--muted); }
 .crumb a:hover { color: var(--blue); }
+.legal-card .guide-fig { margin: 22px 0 8px; }
+.legal-card .guide-fig img { width: 100%; border-radius: 14px; border: 1px solid var(--line); box-shadow: var(--shadow); display: block; }
+.legal-card .guide-fig figcaption { font-size: 0.85rem; color: var(--muted); text-align: center; margin-top: 10px; }
+.guide-related { margin-top: 30px; padding-top: 22px; border-top: 1px solid var(--line); }
+.guide-related h3 { font-size: 1.1rem; margin-bottom: 12px; }
+.guide-related ul { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; }
+.guide-related li a { display: inline-block; padding: 8px 15px; border-radius: 999px; background: var(--paper); border: 1px solid var(--line); font-size: 0.92rem; color: var(--ink-3); }
+.guide-related li a:hover { border-color: var(--blue); color: var(--blue); }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Einkaufspreise (Unit Cost) in Shopify verwalten | PriceCalc Pro</title>
+  <meta name="description" content="Einkaufspreise in Shopify richtig pflegen: Was der Unit Cost ist, wo Shopify ihn speichert und wie du EK-Preise über das ganze Sortiment aktuell hältst." />
+  <link rel="canonical" href="https://pricecalcpro.de/einkaufspreise-shopify.html" />
+  <link rel="alternate" hreflang="de" href="https://pricecalcpro.de/einkaufspreise-shopify.html" />
+  <link rel="alternate" hreflang="en" href="https://pricecalcpro.de/en/cost-prices-shopify.html" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0E1B2E" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Einkaufspreise (Unit Cost) in Shopify verwalten" />
+  <meta property="og:description" content="Einkaufspreise in Shopify richtig pflegen: Was der Unit Cost ist, wo Shopify ihn speichert und wie du EK-Preise über das ganze Sortiment aktuell hältst." />
+  <meta property="og:url" content="https://pricecalcpro.de/einkaufspreise-shopify.html" />
+  <meta property="og:image" content="https://pricecalcpro.de/assets/img/og.png" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Einkaufspreise (Unit Cost) in Shopify verwalten",
+      "description": "Einkaufspreise in Shopify richtig pflegen: Was der Unit Cost ist, wo Shopify ihn speichert und wie du EK-Preise über das ganze Sortiment aktuell hältst.",
+      "inLanguage": "de",
+      "image": "https://pricecalcpro.de/assets/img/og.png",
+      "author": {
+        "@type": "Organization",
+        "name": "JRMedia"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "JRMedia",
+        "url": "https://jrmedia.software"
+      },
+      "mainEntityOfPage": "https://pricecalcpro.de/einkaufspreise-shopify.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Start",
+          "item": "https://pricecalcpro.de/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Einkaufspreise in Shopify",
+          "item": "https://pricecalcpro.de/einkaufspreise-shopify.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Wo speichert Shopify den Einkaufspreis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Als „Cost per item“ (Unit Cost) im Inventar jeder Variante."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kann ich Einkaufspreise per Excel aktualisieren?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja – exportiere die Artikel, pflege die EK-Preise offline und importiere sie wieder. Mehr dazu im Ratgeber zur Excel-Massenänderung."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Sieht die Kundschaft den Einkaufspreis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nein. Der Unit Cost ist interne Information und wird im Shop nicht angezeigt."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+  <header class="site-header">
+    <div class="wrap">
+      <nav class="nav" aria-label="Hauptnavigation">
+        <a class="brand" href="index.html">
+          <img src="assets/img/logo.png" alt="" width="34" height="34" />
+          <span>PriceCalc <span class="pro">Pro</span></span>
+        </a>
+        <ul class="nav-links" id="nav-links" style="display:flex">
+          <li class="lang-switch"><span class="active" aria-current="true">DE</span><a href="en/cost-prices-shopify.html" hreflang="en">EN</a></li>
+          <li class="nav-cta"><a class="btn btn-ghost" href="index.html">← Zur Startseite</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="legal">
+    <div class="wrap">
+      <div class="legal-wrap">
+        <div class="legal-head">
+          <p class="crumb"><a href="index.html">Start</a> › Ratgeber</p>
+          <h1>Einkaufspreise (Unit Cost) in Shopify verwalten</h1>
+          <p class="stand">Ratgeber · Lesezeit ca. 4 Min.</p>
+        </div>
+
+        <article class="legal-card">
+          <p class="lead">Ohne saubere Einkaufspreise ist jede Kalkulation Raten. Shopify speichert den Einkaufspreis als <strong>Unit Cost</strong> je Variante – hier erfährst du, wie du ihn effizient pflegst.</p>
+          <figure class="guide-fig"><img src="assets/img/screen-einkaufspreise.png" alt="Der Einkaufspreise-Tab von PriceCalc Pro mit Produktliste, Filtern und Status-Badges." loading="lazy" /></figure>
+          <h2>Was ist der Unit Cost?</h2>
+          <p>Der Unit Cost (Kosten pro Artikel) ist Shopifys Feld für den Einkaufspreis einer Variante. Er liegt im Inventar jeder Variante und ist die Basis jeder Kalkulation. Ohne gepflegten Unit Cost kennst du deine Marge nicht.</p>
+          <h2>Warum EK-Preise oft veralten</h2>
+          <p>Lieferanten ändern Preise, neue Varianten kommen ohne Kosten dazu, Altbestände haben Lücken. Über hunderte Varianten wird die Pflege schnell unübersichtlich – besonders, wenn man jede Variante einzeln in Shopify öffnen muss.</p>
+          <h2>EK-Preise effizient pflegen</h2>
+          <p>Effizienter ist eine Übersicht, in der du alle Varianten siehst, nach Kollektion, Hersteller oder Tag filterst und Preise einzeln oder im Batch aktualisierst. Ein Status zeigt dir sofort, welche Varianten noch keinen Einkaufspreis haben.</p>
+
+          <div class="guide-cta">
+            <h3>Einkaufspreise zentral verwalten</h3>
+            <p>PriceCalc Pro zeigt alle Varianten mit ihrem Unit Cost, filtert nach Kollektion, Hersteller, Tag und SKU und speichert Änderungen einzeln oder im Batch – direkt in Shopify.</p>
+            <a class="btn btn-green" href="index.html">PriceCalc Pro ansehen →</a>
+          </div>
+
+          <h2>Häufige Fragen</h2>
+          <div class="m-faq"><div class="q">Wo speichert Shopify den Einkaufspreis?</div><div class="a">Als „Cost per item“ (Unit Cost) im Inventar jeder Variante.</div></div>
+          <div class="m-faq"><div class="q">Kann ich Einkaufspreise per Excel aktualisieren?</div><div class="a">Ja – exportiere die Artikel, pflege die EK-Preise offline und importiere sie wieder. Mehr dazu im Ratgeber zur Excel-Massenänderung.</div></div>
+          <div class="m-faq"><div class="q">Sieht die Kundschaft den Einkaufspreis?</div><div class="a">Nein. Der Unit Cost ist interne Information und wird im Shop nicht angezeigt.</div></div>
+
+          <nav class="guide-related" aria-label="Weiterlesen">
+            <h3>Weiterlesen</h3>
+            <ul><li><a href="handelskalkulation.html">Handelskalkulation</a></li><li><a href="preise-excel-shopify.html">Preise per Excel ändern</a></li><li><a href="kalkulationsfaktor-bestimmen.html">Kalkulationsfaktor bestimmen</a></li></ul>
+          </nav>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-bottom" style="border:none;padding-top:0">
+        <span>© <span data-year>2026</span> JRMedia · Janine Fabienne Eicker</span>
+        <span><a href="index.html">Startseite</a> · <a href="handelskalkulation.html">Handelskalkulation</a> · <a href="impressum.html">Impressum</a></span>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

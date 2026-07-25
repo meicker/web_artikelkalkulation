@@ -3,6 +3,7 @@ import { HeroChain } from "./HeroChain";
 import { OgCard } from "./OgCard";
 import { PromoVertical } from "./PromoVertical";
 import { BrandProfile, BrandLockupLight, BrandLockupDark, SocialBanner, BrandVertical, BrandReveal } from "./JrBrand";
+import { FactorGraphic, MarginGraphic, StepGraphic, VatGraphic, RoundingGraphic, SkontoGraphic } from "./GuideGraphics";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -16,6 +17,20 @@ export const RemotionRoot: React.FC = () => {
       <Still id="JrBannerX" component={SocialBanner} width={1500} height={500} defaultProps={{ safeH: 380 }} />
       <Still id="JrVertical" component={BrandVertical} width={1080} height={1920} />
       <Composition id="JrReveal" component={BrandReveal} durationInFrames={130} fps={30} width={1080} height={1080} />
+
+      {/* ---- Ratgeber-Grafiken ---- */}
+      <Still id="FactorGraphicDE" component={FactorGraphic} width={1600} height={900} defaultProps={{ lang: "de" as const }} />
+      <Still id="FactorGraphicEN" component={FactorGraphic} width={1600} height={900} defaultProps={{ lang: "en" as const }} />
+      <Still id="MarginGraphicDE" component={MarginGraphic} width={1600} height={900} defaultProps={{ lang: "de" as const }} />
+      <Still id="MarginGraphicEN" component={MarginGraphic} width={1600} height={900} defaultProps={{ lang: "en" as const }} />
+      <Still id="StepGraphicDE" component={StepGraphic} width={1600} height={760} defaultProps={{ lang: "de" as const }} />
+      <Still id="StepGraphicEN" component={StepGraphic} width={1600} height={760} defaultProps={{ lang: "en" as const }} />
+      <Still id="VatGraphicDE" component={VatGraphic} width={1600} height={800} defaultProps={{ lang: "de" as const }} />
+      <Still id="VatGraphicEN" component={VatGraphic} width={1600} height={800} defaultProps={{ lang: "en" as const }} />
+      <Still id="RoundingGraphicDE" component={RoundingGraphic} width={1600} height={760} defaultProps={{ lang: "de" as const }} />
+      <Still id="RoundingGraphicEN" component={RoundingGraphic} width={1600} height={760} defaultProps={{ lang: "en" as const }} />
+      <Still id="SkontoGraphicDE" component={SkontoGraphic} width={1600} height={760} defaultProps={{ lang: "de" as const }} />
+      <Still id="SkontoGraphicEN" component={SkontoGraphic} width={1600} height={760} defaultProps={{ lang: "en" as const }} />
 
       {/* ---- Website (PriceCalc Pro) ---- */}
       <Composition id="HeroChain" component={HeroChain} durationInFrames={330} fps={30} width={1920} height={1080} defaultProps={{ lang: "de" as const }} />
