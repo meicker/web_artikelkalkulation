@@ -12,8 +12,8 @@ const slugOf = (key, lang) => GUIDES.find((x) => x.key === key)[lang].slug;
 const labelOf = (key, lang) => GUIDES.find((x) => x.key === key)[lang].label;
 
 const UI = {
-  de: { skip: "Zum Inhalt springen", home: "index.html", crumb: "Start", back: "← Zur Startseite", nav: "Hauptnavigation", more: "Weiterlesen", ctaBtn: "PriceCalc Pro ansehen →", pillarNote: "Grundlagen" },
-  en: { skip: "Skip to content", home: "index.html", crumb: "Home", back: "← Home", nav: "Main navigation", more: "Read more", ctaBtn: "See PriceCalc Pro →", pillarNote: "Basics" },
+  de: { skip: "Zum Inhalt springen", home: "index.html", crumb: "Start", back: "← Zur Startseite", nav: "Hauptnavigation", more: "Alle Ratgeber", ctaBtn: "PriceCalc Pro ansehen →", pillarNote: "Grundlagen" },
+  en: { skip: "Skip to content", home: "index.html", crumb: "Home", back: "← Home", nav: "Main navigation", more: "All guides", ctaBtn: "See PriceCalc Pro →", pillarNote: "Basics" },
 };
 
 function page(guide, lang) {
@@ -47,10 +47,14 @@ function page(guide, lang) {
 
   const faqHtml = g.faq.map(([q, a]) => `          <div class="m-faq"><div class="q">${q}</div><div class="a">${a}</div></div>`).join("\n");
 
-  // related: pillar + related guides (same language)
-  const relItems = [`<li><a href="${base ? "" : ""}${PILLAR[lang].slug}">${PILLAR[lang].label}</a></li>`]
-    .concat((g.related || []).map((k) => `<li><a href="${slugOf(k, lang)}">${labelOf(k, lang)}</a></li>`))
-    .join("");
+  // related: full list of all guides, current one highlighted (easy click-through)
+  const ALL = [{ key: "__pillar__", slug: PILLAR[lang].slug, label: PILLAR[lang].label }]
+    .concat(GUIDES.map((x) => ({ key: x.key, slug: x[lang].slug, label: x[lang].label })));
+  const relItems = ALL.map((it) =>
+    it.key === guide.key
+      ? `<li><span class="active" aria-current="page">${it.label}</span></li>`
+      : `<li><a href="${it.slug}">${it.label}</a></li>`
+  ).join("\n              ");
 
   const ld = {
     "@context": "https://schema.org",
