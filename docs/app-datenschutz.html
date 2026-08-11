@@ -39,7 +39,7 @@
         <div class="legal-head">
           <a class="back" href="index.html">‹ Startseite</a>
           <h1>🔒 Datenschutzerklärung der App</h1>
-          <p class="stand">PriceCalc Pro – Shopify App · Stand: Juli 2026</p>
+          <p class="stand">PriceCalc Pro – Shopify App · Stand: August 2026</p>
         </div>
 
         <div class="legal-note">
@@ -48,221 +48,46 @@
         </div>
 
         <div class="legal-card">
-          <p style="color:var(--muted);font-size:.92rem;margin-bottom:20px">
-            <strong>PriceCalc Pro – Shopify App</strong><br />
-            Anbieter: Janine Fabienne Eicker, Unnersberger Allee 10, 42659 Solingen, Deutschland<br />
-            Kontakt: <a href="mailto:support@jrmedia.software">support@jrmedia.software</a>
-          </p>
+          <p style="color:var(--muted);font-size:.92rem;margin-bottom:20px"><strong>PriceCalc Pro – Shopify App</strong><br/>Anbieter: Janine Fabienne Eicker, Unnersberger Allee 10, 42659 Solingen, Deutschland<br/>Kontakt: <a href="mailto:support@jrmedia.software">support@jrmedia.software</a></p>
 
-          <h2>1. Verantwortlicher</h2>
-          <p>Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO) für die Verarbeitung
-            personenbezogener Daten im Zusammenhang mit der App PriceCalc Pro ist:</p>
-          <p><strong>Janine Fabienne Eicker</strong><br />Unnersberger Allee 10<br />42659 Solingen<br />Deutschland<br />E-Mail: support@jrmedia.software</p>
-          <p>Ein gesetzlich vorgeschriebener Datenschutzbeauftragter ist nicht benannt, da die
-            Voraussetzungen nach Art. 37 DSGVO i. V. m. § 38 BDSG nicht erfüllt sind.</p>
+          <h2 id="abschnitt-1">1. Verantwortlicher</h2>
+          <p>Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO) für die Verarbeitung personenbezogener Daten im Zusammenhang mit der App PriceCalc Pro ist:</p><p><strong>Janine Fabienne Eicker</strong><br/>Unnersberger Allee 10<br/>42659 Solingen<br/>Deutschland<br/>E-Mail: support@jrmedia.software</p><p>Ein gesetzlich vorgeschriebener Datenschutzbeauftragter ist nicht benannt, da die Voraussetzungen nach Art. 37 DSGVO i. V. m. § 38 BDSG nicht erfüllt sind.</p>
 
-          <h2>2. Überblick über die verarbeiteten Daten</h2>
-          <p>PriceCalc Pro ist eine <strong>in den Shopify Admin eingebettete B2B-App</strong>, die
-            ausschließlich von Shopify-Händlern (Unternehmen oder Selbstständigen) genutzt wird. Die App
-            verarbeitet folgende Datenkategorien:</p>
-          <p><strong>2.1 Produkt- und Preisdaten (via Shopify API)</strong><br />Die App ruft über die
-            Shopify Admin GraphQL API folgende Daten ab:</p>
-          <ul>
-            <li>Shop-ID und Shop-Währung</li>
-            <li>Produkt- und Variantendaten (Produktname, Variante, SKU, Einkaufspreis/Unit Cost, Verkaufspreis)</li>
-            <li>Kollektionen, Hersteller (Vendor) und Tags</li>
-            <li>Metafelder im Namespace <code>custom</code> (Kalkulationsfaktor, Bezugskosten, Handlungskosten, Gewinnzuschlag, Puffer, MwSt-Schlüssel, Sicherungspreis)</li>
-          </ul>
-          <p>Die App schreibt veränderte Preise und Metafelder zurück in den Shopify-Store des Nutzers.
-            Diese Produkt- und Preisdaten werden <strong>nicht dauerhaft auf Servern des Anbieters
-            gespeichert</strong>, sondern nur zur Laufzeit verarbeitet und im Browser des Nutzers gehalten.</p>
-          <p>Bei diesen Daten handelt es sich in der Regel um <strong>keine personenbezogenen Daten</strong>
-            im Sinne der DSGVO, da es sich um Geschäftsdaten des Händlers (Produkte, Preise) handelt.</p>
-          <p><strong>2.2 Shop-Stammdaten (serverseitige Speicherung)</strong><br />Zur Zuordnung von
-            Abonnement, Nutzungskontingent und Support speichert der Anbieter in der App-Datenbank (betrieben
-            durch Gadget, siehe Ziffer 4.2) folgende von Shopify übermittelte Stammdaten des Shops:</p>
-          <ul>
-            <li>Shop-ID, myshopify-Domain und Shop-Domain</li>
-            <li>Shop-Name und Name des Shop-Inhabers</li>
-            <li>E-Mail-Adresse des Shops</li>
-            <li>Land des Shops</li>
-            <li>Shopify-Tarif des Shops und Erstellungsdatum des Shops</li>
-          </ul>
-          <p>Diese Daten werden bei der Installation übernommen und über den Shopify-Webhook
-            <code>shop/update</code> aktuell gehalten. Da sie den Namen und die E-Mail-Adresse einer
-            natürlichen Person enthalten können — insbesondere bei Einzelunternehmern —, behandelt der
-            Anbieter sie als personenbezogene Daten. <strong>Anschrift, Telefonnummer und Geodaten des Shops
-            werden ausdrücklich nicht gespeichert.</strong></p>
-          <p><strong>2.3 Abrechnungs- und Abonnementdaten</strong><br />Die Abrechnung für kostenpflichtige
-            Pläne erfolgt ausschließlich über die <strong>Shopify Billing API</strong>. Zahlungsdaten werden
-            von Shopify verarbeitet; der Anbieter hat keinen Zugriff auf Kreditkarten- oder Bankdaten. Vom
-            Anbieter werden nur Plan-Status, Abonnement-Kennung, Laufzeitende und Nutzungszähler
-            gespeichert.</p>
-          <p><strong>2.4 Nutzungs- und Verwaltungsdaten (Missbrauchsabwehr)</strong><br />Zur Durchsetzung
-            der Plan-Kontingente und zur Abwehr von Missbrauch speichert der Anbieter je Shop folgende
-            Kennzahlen:</p>
-          <ul>
-            <li>Anzahl der Kalkulations- bzw. API-Aufrufe im laufenden Abrechnungszeitraum</li>
-            <li>Anzahl empfangener Webhooks und Anzahl der Kontingent-Überschreitungen</li>
-            <li>Zeitpunkt der letzten Aktivität in der App</li>
-            <li>Verwaltungsstatus des Shops (aktiv, markiert oder gesperrt) samt Grund und Zeitpunkt einer Markierung</li>
-          </ul>
-          <p>Diese Kennzahlen sind ausschließlich für den Anbieter in einem internen Verwaltungsbereich
-            einsehbar, der technisch auf festgelegte Administrator-Shops beschränkt ist. Auf dieser Grundlage
-            kann der Anbieter einen Shop bei erheblichem Missbrauch sperren oder die App entfernen. Eine
-            automatische Markierung auffälliger Shops dient dabei nur als internes Prüfsignal; die
-            Entscheidung über eine Sperrung wird stets manuell getroffen (siehe Ziffer 10). Die Zähler werden
-            monatlich zurückgesetzt.</p>
-          <p><strong>2.5 App-Einstellungen und Zugriff auf den Endgeräte-Speicher</strong><br />Nutzer&shy;einstellungen
-            (Autosave, Preisrundung, Sprache, Backup-Präferenz) sowie Arbeitssessions werden im
-            <strong>localStorage des Browsers</strong> gespeichert. Diese Daten verbleiben lokal im Browser
-            des Nutzers und werden nicht an den Server des Anbieters übertragen.</p>
-          <p>Zusätzlich setzen Shopify und die Plattform Gadget technisch notwendige Session-Cookies, um die
-            eingebettete App-Sitzung zu authentifizieren. Der Zugriff auf den Endgeräte-Speicher
-            (localStorage und Session-Cookies) ist für die Bereitstellung des vom Nutzer ausdrücklich
-            gewünschten Dienstes unbedingt erforderlich und daher nach <strong>§ 25 Abs. 2 Nr. 2 TDDDG
-            einwilligungsfrei</strong>. Analyse-, Tracking- oder Werbe-Cookies werden nicht eingesetzt.</p>
-          <p><strong>2.6 Sicherungsdateien (lokale Downloads)</strong><br />Exportierte Sicherungsdateien
-            (JSON) werden direkt auf das Gerät des Nutzers heruntergeladen und nicht auf Servern des
-            Anbieters gespeichert.</p>
-          <p><strong>2.7 Keine Verarbeitung von Endkundendaten</strong><br />PriceCalc Pro verarbeitet
-            <strong>keine personenbezogenen Daten der Endkunden</strong> des Shopify-Händlers. Die App
-            fordert von Shopify ausschließlich Berechtigungen für Produkte, Bestände, Standorte und Sprachen
-            an; ein Zugriff auf Bestellungen, Kundennamen, Adressen oder sonstige Kundendaten ist technisch
-            nicht möglich.</p>
+          <h2 id="abschnitt-2">2. Überblick über die verarbeiteten Daten</h2>
+          <p>PriceCalc Pro ist eine <strong>in den Shopify Admin eingebettete B2B-App</strong>, die ausschließlich von Shopify-Händlern (Unternehmen oder Selbstständigen) genutzt wird. Die App verarbeitet folgende Datenkategorien:</p><p><strong>2.1 Produkt- und Preisdaten (via Shopify API)</strong><br/>Die App ruft über die Shopify Admin GraphQL API folgende Daten ab:</p><ul><li>Shop-ID und Shop-Währung</li><li>Produkt- und Variantendaten (Produktname, Variante, SKU, Einkaufspreis/Unit Cost, Verkaufspreis)</li><li>Kollektionen, Hersteller (Vendor) und Tags</li><li>Metafelder im Namespace <code>custom</code> (Kalkulationsfaktor, Bezugskosten, Handlungskosten, Gewinnzuschlag, Puffer, MwSt-Schlüssel, Sicherungspreis)</li></ul><p>Die App schreibt veränderte Preise und Metafelder zurück in den Shopify-Store des Nutzers. Diese Produkt- und Preisdaten werden <strong>nicht dauerhaft auf Servern des Anbieters gespeichert</strong>, sondern nur zur Laufzeit verarbeitet und im Browser des Nutzers gehalten.</p><p>Bei diesen Daten handelt es sich in der Regel um <strong>keine personenbezogenen Daten</strong> im Sinne der DSGVO, da es sich um Geschäftsdaten des Händlers (Produkte, Preise) handelt.</p><p><strong>2.2 Shop-Stammdaten (serverseitige Speicherung)</strong><br/>Zur Zuordnung von Abonnement, Nutzungskontingent und Support speichert der Anbieter in der App-Datenbank (betrieben durch Gadget, siehe Ziffer 4.2) folgende von Shopify übermittelte Stammdaten des Shops:</p><ul><li>Shop-ID, myshopify-Domain und Shop-Domain</li><li>Shop-Name und Name des Shop-Inhabers</li><li>E-Mail-Adresse des Shops</li><li>Land des Shops</li><li>Shopify-Tarif des Shops und Erstellungsdatum des Shops</li></ul><p>Diese Daten werden bei der Installation übernommen und über den Shopify-Webhook <code>shop/update</code> aktuell gehalten. Da sie den Namen und die E-Mail-Adresse einer natürlichen Person enthalten können — insbesondere bei Einzelunternehmern —, behandelt der Anbieter sie als personenbezogene Daten. <strong>Anschrift, Telefonnummer und Geodaten des Shops werden ausdrücklich nicht gespeichert.</strong></p><p><strong>2.3 Abrechnungs- und Abonnementdaten</strong><br/>Die Abrechnung für kostenpflichtige Pläne erfolgt ausschließlich über die <strong>Shopify Billing API</strong>. Zahlungsdaten werden von Shopify verarbeitet; der Anbieter hat keinen Zugriff auf Kreditkarten- oder Bankdaten. Vom Anbieter werden nur Plan-Status, Abonnement-Kennung, Laufzeitende und Nutzungszähler gespeichert.</p><p><strong>2.4 Nutzungs- und Verwaltungsdaten (Missbrauchsabwehr)</strong><br/>Zur Durchsetzung der Plan-Kontingente und zur Abwehr von Missbrauch speichert der Anbieter je Shop folgende Kennzahlen:</p><ul><li>Anzahl der Kalkulations- bzw. API-Aufrufe im laufenden Abrechnungszeitraum</li><li>Anzahl empfangener Webhooks und Anzahl der Kontingent-Überschreitungen</li><li>Zeitpunkt der letzten Aktivität in der App</li><li>Verwaltungsstatus des Shops (aktiv, markiert oder gesperrt) samt Grund und Zeitpunkt einer Markierung</li></ul><p>Diese Kennzahlen sind ausschließlich für den Anbieter in einem internen Verwaltungsbereich einsehbar, der technisch auf festgelegte Administrator-Shops beschränkt ist. Auf dieser Grundlage kann der Anbieter einen Shop bei erheblichem Missbrauch sperren oder die App entfernen. Eine automatische Markierung auffälliger Shops dient dabei nur als internes Prüfsignal; die Entscheidung über eine Sperrung wird stets manuell getroffen (siehe Ziffer 10). Die Zähler werden monatlich zurückgesetzt.</p><p><strong>2.5 App-Einstellungen und Zugriff auf den Endgeräte-Speicher</strong><br/>Nutzereinstellungen (Autosave, Preisrundung, Sprache, Backup-Präferenz) sowie Arbeitssessions werden im <strong>localStorage des Browsers</strong> gespeichert. Diese Daten verbleiben lokal im Browser des Nutzers und werden nicht an den Server des Anbieters übertragen.</p><p>Beim Einlesen einer Lieferanten-Preisliste wird dort zusätzlich die angefangene Zuordnung dieser Liste abgelegt: der Dateiname, die Artikelnummern des Lieferanten und die dazu getroffenen Festlegungen. Sie dienen allein dazu, unterbrochene Arbeit fortsetzen zu können, verlassen den Browser des Nutzers nicht und werden nach 30 Tagen automatisch entfernt; über die Schaltfläche „Verwerfen“ lassen sie sich jederzeit sofort löschen.</p><p>Zusätzlich setzen Shopify und die Plattform Gadget technisch notwendige Session-Cookies, um die eingebettete App-Sitzung zu authentifizieren. Der Zugriff auf den Endgeräte-Speicher (localStorage und Session-Cookies) ist für die Bereitstellung des vom Nutzer ausdrücklich gewünschten Dienstes unbedingt erforderlich und daher nach <strong>§ 25 Abs. 2 Nr. 2 TDDDG einwilligungsfrei</strong>. Analyse-, Tracking- oder Werbe-Cookies werden nicht eingesetzt.</p><p><strong>2.6 Sicherungsdateien (lokale Downloads)</strong><br/>Exportierte Sicherungsdateien (JSON) werden direkt auf das Gerät des Nutzers heruntergeladen und nicht auf Servern des Anbieters gespeichert.</p><p><strong>2.7 Keine Verarbeitung von Endkundendaten</strong><br/>PriceCalc Pro verarbeitet <strong>keine personenbezogenen Daten der Endkunden</strong> des Shopify-Händlers. Die App fordert von Shopify ausschließlich Berechtigungen für Produkte, Bestände, Standorte und Sprachen an; ein Zugriff auf Bestellungen, Kundennamen, Adressen oder sonstige Kundendaten ist technisch nicht möglich.</p>
 
-          <h2>3. Zweck und Rechtsgrundlage der Verarbeitung</h2>
-          <table>
-            <thead><tr><th>Verarbeitungszweck</th><th>Rechtsgrundlage</th></tr></thead>
-            <tbody>
-              <tr><td>Bereitstellung der App-Funktionen (Lesen und Schreiben von Produkt- und Preisdaten)</td><td>Art. 6 Abs. 1 lit. b DSGVO – Vertragserfüllung</td></tr>
-              <tr><td>Abonnementverwaltung und Nutzungszählung</td><td>Art. 6 Abs. 1 lit. b DSGVO – Vertragserfüllung</td></tr>
-              <tr><td>Sicherheit und Fehlerbehebung</td><td>Art. 6 Abs. 1 lit. f DSGVO – Berechtigte Interessen des Anbieters</td></tr>
-              <tr><td>Missbrauchsabwehr, Durchsetzung der Nutzungskontingente und Sperrung auffälliger Shops (Ziffer 2.4)</td><td>Art. 6 Abs. 1 lit. f DSGVO – Berechtigte Interessen des Anbieters</td></tr>
-              <tr><td>Einhaltung von Shopify-DSGVO-Anforderungen (GDPR-Webhooks)</td><td>Art. 6 Abs. 1 lit. c DSGVO – Rechtliche Verpflichtung</td></tr>
-            </tbody>
-          </table>
-          <p>Das berechtigte Interesse des Anbieters (lit. f) besteht in der Sicherstellung des stabilen und
-            sicheren Betriebs der App sowie der Verhinderung von Missbrauch.</p>
+          <h2 id="abschnitt-3">3. Zweck und Rechtsgrundlage der Verarbeitung</h2>
+          <table><thead><tr><th>Verarbeitungszweck</th><th>Rechtsgrundlage</th></tr></thead><tbody><tr><td>Bereitstellung der App-Funktionen (Lesen und Schreiben von Produkt- und Preisdaten)</td><td>Art. 6 Abs. 1 lit. b DSGVO – Vertragserfüllung</td></tr><tr><td>Abonnementverwaltung und Nutzungszählung</td><td>Art. 6 Abs. 1 lit. b DSGVO – Vertragserfüllung</td></tr><tr><td>Sicherheit und Fehlerbehebung</td><td>Art. 6 Abs. 1 lit. f DSGVO – Berechtigte Interessen des Anbieters</td></tr><tr><td>Missbrauchsabwehr, Durchsetzung der Nutzungskontingente und Sperrung auffälliger Shops (Ziffer 2.4)</td><td>Art. 6 Abs. 1 lit. f DSGVO – Berechtigte Interessen des Anbieters</td></tr><tr><td>Einhaltung von Shopify-DSGVO-Anforderungen (GDPR-Webhooks)</td><td>Art. 6 Abs. 1 lit. c DSGVO – Rechtliche Verpflichtung</td></tr></tbody></table><p>Das berechtigte Interesse des Anbieters (lit. f) besteht in der Sicherstellung des stabilen und sicheren Betriebs der App sowie der Verhinderung von Missbrauch.</p>
 
-          <h2>4. Auftragsverarbeiter und Drittanbieter</h2>
-          <p><strong>4.1 Shopify Inc.</strong><br />Die App ist in den Shopify Admin eingebettet und greift
-            über die Shopify Admin API auf Shop-Daten zu. Shopify agiert in diesem Rahmen als eigenständiger
-            Verantwortlicher für die Verarbeitung von Händlerdaten gemäß eigenen Datenschutzbestimmungen:
-            <a href="https://www.shopify.com/legal/privacy" rel="noopener">shopify.com/legal/privacy</a></p>
-          <p><strong>4.2 Gadget Software Inc. (Hosting und Plattform)</strong><br />Die App wird auf der
-            Plattform <strong>Gadget</strong> (Gadget Software Inc., Vancouver, Kanada) gehostet und
-            betrieben. Gadget verarbeitet im Rahmen der Auftragsverarbeitung App-Daten, die über die Shopify
-            API abgerufen werden.</p>
-          <p>Gadget speichert Daten in <strong>Kanada</strong> (EU-Angemessenheitsbeschluss vorhanden) sowie
-            in den <strong>USA</strong> über Sub-Prozessoren (u. a. Google Cloud, Cloudflare). Für
-            Drittlandtransfers in die USA stützt sich Gadget auf Standardvertragsklauseln (SCCs) nach
-            Art. 46 Abs. 2 lit. c DSGVO.</p>
-          <p>Ein Data Processing Addendum (DPA) zwischen dem Anbieter und Gadget wird gemäß den Vorgaben von
-            Gadget Software Inc. abgeschlossen. Weitere Informationen:
-            <a href="https://gadget.dev/privacy" rel="noopener">gadget.dev/privacy</a> und
-            <a href="https://gadget.dev/data-processing-addendum" rel="noopener">gadget.dev/data-processing-addendum</a></p>
-          <p>Gadget setzt seinerseits die nachfolgenden Sub-Prozessoren ein. Die Übersicht gibt den von
-            Gadget benannten Stand zum Zeitpunkt der letzten Aktualisierung dieser Erklärung wieder; die
-            jeweils aktuelle Liste veröffentlicht Gadget unter
-            <a href="https://gadget.dev/privacy" rel="noopener">gadget.dev/privacy</a>.</p>
-          <table>
-            <thead><tr><th>Dienstleister</th><th>Funktion</th><th>Standort</th></tr></thead>
-            <tbody>
-              <tr><td>Google Cloud</td><td>Infrastruktur / Datenhosting</td><td>USA</td></tr>
-              <tr><td>Cloudflare (inkl. Cloudflare Analytics)</td><td>CDN / Sicherheit / Web-Aktivitätsprotokolle</td><td>USA</td></tr>
-              <tr><td>Crunchy Data</td><td>Datenbank-Betrieb</td><td>USA</td></tr>
-              <tr><td>Axiom</td><td>Produkt- und Betriebs-Logs</td><td>USA</td></tr>
-              <tr><td>Humio</td><td>Betriebs-Logs / Web-Aktivitätsprotokolle</td><td>USA</td></tr>
-              <tr><td>LaunchDarkly</td><td>Feature Flags</td><td>USA</td></tr>
-              <tr><td>Fivetran</td><td>Datenintegration und Auswertung</td><td>USA</td></tr>
-            </tbody>
-          </table>
-          <p><strong>4.3 Shopify CDN</strong><br />Die App lädt die von Shopify bereitgestellten Bibliotheken
-            App Bridge und Polaris direkt von den Shopify-Servern (<code>cdn.shopify.com</code>). Dabei wird
-            die IP-Adresse des Nutzers an Shopify übermittelt. Da die App ausschließlich innerhalb des
-            Shopify Admin ausgeführt wird, besteht diese Verbindung zu Shopify ohnehin.</p>
-          <p><strong>4.4 Keine weiteren Dienste</strong><br />Über die vorstehend genannten Dienste hinaus
-            werden keine weiteren Auftragsverarbeiter eingesetzt. Insbesondere bindet die App
-            <strong>keine Analyse-, Tracking-, Werbe- oder E-Mail-Marketing-Dienste</strong> ein, und es
-            findet keine Übermittlung von Daten an solche Dienste statt.</p>
+          <h2 id="abschnitt-4">4. Auftragsverarbeiter und Drittanbieter</h2>
+          <p><strong>4.1 Shopify Inc.</strong><br/>Die App ist in den Shopify Admin eingebettet und greift über die Shopify Admin API auf Shop-Daten zu. Shopify agiert in diesem Rahmen als eigenständiger Verantwortlicher für die Verarbeitung von Händlerdaten gemäß eigenen Datenschutzbestimmungen: <a href="https://www.shopify.com/legal/privacy" target="_blank" rel="noreferrer">shopify.com/legal/privacy</a></p><p><strong>4.2 Gadget Software Inc. (Hosting und Plattform)</strong><br/>Die App wird auf der Plattform <strong>Gadget</strong> (Gadget Software Inc., Vancouver, Kanada) gehostet und betrieben. Gadget verarbeitet im Rahmen der Auftragsverarbeitung App-Daten, die über die Shopify API abgerufen werden.</p><p>Gadget speichert Daten in <strong>Kanada</strong> (EU-Angemessenheitsbeschluss vorhanden) sowie in den <strong>USA</strong> über Sub-Prozessoren (u. a. Google Cloud, Cloudflare). Für Drittlandtransfers in die USA stützt sich Gadget auf Standardvertragsklauseln (SCCs) nach Art. 46 Abs. 2 lit. c DSGVO.</p><p>Ein Data Processing Addendum (DPA) zwischen dem Anbieter und Gadget wird gemäß den Vorgaben von Gadget Software Inc. abgeschlossen. Weitere Informationen: <a href="https://gadget.dev/privacy" target="_blank" rel="noreferrer">gadget.dev/privacy</a> und <a href="https://gadget.dev/data-processing-addendum" target="_blank" rel="noreferrer">gadget.dev/data-processing-addendum</a></p><p>Gadget setzt seinerseits die nachfolgenden Sub-Prozessoren ein. Die Übersicht gibt den von Gadget benannten Stand zum Zeitpunkt der letzten Aktualisierung dieser Erklärung wieder; die jeweils aktuelle Liste veröffentlicht Gadget unter <a href="https://gadget.dev/privacy" target="_blank" rel="noreferrer">gadget.dev/privacy</a>.</p><table><thead><tr><th>Dienstleister</th><th>Funktion</th><th>Standort</th></tr></thead><tbody><tr><td>Google Cloud</td><td>Infrastruktur / Datenhosting</td><td>USA</td></tr><tr><td>Cloudflare (inkl. Cloudflare Analytics)</td><td>CDN / Sicherheit / Web-Aktivitätsprotokolle</td><td>USA</td></tr><tr><td>Crunchy Data</td><td>Datenbank-Betrieb</td><td>USA</td></tr><tr><td>Axiom</td><td>Produkt- und Betriebs-Logs</td><td>USA</td></tr><tr><td>Humio</td><td>Betriebs-Logs / Web-Aktivitätsprotokolle</td><td>USA</td></tr><tr><td>LaunchDarkly</td><td>Feature Flags</td><td>USA</td></tr><tr><td>Fivetran</td><td>Datenintegration und Auswertung</td><td>USA</td></tr></tbody></table><p><strong>4.3 Shopify CDN</strong><br/>Die App lädt die von Shopify bereitgestellten Bibliotheken App Bridge und Polaris direkt von den Shopify-Servern (<code>cdn.shopify.com</code>). Dabei wird die IP-Adresse des Nutzers an Shopify übermittelt. Da die App ausschließlich innerhalb des Shopify Admin ausgeführt wird, besteht diese Verbindung zu Shopify ohnehin.</p><p><strong>4.4 Keine weiteren Dienste</strong><br/>Über die vorstehend genannten Dienste hinaus werden keine weiteren Auftragsverarbeiter eingesetzt. Insbesondere bindet die App <strong>keine Analyse-, Tracking-, Werbe- oder E-Mail-Marketing-Dienste</strong> ein, und es findet keine Übermittlung von Daten an solche Dienste statt.</p>
 
-          <h2>5. Übermittlung in Drittländer</h2>
-          <p>App-Daten können im Rahmen des Hostings durch Gadget Software Inc. in die USA und nach Kanada
-            übertragen werden. Für Kanada besteht ein EU-Angemessenheitsbeschluss der Europäischen
-            Kommission. Für Transfers in die USA werden Standardvertragsklauseln (SCC) gemäß Art. 46 Abs. 2
-            lit. c DSGVO als geeignete Garantien herangezogen.</p>
+          <h2 id="abschnitt-5">5. Übermittlung in Drittländer</h2>
+          <p>App-Daten können im Rahmen des Hostings durch Gadget Software Inc. in die USA und nach Kanada übertragen werden. Für Kanada besteht ein EU-Angemessenheitsbeschluss der Europäischen Kommission. Für Transfers in die USA werden Standardvertragsklauseln (SCC) gemäß Art. 46 Abs. 2 lit. c DSGVO als geeignete Garantien herangezogen.</p>
 
-          <h2>6. Shopify GDPR-Webhooks</h2>
-          <p>Als Shopify-Partner ist der Anbieter verpflichtet, folgende DSGVO-Webhooks von Shopify zu
-            empfangen und zu verarbeiten:</p>
-          <ul>
-            <li><strong>customers/data_request</strong>: Anfragen auf Auskunft über gespeicherte Kundendaten. Da die App keine Endkundendaten verarbeitet, wird diese Anfrage entsprechend beantwortet.</li>
-            <li><strong>customers/redact</strong>: Löschanfragen für Endkundendaten. Da keine solchen Daten gespeichert werden, entfällt eine Löschung.</li>
-            <li><strong>shop/redact</strong>: Anfrage zur Löschung von Shop-Daten, die 48 Stunden nach Deinstallation der App eingeht. Nach Eingang löscht der Anbieter automatisch sämtliche zum Shop gespeicherten Stammdaten (Shop-Name, Name des Inhabers, E-Mail-Adresse, Domain, Land), alle Abrechnungs- und Nutzungsdaten sowie alle Verwaltungs- und Missbrauchs-Kennzahlen gemäß Ziffer 2.4. Es verbleibt ausschließlich ein technischer Datensatz ohne personenbezogenen Inhalt (Shop-ID und myshopify-Domain), damit eine spätere Neuinstallation korrekt zugeordnet werden kann.</li>
-          </ul>
+          <h2 id="abschnitt-6">6. Shopify GDPR-Webhooks</h2>
+          <p>Als Shopify-Partner ist der Anbieter verpflichtet, folgende DSGVO-Webhooks von Shopify zu empfangen und zu verarbeiten:</p><ul><li><strong>customers/data_request</strong>: Anfragen auf Auskunft über gespeicherte Kundendaten. Da die App keine Endkundendaten verarbeitet, wird diese Anfrage entsprechend beantwortet.</li><li><strong>customers/redact</strong>: Löschanfragen für Endkundendaten. Da keine solchen Daten gespeichert werden, entfällt eine Löschung.</li><li><strong>shop/redact</strong>: Anfrage zur Löschung von Shop-Daten, die 48 Stunden nach Deinstallation der App eingeht. Nach Eingang löscht der Anbieter automatisch sämtliche zum Shop gespeicherten Stammdaten (Shop-Name, Name des Inhabers, E-Mail-Adresse, Domain, Land), alle Abrechnungs- und Nutzungsdaten sowie alle Verwaltungs- und Missbrauchs-Kennzahlen gemäß Ziffer 2.4. Es verbleibt ausschließlich ein technischer Datensatz ohne personenbezogenen Inhalt (Shop-ID und myshopify-Domain), damit eine spätere Neuinstallation korrekt zugeordnet werden kann.</li></ul>
 
-          <h2>7. Speicherdauer und Löschung</h2>
-          <table>
-            <thead><tr><th>Datenkategorie</th><th>Speicherdauer</th></tr></thead>
-            <tbody>
-              <tr><td>Produkt- und Preisdaten (Metafelder in Shopify)</td><td>Verbleiben im Shopify-Store des Händlers; keine dauerhafte serverseitige Speicherung durch den Anbieter</td></tr>
-              <tr><td>Shop-Stammdaten (Ziffer 2.2)</td><td>Für die Dauer der Installation; automatische Löschung mit Eingang des <code>shop/redact</code>-Webhooks (48 Stunden nach Deinstallation)</td></tr>
-              <tr><td>Abrechnungs- und Abonnementdaten (Ziffer 2.3)</td><td>Für die Dauer der Installation; automatische Löschung mit dem <code>shop/redact</code>-Webhook. Rechnungs- und Zahlungsbelege werden ausschließlich von Shopify erstellt und dort nach den gesetzlichen Fristen aufbewahrt; der Anbieter führt in der App selbst keine Buchhaltungsdaten</td></tr>
-              <tr><td>Nutzungs- und Verwaltungsdaten (Ziffer 2.4)</td><td>Zähler werden monatlich zurückgesetzt; vollständige Löschung mit dem <code>shop/redact</code>-Webhook</td></tr>
-              <tr><td>Browser-Einstellungen (localStorage)</td><td>Lokal im Browser des Nutzers; werden gelöscht sobald der Nutzer den Browser-Speicher leert oder die App deinstalliert</td></tr>
-              <tr><td>Protokolldaten / Logs</td><td>Gemäß den Aufbewahrungsrichtlinien von Gadget Software Inc. (in der Regel 30–90 Tage)</td></tr>
-            </tbody>
-          </table>
+          <h2 id="abschnitt-7">7. Speicherdauer und Löschung</h2>
+          <table><thead><tr><th>Datenkategorie</th><th>Speicherdauer</th></tr></thead><tbody><tr><td>Produkt- und Preisdaten (Metafelder in Shopify)</td><td>Verbleiben im Shopify-Store des Händlers; keine dauerhafte serverseitige Speicherung durch den Anbieter</td></tr><tr><td>Shop-Stammdaten (Ziffer 2.2)</td><td>Für die Dauer der Installation; automatische Löschung mit Eingang des <code>shop/redact</code>-Webhooks (48 Stunden nach Deinstallation)</td></tr><tr><td>Abrechnungs- und Abonnementdaten (Ziffer 2.3)</td><td>Für die Dauer der Installation; automatische Löschung mit dem <code>shop/redact</code>-Webhook. Rechnungs- und Zahlungsbelege werden ausschließlich von Shopify erstellt und dort nach den gesetzlichen Fristen aufbewahrt; der Anbieter führt in der App selbst keine Buchhaltungsdaten</td></tr><tr><td>Nutzungs- und Verwaltungsdaten (Ziffer 2.4)</td><td>Zähler werden monatlich zurückgesetzt; vollständige Löschung mit dem <code>shop/redact</code>-Webhook</td></tr><tr><td>Browser-Einstellungen (localStorage)</td><td>Lokal im Browser des Nutzers; werden gelöscht sobald der Nutzer den Browser-Speicher leert oder die App deinstalliert. Angefangene Preislisten-Zuordnungen entfallen zusätzlich automatisch nach 30 Tagen</td></tr><tr><td>Protokolldaten / Logs</td><td>Gemäß den Aufbewahrungsrichtlinien von Gadget Software Inc. (in der Regel 30–90 Tage)</td></tr></tbody></table>
 
-          <h2>8. Datensicherheit</h2>
-          <p>Der Anbieter trifft geeignete technische und organisatorische Maßnahmen nach Art. 32 DSGVO:</p>
-          <ul>
-            <li>Die Übertragung zwischen Browser, App und Shopify erfolgt ausschließlich verschlüsselt über HTTPS/TLS.</li>
-            <li>Der Zugriff auf Shop-Daten ist durch die Shopify-Sitzung authentifiziert und durch mandantenbezogene Zugriffsregeln auf den jeweils eigenen Shop beschränkt; ein Zugriff auf Daten anderer Shops ist ausgeschlossen.</li>
-            <li>Der interne Verwaltungsbereich (Ziffer 2.4) ist technisch auf festgelegte Administrator-Shops beschränkt.</li>
-            <li>Die App fordert von Shopify ausschließlich die für den Betrieb erforderlichen Berechtigungen an (Lesen und Schreiben von Produkten und Beständen, Lesen von Standorten und Sprachen).</li>
-            <li>Der Betrieb der Infrastruktur erfolgt über Gadget Software Inc. nach deren Sicherheitsstandards.</li>
-          </ul>
+          <h2 id="abschnitt-8">8. Datensicherheit</h2>
+          <p>Der Anbieter trifft geeignete technische und organisatorische Maßnahmen nach Art. 32 DSGVO:</p><ul><li>Die Übertragung zwischen Browser, App und Shopify erfolgt ausschließlich verschlüsselt über HTTPS/TLS.</li><li>Der Zugriff auf Shop-Daten ist durch die Shopify-Sitzung authentifiziert und durch mandantenbezogene Zugriffsregeln auf den jeweils eigenen Shop beschränkt; ein Zugriff auf Daten anderer Shops ist ausgeschlossen.</li><li>Der interne Verwaltungsbereich (Ziffer 2.4) ist technisch auf festgelegte Administrator-Shops beschränkt.</li><li>Die App fordert von Shopify ausschließlich die für den Betrieb erforderlichen Berechtigungen an (Lesen und Schreiben von Produkten und Beständen, Lesen von Standorten und Sprachen).</li><li>Der Betrieb der Infrastruktur erfolgt über Gadget Software Inc. nach deren Sicherheitsstandards.</li></ul>
 
-          <h2>9. Betroffenenrechte</h2>
-          <p>Als von der Datenverarbeitung betroffene Person stehen Ihnen folgende Rechte zu:</p>
-          <ul>
-            <li><strong>Auskunftsrecht</strong> (Art. 15 DSGVO): Sie können Auskunft über die zu Ihrer Person gespeicherten Daten verlangen.</li>
-            <li><strong>Berichtigungsrecht</strong> (Art. 16 DSGVO): Sie können die Berichtigung unrichtiger Daten verlangen.</li>
-            <li><strong>Recht auf Löschung</strong> (Art. 17 DSGVO): Sie können die Löschung Ihrer Daten verlangen, soweit keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</li>
-            <li><strong>Recht auf Einschränkung der Verarbeitung</strong> (Art. 18 DSGVO)</li>
-            <li><strong>Recht auf Datenübertragbarkeit</strong> (Art. 20 DSGVO)</li>
-            <li><strong>Widerspruchsrecht</strong> (Art. 21 DSGVO): Sie können der Verarbeitung auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO widersprechen.</li>
-            <li><strong>Beschwerderecht</strong> (Art. 77 DSGVO): Sie haben das Recht, sich bei einer Datenschutzaufsichtsbehörde zu beschweren. Zuständig ist die Aufsichtsbehörde Ihres gewöhnlichen Aufenthaltsortes oder des Ortes des mutmaßlichen Verstoßes.</li>
-          </ul>
-          <p>Zur Ausübung Ihrer Rechte wenden Sie sich bitte an: <a href="mailto:support@jrmedia.software">support@jrmedia.software</a></p>
+          <h2 id="abschnitt-9">9. Betroffenenrechte</h2>
+          <p>Als von der Datenverarbeitung betroffene Person stehen Ihnen folgende Rechte zu:</p><ul><li><strong>Auskunftsrecht</strong> (Art. 15 DSGVO): Sie können Auskunft über die zu Ihrer Person gespeicherten Daten verlangen.</li><li><strong>Berichtigungsrecht</strong> (Art. 16 DSGVO): Sie können die Berichtigung unrichtiger Daten verlangen.</li><li><strong>Recht auf Löschung</strong> (Art. 17 DSGVO): Sie können die Löschung Ihrer Daten verlangen, soweit keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</li><li><strong>Recht auf Einschränkung der Verarbeitung</strong> (Art. 18 DSGVO)</li><li><strong>Recht auf Datenübertragbarkeit</strong> (Art. 20 DSGVO)</li><li><strong>Widerspruchsrecht</strong> (Art. 21 DSGVO): Sie können der Verarbeitung auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO widersprechen.</li><li><strong>Beschwerderecht</strong> (Art. 77 DSGVO): Sie haben das Recht, sich bei einer Datenschutzaufsichtsbehörde zu beschweren. Zuständig ist die Aufsichtsbehörde Ihres gewöhnlichen Aufenthaltsortes oder des Ortes des mutmaßlichen Verstoßes.</li></ul><p>Zur Ausübung Ihrer Rechte wenden Sie sich bitte an: support@jrmedia.software</p>
 
-          <h2>10. Automatisierte Entscheidungsfindung</h2>
-          <p>Eine automatisierte Entscheidungsfindung oder ein Profiling im Sinne des Art. 22 DSGVO findet
-            nicht statt. Die in Ziffer 2.4 beschriebene automatische Markierung auffälliger Shops dient
-            ausschließlich als internes Prüfsignal und hat für sich genommen keine Rechtswirkung; über eine
-            Sperrung oder Entfernung der App entscheidet der Anbieter stets nach manueller Prüfung des
-            Einzelfalls. Betroffene können einer solchen Maßnahme unter den in Ziffer 9 genannten
-            Kontaktdaten widersprechen.</p>
+          <h2 id="abschnitt-10">10. Automatisierte Entscheidungsfindung</h2>
+          <p>Eine automatisierte Entscheidungsfindung oder ein Profiling im Sinne des Art. 22 DSGVO findet nicht statt. Die in Ziffer 2.4 beschriebene automatische Markierung auffälliger Shops dient ausschließlich als internes Prüfsignal und hat für sich genommen keine Rechtswirkung; über eine Sperrung oder Entfernung der App entscheidet der Anbieter stets nach manueller Prüfung des Einzelfalls. Betroffene können einer solchen Maßnahme unter den in Ziffer 9 genannten Kontaktdaten widersprechen.</p>
 
-          <h2>11. Verhältnis zwischen Händler und Anbieter</h2>
-          <p>Der Anbieter verarbeitet die vorstehend beschriebenen Daten als eigener Verantwortlicher zur
-            Erfüllung des Nutzungsvertrags mit dem Händler. Da PriceCalc Pro keine personenbezogenen Daten
-            der Endkunden des Händlers verarbeitet (siehe Ziffer 2.7), ist ein Auftragsverarbeitungsvertrag
-            (AVV) nach Art. 28 DSGVO zwischen Händler und Anbieter nicht erforderlich. Auf Anfrage stellt der
-            Anbieter Händlern gleichwohl eine entsprechende Vereinbarung zur Verfügung:
-            <a href="mailto:support@jrmedia.software">support@jrmedia.software</a></p>
+          <h2 id="abschnitt-11">11. Verhältnis zwischen Händler und Anbieter</h2>
+          <p>Der Anbieter verarbeitet die vorstehend beschriebenen Daten als eigener Verantwortlicher zur Erfüllung des Nutzungsvertrags mit dem Händler. Da PriceCalc Pro keine personenbezogenen Daten der Endkunden des Händlers verarbeitet (siehe Ziffer 2.7), ist ein Auftragsverarbeitungsvertrag (AVV) nach Art. 28 DSGVO zwischen Händler und Anbieter nicht erforderlich. Auf Anfrage stellt der Anbieter Händlern gleichwohl eine entsprechende Vereinbarung zur Verfügung: support@jrmedia.software</p>
 
-          <h2>12. Keine Shopify-Affilierung</h2>
-          <p>PriceCalc Pro ist eine unabhängige Drittanbieter-App und steht in keiner offiziellen Verbindung
-            zu Shopify Inc. Shopify® ist eine eingetragene Marke von Shopify Inc.</p>
+          <h2 id="abschnitt-12">12. Keine Shopify-Affilierung</h2>
+          <p>PriceCalc Pro ist eine unabhängige Drittanbieter-App und steht in keiner offiziellen Verbindung zu Shopify Inc. Shopify® ist eine eingetragene Marke von Shopify Inc.</p>
 
-          <h2>13. Änderungen dieser Datenschutzerklärung</h2>
-          <p>Der Anbieter behält sich vor, diese Datenschutzerklärung bei Änderungen der Rechtslage, der
-            App-Funktionen oder der Datenverarbeitungspraktiken zu aktualisieren. Die jeweils aktuelle
-            Fassung ist in der App abrufbar. Bei wesentlichen Änderungen wird der Nutzer, soweit möglich,
-            informiert.</p>
+          <h2 id="abschnitt-13">13. Änderungen dieser Datenschutzerklärung</h2>
+          <p>Der Anbieter behält sich vor, diese Datenschutzerklärung bei Änderungen der Rechtslage, der App-Funktionen oder der Datenverarbeitungspraktiken zu aktualisieren. Die jeweils aktuelle Fassung ist in der App abrufbar. Bei wesentlichen Änderungen wird der Nutzer, soweit möglich, informiert.</p>
         </div>
       </div>
     </div>
