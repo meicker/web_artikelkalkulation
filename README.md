@@ -3,7 +3,7 @@
 Marketing- und Informations-Website für die Shopify-App **PriceCalc Pro**
 (entwickelt & vertrieben von **JRMedia** / Janine Fabienne Eicker).
 
-Die Seite ist statisch (HTML/CSS/JS, keine Build-Abhängigkeiten) und wird über
+Die Seite ist statisch (HTML/CSS/JS, zur Laufzeit ohne Build) und wird über
 **GitHub Pages** aus dem Ordner [`/docs`](./docs) ausgeliefert. Sie ist zweisprachig
 (Deutsch = Root, Englisch = `/docs/en`). Fonts sind **selbst gehostet** (kein Google-CDN).
 Die Promo-Animation im Hero wird mit **Remotion** gerendert.
@@ -13,9 +13,11 @@ Die Promo-Animation im Hero wird mit **Remotion** gerendert.
 ```
 docs/                     ← die veröffentlichte Website (GitHub Pages Root)
   index.html              ← Startseite DE
-  impressum.html · datenschutz.html · app-datenschutz.html · haftungsausschluss.html
+  impressum.html · datenschutz.html · haftungsausschluss.html
+  app-datenschutz.html · anleitung.html   ← erzeugt, siehe „Aus der App erzeugte Seiten"
   en/                     ← englische Version (gleiche Dateinamen)
-    index.html · impressum.html · datenschutz.html · app-datenschutz.html · haftungsausschluss.html
+    index.html · impressum.html · datenschutz.html · haftungsausschluss.html
+    app-datenschutz.html · anleitung.html ← ebenfalls erzeugt
   assets/
     css/style.css         ← Design-System
     css/fonts.css         ← @font-face (generiert, siehe scripts/fetch-fonts.mjs)
@@ -27,7 +29,31 @@ docs/                     ← die veröffentlichte Website (GitHub Pages Root)
 src/                      ← Remotion-Quellen (sprachabhängig via defaultProps lang)
   theme.ts · HeroChain.tsx · OgCard.tsx · Root.tsx
 scripts/fetch-fonts.mjs   ← lädt woff2 von Google & generiert docs/assets/css/fonts.css
+scripts/build-privacy.mjs ← erzeugt app-datenschutz.html (DE/EN) aus dem App-Projekt
+scripts/build-manual.mjs  ← erzeugt anleitung.html (DE/EN) aus dem App-Projekt
 ```
+
+## Aus der App erzeugte Seiten
+
+Die App-Datenschutzerklärung und die Bedienungsanleitung stehen auch **in** der
+Shopify-App. Beide Fassungen müssen übereinstimmen — darum gibt es hier keine
+Zweitschrift des Textes, sondern zwei Erzeuger, die direkt aus dem App-Projekt
+(`../artikelkalkulation`) lesen:
+
+```bash
+node scripts/build-privacy.mjs   # ← web/content/privacy.<sprache>.json
+node scripts/build-manual.mjs    # ← web/locales/<sprache>.json, Zweig "manual"
+```
+
+Liegt das App-Projekt woanders: `PRICECALC_APP=/pfad/zur/app node scripts/…`.
+
+Die erzeugten HTML-Dateien sind **eingecheckt**, damit GitHub Pages die Seite
+weiter ohne Build ausliefert. Wer den Text ändert, ändert ihn im App-Projekt und
+lässt hier neu erzeugen — nicht umgekehrt.
+
+`build-manual.mjs` prüft zum Schluss, ob jeder Text der App auch auf der
+Webseite landet, und bricht mit Fehler ab, wenn nicht. Genau so ist die alte
+Handkopie unbemerkt 115 Texte hinter der App zurückgefallen.
 
 ## Fonts aktualisieren (Self-Hosting)
 

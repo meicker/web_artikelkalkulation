@@ -351,6 +351,16 @@ ul { margin: 0; padding: 0; }
 .legal-card .m-faq { background: var(--paper); border-radius: 8px; border-left: 3px solid #cfe0ff; padding: 12px 16px; margin-bottom: 12px; }
 .legal-card .m-faq .q { font-family: var(--font-display); font-weight: 600; color: var(--ink); margin-bottom: 4px; }
 .legal-card .m-faq .a { color: var(--muted); font-size: 0.95rem; }
+/* Nachschlagetabellen ohne Kopfzeile: links das Stichwort, rechts die Erklaerung. */
+.legal-card table.m-def td:first-child { width: 30%; color: var(--ink-3); white-space: normal; }
+.legal-card .m-warn table.m-def { margin: 8px 0 0; font-size: 0.9rem; }
+.legal-card .m-warn table.m-def td { border-bottom-color: #f0d6bb; color: #8b4a12; }
+/* Handlungsanleitung: nummerierter Schritt mit fetter Ueberschrift und Erklaerung. */
+.legal-card ol.m-steps { padding-left: 20px; margin: 8px 0 16px; }
+.legal-card ol.m-steps > li { margin-bottom: 10px; }
+.legal-card ol.m-steps > li > strong { color: var(--ink-3); }
+.legal-card ol.m-steps > li > div { color: var(--muted); font-size: 0.95rem; margin-top: 2px; }
+.legal-card .m-foot { margin-top: 4px; color: var(--muted); font-size: 0.95rem; }
 
 /* ---------- Guide / SEO article ---------- */
 .legal-card .lead { font-size: 1.12rem; color: var(--text); }
