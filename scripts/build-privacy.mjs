@@ -81,6 +81,7 @@ function page(lang, doc) {
   <link rel="canonical" href="${u.canonical}" />
   <link rel="alternate" hreflang="de" href="${ALT_DE}" />
   <link rel="alternate" hreflang="en" href="${ALT_EN}" />
+  <link rel="alternate" hreflang="x-default" href="${ALT_DE}" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#0E1B2E" />
   <link rel="icon" href="/favicon.ico" sizes="any" />

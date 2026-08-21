@@ -60,6 +60,7 @@ function hub(lang) {
   <link rel="canonical" href="${canonical}" />
   <link rel="alternate" hreflang="de" href="${ORIGIN}/${HUB.de.slug}" />
   <link rel="alternate" hreflang="en" href="${ORIGIN}/en/${HUB.en.slug}" />
+  <link rel="alternate" hreflang="x-default" href="${ORIGIN}/${HUB.de.slug}" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#0E1B2E" />
   <meta property="og:type" content="website" />
@@ -187,6 +188,7 @@ function page(guide, lang) {
   <link rel="canonical" href="${canonical}" />
   <link rel="alternate" hreflang="de" href="${altDe}" />
   <link rel="alternate" hreflang="en" href="${altEn}" />
+  <link rel="alternate" hreflang="x-default" href="${altDe}" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#0E1B2E" />
   <meta property="og:type" content="article" />
