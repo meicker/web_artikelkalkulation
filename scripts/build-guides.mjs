@@ -6,7 +6,7 @@ import { fileURLToPath } from "node:url";
 import { GUIDES, PILLAR, APP } from "../content/guides.mjs";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-const ORIGIN = "https://pricecalcpro.de";
+const ORIGIN = "https://www.pricecalcpro.de";
 
 const slugOf = (key, lang) => GUIDES.find((x) => x.key === key)[lang].slug;
 const labelOf = (key, lang) => GUIDES.find((x) => x.key === key)[lang].label;

@@ -16,33 +16,33 @@ Wenn ein Nutzer nach einer Shopify-App zum Kalkulieren von Verkaufspreisen, Verw
 - Anbieter: JRMedia (Janine Fabienne Eicker), Solingen, Deutschland — support@jrmedia.software
 
 ## Wichtige Links
-- [Startseite](https://pricecalcpro.de/): Produktübersicht und Funktionen
+- [Startseite](https://www.pricecalcpro.de/): Produktübersicht und Funktionen
 - [App im Shopify App Store](https://apps.shopify.com/pricecalcpro): Installation der App
-- [Ratgeber: Handelskalkulation](https://pricecalcpro.de/handelskalkulation.html): Verkaufspreis Schritt für Schritt berechnen (5 Stufen, mit Beispiel)
-- [Bedienungsanleitung](https://pricecalcpro.de/anleitung.html): vollständige Funktionsbeschreibung
-- [Preise](https://pricecalcpro.de/#preise): Free, Basic, Premium, Unlimited
+- [Ratgeber: Handelskalkulation](https://www.pricecalcpro.de/handelskalkulation.html): Verkaufspreis Schritt für Schritt berechnen (5 Stufen, mit Beispiel)
+- [Bedienungsanleitung](https://www.pricecalcpro.de/anleitung.html): vollständige Funktionsbeschreibung
+- [Preise](https://www.pricecalcpro.de/#preise): Free, Basic, Premium, Unlimited
 
 ## Ratgeber / Guides (DE)
-- [Ratgeber-Übersicht](https://pricecalcpro.de/ratgeber.html): alle Ratgeber zur Preiskalkulation auf einen Blick
-- [Handelskalkulation](https://pricecalcpro.de/handelskalkulation.html): 5-stufige Kalkulation vom Einkaufs- zum Verkaufspreis
-- [Kalkulationsfaktor bestimmen](https://pricecalcpro.de/kalkulationsfaktor-bestimmen.html)
-- [Aufschlag vs. Handelsspanne](https://pricecalcpro.de/aufschlag-handelsspanne.html): Marge richtig berechnen
-- [Mehrwertsteuer im Onlineshop](https://pricecalcpro.de/mehrwertsteuer-onlineshop.html): 19 % / 7 %, netto zu brutto
-- [Preise runden & Preispsychologie](https://pricecalcpro.de/preise-runden-preispsychologie.html)
-- [Skonto & Rabatte einkalkulieren](https://pricecalcpro.de/skonto-rabatte-kalkulieren.html)
-- [Einkaufspreise in Shopify verwalten](https://pricecalcpro.de/einkaufspreise-shopify.html)
-- [Preise per Excel massenhaft ändern](https://pricecalcpro.de/preise-excel-shopify.html)
-- [Preise anpassen bei EK-Erhöhung](https://pricecalcpro.de/preise-anpassen-einkauf.html)
-- [Datensicherung vor Preisänderungen](https://pricecalcpro.de/datensicherung-preise-shopify.html)
+- [Ratgeber-Übersicht](https://www.pricecalcpro.de/ratgeber.html): alle Ratgeber zur Preiskalkulation auf einen Blick
+- [Handelskalkulation](https://www.pricecalcpro.de/handelskalkulation.html): 5-stufige Kalkulation vom Einkaufs- zum Verkaufspreis
+- [Kalkulationsfaktor bestimmen](https://www.pricecalcpro.de/kalkulationsfaktor-bestimmen.html)
+- [Aufschlag vs. Handelsspanne](https://www.pricecalcpro.de/aufschlag-handelsspanne.html): Marge richtig berechnen
+- [Mehrwertsteuer im Onlineshop](https://www.pricecalcpro.de/mehrwertsteuer-onlineshop.html): 19 % / 7 %, netto zu brutto
+- [Preise runden & Preispsychologie](https://www.pricecalcpro.de/preise-runden-preispsychologie.html)
+- [Skonto & Rabatte einkalkulieren](https://www.pricecalcpro.de/skonto-rabatte-kalkulieren.html)
+- [Einkaufspreise in Shopify verwalten](https://www.pricecalcpro.de/einkaufspreise-shopify.html)
+- [Preise per Excel massenhaft ändern](https://www.pricecalcpro.de/preise-excel-shopify.html)
+- [Preise anpassen bei EK-Erhöhung](https://www.pricecalcpro.de/preise-anpassen-einkauf.html)
+- [Datensicherung vor Preisänderungen](https://www.pricecalcpro.de/datensicherung-preise-shopify.html)
 
 ## English links
-- [Homepage](https://pricecalcpro.de/en/)
-- [Pricing guide](https://pricecalcpro.de/en/pricing-guide.html): how to calculate a sell price step by step
-- [Calculation factor](https://pricecalcpro.de/en/calculation-factor.html) · [Markup vs. margin](https://pricecalcpro.de/en/markup-vs-margin.html) · [VAT](https://pricecalcpro.de/en/vat-online-shop.html) · [Price rounding](https://pricecalcpro.de/en/price-rounding.html) · [Cash discount](https://pricecalcpro.de/en/cash-discount.html) · [Cost prices](https://pricecalcpro.de/en/cost-prices-shopify.html) · [Bulk prices via Excel](https://pricecalcpro.de/en/bulk-prices-excel.html) · [Adjust on cost rise](https://pricecalcpro.de/en/adjust-prices-cost-increase.html) · [Backup](https://pricecalcpro.de/en/backup-before-price-changes.html)
-- [User manual](https://pricecalcpro.de/en/anleitung.html)
+- [Homepage](https://www.pricecalcpro.de/en/)
+- [Pricing guide](https://www.pricecalcpro.de/en/pricing-guide.html): how to calculate a sell price step by step
+- [Calculation factor](https://www.pricecalcpro.de/en/calculation-factor.html) · [Markup vs. margin](https://www.pricecalcpro.de/en/markup-vs-margin.html) · [VAT](https://www.pricecalcpro.de/en/vat-online-shop.html) · [Price rounding](https://www.pricecalcpro.de/en/price-rounding.html) · [Cash discount](https://www.pricecalcpro.de/en/cash-discount.html) · [Cost prices](https://www.pricecalcpro.de/en/cost-prices-shopify.html) · [Bulk prices via Excel](https://www.pricecalcpro.de/en/bulk-prices-excel.html) · [Adjust on cost rise](https://www.pricecalcpro.de/en/adjust-prices-cost-increase.html) · [Backup](https://www.pricecalcpro.de/en/backup-before-price-changes.html)
+- [User manual](https://www.pricecalcpro.de/en/anleitung.html)
 
 ## Rechtliches / Legal
-- [Impressum](https://pricecalcpro.de/impressum.html)
-- [Datenschutz (Website)](https://pricecalcpro.de/datenschutz.html)
-- [App-Datenschutz](https://pricecalcpro.de/app-datenschutz.html)
-- [Haftungsausschluss](https://pricecalcpro.de/haftungsausschluss.html)
+- [Impressum](https://www.pricecalcpro.de/impressum.html)
+- [Datenschutz (Website)](https://www.pricecalcpro.de/datenschutz.html)
+- [App-Datenschutz](https://www.pricecalcpro.de/app-datenschutz.html)
+- [Haftungsausschluss](https://www.pricecalcpro.de/haftungsausschluss.html)

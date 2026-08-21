@@ -10,6 +10,7 @@ import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
+const ORIGIN = "https://www.pricecalcpro.de";
 const app = process.env.PRICECALC_APP
   ? resolve(process.env.PRICECALC_APP)
   : resolve(root, "..", "artikelkalkulation");
@@ -35,7 +36,7 @@ const UI = {
     lang: "de", asset: "assets", home: "index.html", homeCrumb: "‹ Startseite", homeBtn: "← Zur Startseite",
     skip: "Zum Inhalt springen", nav: "Hauptnavigation", other: "en/app-datenschutz.html",
     out: "docs/app-datenschutz.html",
-    canonical: "https://pricecalcpro.de/app-datenschutz.html",
+    canonical: `${ORIGIN}/app-datenschutz.html`,
     pageTitle: "App-Datenschutzerklärung – PriceCalc Pro",
     h1: "🔒 Datenschutzerklärung der App",
     metaDesc: "Datenschutzerklärung der Shopify-App PriceCalc Pro: verarbeitete Daten, Rechtsgrundlagen, Auftragsverarbeiter, Drittlandtransfers und Betroffenenrechte.",
@@ -47,7 +48,7 @@ const UI = {
     lang: "en", asset: "../assets", home: "index.html", homeCrumb: "‹ Home", homeBtn: "← Home",
     skip: "Skip to content", nav: "Main navigation", other: "../app-datenschutz.html",
     out: "docs/en/app-datenschutz.html",
-    canonical: "https://pricecalcpro.de/en/app-datenschutz.html",
+    canonical: `${ORIGIN}/en/app-datenschutz.html`,
     pageTitle: "App Privacy Policy – PriceCalc Pro",
     h1: "🔒 App Privacy Policy",
     metaDesc: "Privacy policy of the Shopify app PriceCalc Pro: data processed, legal bases, processors, third-country transfers and data subject rights.",
@@ -57,8 +58,8 @@ const UI = {
   },
 };
 
-const ALT_DE = "https://pricecalcpro.de/app-datenschutz.html";
-const ALT_EN = "https://pricecalcpro.de/en/app-datenschutz.html";
+const ALT_DE = `${ORIGIN}/app-datenschutz.html`;
+const ALT_EN = `${ORIGIN}/en/app-datenschutz.html`;
 
 function page(lang, doc) {
   const u = UI[lang];

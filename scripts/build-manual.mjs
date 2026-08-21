@@ -17,6 +17,7 @@ import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
+const ORIGIN = "https://www.pricecalcpro.de";
 const app = process.env.PRICECALC_APP
   ? resolve(process.env.PRICECALC_APP)
   : resolve(root, "..", "artikelkalkulation");
@@ -262,14 +263,14 @@ const UI = {
   de: {
     lang: "de", asset: "assets", home: "index.html", homeCrumb: "‹ Startseite", homeBtn: "← Zur Startseite",
     skip: "Zum Inhalt springen", other: "en/anleitung.html",
-    canonical: "https://pricecalcpro.de/anleitung.html",
+    canonical: `${ORIGIN}/anleitung.html`,
     metaDesc: "Vollständige Bedienungsanleitung für PriceCalc Pro: Einkaufspreise, Preislisten-Import, Kalkulationsfaktoren, Lieferanten, Artikelkalkulation, Datensicherung, Einstellungen und Abonnement.",
     tocLabel: "Inhalt",
   },
   en: {
     lang: "en", asset: "../assets", home: "index.html", homeCrumb: "‹ Home", homeBtn: "← Home",
     skip: "Skip to content", other: "../anleitung.html",
-    canonical: "https://pricecalcpro.de/en/anleitung.html",
+    canonical: `${ORIGIN}/en/anleitung.html`,
     metaDesc: "Complete user guide for PriceCalc Pro: purchase prices, price-list import, calculation factors, vendors, product calculation, data backup, settings and subscription.",
     tocLabel: "Contents",
   },
@@ -282,8 +283,8 @@ function page(lang, m) {
     lang === "de"
       ? `<span class="active" aria-current="true">DE</span><a href="${u.other}" hreflang="en">EN</a>`
       : `<a href="${u.other}" hreflang="de">DE</a><span class="active" aria-current="true">EN</span>`;
-  const altDe = lang === "de" ? u.canonical : "https://pricecalcpro.de/anleitung.html";
-  const altEn = lang === "de" ? "https://pricecalcpro.de/en/anleitung.html" : u.canonical;
+  const altDe = lang === "de" ? u.canonical : `${ORIGIN}/anleitung.html`;
+  const altEn = lang === "de" ? `${ORIGIN}/en/anleitung.html` : u.canonical;
 
   return `<!DOCTYPE html>
 <html lang="${u.lang}">

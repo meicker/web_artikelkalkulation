@@ -27,4 +27,4 @@ User-agent: CCBot
 Allow: /
 
 # Maschinenlesbare Zusammenfassung für LLMs: /llms.txt
-Sitemap: https://pricecalcpro.de/sitemap.xml
+Sitemap: https://www.pricecalcpro.de/sitemap.xml
