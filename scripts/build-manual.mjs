@@ -107,7 +107,7 @@ function sessionBlock(s) {
 }
 
 // Reihenfolge und Abschnittskennungen spiegeln web/routes/_app.manual.tsx.
-const TOC_IDS = ["ueberblick", "ek", "kalkulationsfaktoren", "lieferanten", "artikelkalkulation", "sicherung", "einstellungen", "abonnement", "tipps"];
+const TOC_IDS = ["ueberblick", "ek", "preislisten-import", "kalkulationsfaktoren", "lieferanten", "artikelkalkulation", "sicherung", "einstellungen", "abonnement", "kontakt", "tipps"];
 
 function renderManual(m) {
   const O = [];
@@ -138,15 +138,18 @@ function renderManual(m) {
   O.push(sub(ek.statusbarTitle), p(ek.statusbarDesc));
   O.push(sub(ek.factorHintTitle), p(ek.factorHintDesc));
   O.push(sessionBlock(m.session));
-  O.push(sub(ek.excelTitle), p(ek.excelDesc), p(ek.excelImportDesc), tip(`💡 ${ek.excelImportNote}`), tip(`🔒 ${ek.excelPlan}`));
+  O.push(sub(ek.excelTitle), p(ek.excelDesc), p(ek.excelImportDesc), tip(`💡 ${ek.excelImportNote}`), tip(`🔒 ${ek.excelPlan}`), tip(`📥 ${ek.plPointer}`));
 
-  // Preislisten-Import
-  O.push(sub(ek.plTitle), p(ek.plDesc));
+  // Preislisten-Import - eigener Abschnitt wie in der App.
+  O.push(`<h2 id="${TOC_IDS[2]}">📥 ${m.toc[2]}</h2>`);
+  O.push(p(ek.plDesc));
+  O.push(warn(`<strong>${ek.plNoGuaranteeTitle}</strong> ${ek.plNoGuarantee}`));
   O.push(sub(ek.plHowTitle), p(ek.plHowIntro), stepList(ek.plHowSteps));
   O.push(warn(`<strong>${ek.plHowPitfallTitle}</strong>${defTable(ek.plHowPitfalls)}`));
   O.push(sub(ek.plMatchTitle), p(ek.plMatchDesc), defTable(ek.plMatchRows));
   O.push(sub(ek.plBlocksTitle), p(ek.plBlocksDesc), tip(`💡 ${ek.plBlocksTip}`));
   O.push(sub(ek.plColTitle), p(ek.plColDesc));
+  O.push(sub(ek.plLimitTitle), p(ek.plLimitDesc), defTable(ek.plLimitRows), tip(`💡 ${ek.plLimitTip}`));
   O.push(sub(ek.plChangeTitle), p(ek.plChangeDesc));
   O.push(sub(ek.plPriceRelTitle), p(ek.plPriceRelDesc), warn(`⚠️ ${ek.plPriceRelConflict}`));
   O.push(sub(ek.plEanTitle), p(ek.plEanDesc));
@@ -169,7 +172,7 @@ function renderManual(m) {
 
   // Kalkulationsfaktoren (Vorlagen)
   const pr = m.presets;
-  O.push(`<h2 id="${TOC_IDS[2]}">🧮 ${pr.title}</h2>`);
+  O.push(`<h2 id="${TOC_IDS[3]}">🧮 ${pr.title}</h2>`);
   O.push(p(pr.desc));
   O.push(sub(pr.presetTitle), p(pr.presetDesc), tip(`💡 ${pr.presetNote}`));
   O.push(sub(pr.modeTitle), p(pr.modeDesc), defTable(pr.modeRows), p(pr.modeBadgeDesc), p(pr.modeCollDesc), tip(`💡 ${pr.modeManualTip}`));
@@ -181,7 +184,7 @@ function renderManual(m) {
 
   // Lieferanten
   const v = m.vendors;
-  O.push(`<h2 id="${TOC_IDS[3]}">🏭 ${v.title}</h2>`);
+  O.push(`<h2 id="${TOC_IDS[4]}">🏭 ${v.title}</h2>`);
   O.push(p(v.desc));
   O.push(sub(v.listTitle), p(v.listDesc), tip(`💡 ${v.listNote}`));
   O.push(sub(v.prefixTitle), p(v.prefixDesc), p(v.prefixMulti));
@@ -194,7 +197,7 @@ function renderManual(m) {
 
   // Artikelkalkulation
   const a = m.artikelkalk;
-  O.push(`<h2 id="${TOC_IDS[4]}">🏷 ${a.title}</h2>`);
+  O.push(`<h2 id="${TOC_IDS[5]}">🏷 ${a.title}</h2>`);
   O.push(p(a.desc));
   O.push(warn(`⚠ ${a.disclaimerNote}`));
   O.push(sub(a.factorInputTitle), ul([a.factorInput1, a.factorInput2]));
@@ -219,14 +222,17 @@ function renderManual(m) {
 
   // Sicherung
   const b = m.sicherung;
-  O.push(`<h2 id="${TOC_IDS[5]}">💾 ${b.title}</h2>`);
+  O.push(`<h2 id="${TOC_IDS[6]}">💾 ${b.title}</h2>`);
   O.push(p(b.desc));
   O.push(sub(b.exportTitle), p(b.exportIntro), ul([b.export1, b.export2, b.export3, b.export4]), tip(`💡 ${b.exportTip}`), p(b.exportPlan));
   O.push(sub(b.restoreTitle), ol([b.restore1, b.restore2, b.restore3, b.restore4, b.restore5]), warn(`⚠ ${b.restoreWarn}`), p(b.restorePlan));
+  O.push(sub(b.setTitle), p(b.setDesc), ul([b.setBlock1, b.setBlock2, b.setBlock3]),
+    ol([b.setStep1, b.setStep2, b.setStep3, b.setStep4]),
+    tip(`🔁 ${b.setMerge}`), warn(`⚠ ${b.setNote}`), p(b.setPlan));
 
   // Einstellungen
   const e = m.einstellungen;
-  O.push(`<h2 id="${TOC_IDS[6]}">⚙ ${e.title}</h2>`);
+  O.push(`<h2 id="${TOC_IDS[7]}">⚙ ${e.title}</h2>`);
   O.push(p(e.desc));
   O.push(sub(e.autosaveTitle), p(e.autosaveDesc), tip(`🔒 ${e.autosavePlan}`));
   O.push(sub(e.autoBackupTitle), p(e.autoBackupDesc));
@@ -234,18 +240,27 @@ function renderManual(m) {
   O.push(sub(e.roundingTitle), p(e.roundingDesc), p(e.roundingNote), tip(`🔒 ${e.roundingPlan}`));
   O.push(sub(e.productPageSizeTitle), p(e.productPageSizeDesc));
   O.push(sub(e.langTitle), p(e.langDesc));
+  O.push(sub(e.removeTitle), p(e.removeDesc), warn(e.removeWarn));
 
   // Abonnement
   const ab = m.abo;
   const t = m.tips;
-  O.push(`<h2 id="${TOC_IDS[7]}">💳 ${ab.title}</h2>`);
+  O.push(`<h2 id="${TOC_IDS[8]}">💳 ${ab.title}</h2>`);
   O.push(p(ab.desc));
   O.push(sub(ab.selectTitle), p(ab.selectDesc));
   O.push(sub(ab.usageTitle), p(ab.usageDesc));
   O.push(sub(ab.cancelTitle), p(ab.cancelDesc), tip(`💡 ${t.planNote}`));
 
+  // Feedback & Kontakt
+  const k = m.kontakt;
+  O.push(`<h2 id="${TOC_IDS[9]}">💬 ${k.title}</h2>`);
+  O.push(p(k.desc));
+  O.push(sub(k.formTitle), p(k.formDesc), p(`<span style="font-size:.85rem;color:var(--muted)">${k.formNote}</span>`));
+  O.push(sub(k.bubbleTitle), p(k.bubbleDesc));
+  O.push(sub(k.supportTitle), p(k.supportDesc), tip(`💡 ${k.tip}`));
+
   // Tipps
-  O.push(`<h2 id="${TOC_IDS[8]}">💡 ${t.title}</h2>`);
+  O.push(`<h2 id="${TOC_IDS[10]}">💡 ${t.title}</h2>`);
   O.push(sub(t.workflowTitle), ol([t.workflow1, t.workflow2, t.workflow3, t.workflow4, t.workflow5]));
   O.push(`<hr class="m-div" />`);
   O.push(sub(t.planTitle), p(t.planDesc), table(t.planTableHead, t.planRows), p(`<span style="font-size:.85rem;color:var(--muted)">${t.planNote}</span>`));
