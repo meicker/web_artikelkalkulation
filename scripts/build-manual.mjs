@@ -301,6 +301,18 @@ function page(lang, m) {
   const altDe = lang === "de" ? u.canonical : `${ORIGIN}/anleitung.html`;
   const altEn = lang === "de" ? `${ORIGIN}/en/anleitung.html` : u.canonical;
 
+  // Aufbau wie in build-guides.mjs. Die Fragen kommen aus derselben Quelle wie
+  // der sichtbare FAQ-Block am Seitenende - eine Zweitschrift, die auseinander-
+  // laufen koennte, gibt es damit nicht.
+  const ld = {
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": "Article", headline: m.title, description: u.metaDesc, inLanguage: u.lang, author: { "@type": "Organization", name: "JRMedia" }, publisher: { "@type": "Organization", name: "JRMedia", url: "https://jrmedia.software" }, mainEntityOfPage: u.canonical },
+      { "@type": "BreadcrumbList", itemListElement: [ { "@type": "ListItem", position: 1, name: lang === "de" ? "Start" : "Home", item: `${ORIGIN}/${lang === "de" ? "" : "en/"}` }, { "@type": "ListItem", position: 2, name: m.title, item: u.canonical } ] },
+      { "@type": "FAQPage", mainEntity: m.tips.faq.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })) },
+    ],
+  };
+
   return `<!DOCTYPE html>
 <html lang="${u.lang}">
 <head>
@@ -312,6 +324,9 @@ function page(lang, m) {
   <link rel="alternate" hreflang="de" href="${altDe}" />
   <link rel="alternate" hreflang="en" href="${altEn}" />
   <link rel="alternate" hreflang="x-default" href="${altDe}" />
+  <script type="application/ld+json">
+${JSON.stringify(ld, null, 2).replace(/</g, "\\u003c")}
+  </script>
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#0E1B2E" />
   <link rel="icon" href="/favicon.ico" sizes="any" />
