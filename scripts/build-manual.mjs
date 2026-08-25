@@ -156,6 +156,10 @@ function renderManual(m) {
   O.push(sub(ek.plDraftTitle), p(ek.plDraftDesc));
   O.push(sub(ek.plPatternTitle), p(ek.plPatternDesc), tip(`💡 <strong>${ek.plPatternTipTitle}</strong> ${ek.plPatternTip}`));
   O.push(sub(ek.plEanTitle2), p(ek.plEanDesc2));
+  O.push(sub(ek.plEanMultiTitle), p(ek.plEanMultiDesc));
+  O.push(sub(ek.plEanMultiResultTitle), p(ek.plEanMultiResultDesc));
+  O.push(warn(`⚠️ <strong>${ek.plEanMultiWarnTitle}</strong> ${ek.plEanMultiWarn}`));
+  O.push(sub(ek.plEanMultiVendorTitle), p(ek.plEanMultiVendorDesc));
   O.push(sub(ek.plSameTitle), p(ek.plSameDesc));
   O.push(sub(ek.plCheckTitle), p(ek.plCheckDesc), p(ek.plCheckStreak), warn(`⚠️ ${ek.plCheckWarn}`));
   O.push(sub(ek.plRunTitle), p(ek.plRunDesc));
@@ -188,7 +192,7 @@ function renderManual(m) {
   O.push(p(v.desc));
   O.push(sub(v.listTitle), p(v.listDesc), tip(`💡 ${v.listNote}`));
   O.push(sub(v.prefixTitle), p(v.prefixDesc), p(v.prefixMulti));
-  O.push(sub(v.prefixFromStock), p(v.prefixFromStockDesc), tip(`💡 ${v.prefixFromStockNote}`));
+  O.push(sub(v.prefixFromStock), p(v.prefixFromStockDesc), tip(`💡 ${v.prefixFromStockNote}`), p(v.prefixFromStockEmpty));
   O.push(sub(v.sampleTitle), p(v.sampleDesc));
   O.push(sub(v.patternTitle), p(v.patternDesc));
   O.push(sub(v.splitTitle), p(v.splitDesc));
