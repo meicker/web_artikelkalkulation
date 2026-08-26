@@ -42,7 +42,7 @@ const UI = {
     metaDesc: "Datenschutzerklärung der Shopify-App PriceCalc Pro: verarbeitete Daten, Rechtsgrundlagen, Auftragsverarbeiter, Drittlandtransfers und Betroffenenrechte.",
     note: `Diese Datenschutzerklärung betrifft die <strong>Shopify-App PriceCalc Pro</strong>. Für die
           Informations-Website gilt die separate <a href="datenschutz.html">Website-Datenschutzerklärung</a>.`,
-    footer: `<a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Website-Datenschutz</a> · <a href="haftungsausschluss.html">Haftungsausschluss</a>`,
+    footer: `<a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Website-Datenschutz</a> · <a href="nutzungsbedingungen.html">Nutzungsbedingungen</a> · <a href="avv.html">AVV</a> · <a href="haftungsausschluss.html">Haftungsausschluss</a>`,
   },
   en: {
     lang: "en", asset: "../assets", home: "index.html", homeCrumb: "‹ Home", homeBtn: "← Home",
@@ -54,7 +54,7 @@ const UI = {
     metaDesc: "Privacy policy of the Shopify app PriceCalc Pro: data processed, legal bases, processors, third-country transfers and data subject rights.",
     note: `This privacy policy concerns the <strong>Shopify app PriceCalc Pro</strong>. For the information
           website, the separate <a href="datenschutz.html">website privacy policy</a> applies.`,
-    footer: `<a href="impressum.html">Legal notice</a> · <a href="datenschutz.html">Website Privacy</a> · <a href="haftungsausschluss.html">Disclaimer</a>`,
+    footer: `<a href="impressum.html">Legal notice</a> · <a href="datenschutz.html">Website Privacy</a> · <a href="terms.html">Terms of Use</a> · <a href="dpa.html">DPA</a> · <a href="haftungsausschluss.html">Disclaimer</a>`,
   },
 };
 

@@ -2,19 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.pricecalcpro.de/anleitung.html</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-08-25</lastmod>
   </url>
   <url>
     <loc>https://www.pricecalcpro.de/app-datenschutz.html</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-08-26</lastmod>
   </url>
   <url>
     <loc>https://www.pricecalcpro.de/aufschlag-handelsspanne.html</loc>
     <lastmod>2026-08-21</lastmod>
   </url>
   <url>
+    <loc>https://www.pricecalcpro.de/avv.html</loc>
+    <lastmod>2026-08-26</lastmod>
+  </url>
+  <url>
     <loc>https://www.pricecalcpro.de/datenschutz.html</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-08-26</lastmod>
   </url>
   <url>
     <loc>https://www.pricecalcpro.de/datensicherung-preise-shopify.html</loc>
@@ -30,11 +34,11 @@
   </url>
   <url>
     <loc>https://www.pricecalcpro.de/en/anleitung.html</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-08-25</lastmod>
   </url>
   <url>
     <loc>https://www.pricecalcpro.de/en/app-datenschutz.html</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-08-26</lastmod>
   </url>
   <url>
     <loc>https://www.pricecalcpro.de/en/backup-before-price-changes.html</loc>
@@ -58,7 +62,11 @@
   </url>
   <url>
     <loc>https://www.pricecalcpro.de/en/datenschutz.html</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-08-26</lastmod>
+  </url>
+  <url>
+    <loc>https://www.pricecalcpro.de/en/dpa.html</loc>
+    <lastmod>2026-08-26</lastmod>
   </url>
   <url>
     <loc>https://www.pricecalcpro.de/en/guides.html</loc>
@@ -66,15 +74,15 @@
   </url>
   <url>
     <loc>https://www.pricecalcpro.de/en/haftungsausschluss.html</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-08-26</lastmod>
   </url>
   <url>
     <loc>https://www.pricecalcpro.de/en/impressum.html</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-08-26</lastmod>
   </url>
   <url>
     <loc>https://www.pricecalcpro.de/en/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-08-26</lastmod>
   </url>
   <url>
     <loc>https://www.pricecalcpro.de/en/markup-vs-margin.html</loc>
@@ -89,12 +97,16 @@
     <lastmod>2026-08-21</lastmod>
   </url>
   <url>
+    <loc>https://www.pricecalcpro.de/en/terms.html</loc>
+    <lastmod>2026-08-26</lastmod>
+  </url>
+  <url>
     <loc>https://www.pricecalcpro.de/en/vat-online-shop.html</loc>
     <lastmod>2026-08-21</lastmod>
   </url>
   <url>
     <loc>https://www.pricecalcpro.de/haftungsausschluss.html</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-08-26</lastmod>
   </url>
   <url>
     <loc>https://www.pricecalcpro.de/handelskalkulation.html</loc>
@@ -102,11 +114,11 @@
   </url>
   <url>
     <loc>https://www.pricecalcpro.de/impressum.html</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-08-26</lastmod>
   </url>
   <url>
     <loc>https://www.pricecalcpro.de/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-08-26</lastmod>
   </url>
   <url>
     <loc>https://www.pricecalcpro.de/kalkulationsfaktor-bestimmen.html</loc>
@@ -115,6 +127,10 @@
   <url>
     <loc>https://www.pricecalcpro.de/mehrwertsteuer-onlineshop.html</loc>
     <lastmod>2026-08-21</lastmod>
+  </url>
+  <url>
+    <loc>https://www.pricecalcpro.de/nutzungsbedingungen.html</loc>
+    <lastmod>2026-08-26</lastmod>
   </url>
   <url>
     <loc>https://www.pricecalcpro.de/preise-anpassen-einkauf.html</loc>
