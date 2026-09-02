@@ -230,6 +230,7 @@ function renderManual(m) {
   O.push(p(b.desc));
   O.push(sub(b.exportTitle), p(b.exportIntro), ul([b.export1, b.export2, b.export3, b.export4]), tip(`💡 ${b.exportTip}`), p(b.exportPlan));
   O.push(sub(b.restoreTitle), ol([b.restore1, b.restore2, b.restore3, b.restore4, b.restore5]), warn(`⚠ ${b.restoreWarn}`), p(b.restorePlan));
+  O.push(sub(b.scopeTitle), p(b.scopeDesc), p(b.scopeDeleted), warn(`⚠ ${b.scopeTip}`));
   O.push(sub(b.setTitle), p(b.setDesc), ul([b.setBlock1, b.setBlock2, b.setBlock3]),
     ol([b.setStep1, b.setStep2, b.setStep3, b.setStep4]),
     tip(`🔁 ${b.setMerge}`), warn(`⚠ ${b.setNote}`), p(b.setPlan));
