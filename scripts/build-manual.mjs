@@ -1,6 +1,7 @@
 // Erzeugt die oeffentliche Bedienungsanleitung (docs/anleitung.html +
 // docs/en/anleitung.html) aus der EINEN Quelle im App-Projekt:
-// <app>/web/locales/<sprache>.json, Zweig "manual". Dieselben Texte zeigt die
+// <app>/web/locales/<sprache>.manual.json, Zweig "manual" (bis Oktober 2026
+// in <sprache>.json; die App laedt die Anleitung seitdem getrennt nach). Dieselben Texte zeigt die
 // App unter web/routes/_app.manual.tsx.
 //
 // Frueher lag hier eine Handkopie unter content/manual.<sprache>.json. Sie war
@@ -23,7 +24,7 @@ const app = process.env.PRICECALC_APP
   : resolve(root, "..", "artikelkalkulation");
 
 function load(lang) {
-  const file = resolve(app, `web/locales/${lang}.json`);
+  const file = resolve(app, `web/locales/${lang}.manual.json`);
   if (!existsSync(file)) {
     console.error(`✗ Quelle nicht gefunden: ${file}`);
     console.error(`  Das App-Projekt wird unter ${app} erwartet.`);
@@ -119,6 +120,10 @@ function renderManual(m) {
   O.push(table(o.tableHead, o.tableRows));
   O.push(warn(`⚠ ${o.warn}`));
   O.push(sub(o.onboardingTitle), p(o.onboardingDesc));
+  O.push(sub(o.homeTitle), p(o.homeDesc));
+  O.push(sub(o.saveBarTitle), p(o.saveBarDesc));
+  O.push(sub(o.msgTitle), p(o.msgDesc));
+  O.push(sub(o.lockedTitle), p(o.lockedDesc));
 
   // Einkaufspreise
   const ek = m.ek;
@@ -253,6 +258,7 @@ function renderManual(m) {
   O.push(`<h2 id="${TOC_IDS[8]}">💳 ${ab.title}</h2>`);
   O.push(p(ab.desc));
   O.push(sub(ab.selectTitle), p(ab.selectDesc));
+  O.push(sub(ab.trialTitle), p(ab.trialDesc));
   O.push(sub(ab.usageTitle), p(ab.usageDesc));
   O.push(sub(ab.cancelTitle), p(ab.cancelDesc), tip(`💡 ${t.planNote}`));
 
