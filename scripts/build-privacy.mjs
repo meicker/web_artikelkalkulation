@@ -61,6 +61,28 @@ const UI = {
 const ALT_DE = `${ORIGIN}/app-datenschutz.html`;
 const ALT_EN = `${ORIGIN}/en/app-datenschutz.html`;
 
+// Wie in build-terms.mjs: Die Quelle verlinkt App-Routen (/terms seit dem
+// Artikel-Kontingent, Ziffer 2.9). Auf der Webseite heissen die Texte anders;
+// ein nicht abgebildeter Pfad bricht laut ab, statt einen toten Link zu erzeugen.
+const ROUTEN = {
+  "/terms": "nutzungsbedingungen.html",
+  "/disclaimer": "haftungsausschluss.html",
+  "/privacy": "app-datenschutz.html",
+};
+
+function appPfadeUmschreiben(html, lang) {
+  return html.replace(/href="(\/[a-z-]+)"/g, (treffer, pfad) => {
+    const ziel = ROUTEN[pfad];
+    if (!ziel) {
+      console.error(`\u2717 Unbekannter App-Pfad im Datenschutztext: ${pfad}`);
+      console.error(`  In ROUTEN in scripts/build-privacy.mjs aufnehmen.`);
+      process.exit(1);
+    }
+    const datei = lang === "en" && ziel === "nutzungsbedingungen.html" ? "terms.html" : ziel;
+    return `href="${datei}"`;
+  });
+}
+
 function page(lang, doc) {
   const u = UI[lang];
   const langLi =
@@ -68,7 +90,7 @@ function page(lang, doc) {
       ? `<span class="active" aria-current="true">DE</span><a href="${u.other}" hreflang="en">EN</a>`
       : `<a href="${u.other}" hreflang="de">DE</a><span class="active" aria-current="true">EN</span>`;
   const body = doc.sections
-    .map((s) => `          <h2 id="${s.id}">${s.title}</h2>\n          ${s.html}`)
+    .map((s) => `          <h2 id="${s.id}">${s.title}</h2>\n          ${appPfadeUmschreiben(s.html, lang)}`)
     .join("\n\n");
 
   return `<!DOCTYPE html>
