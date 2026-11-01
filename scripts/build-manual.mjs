@@ -108,7 +108,7 @@ function sessionBlock(s) {
 }
 
 // Reihenfolge und Abschnittskennungen spiegeln web/routes/_app.manual.tsx.
-const TOC_IDS = ["ueberblick", "ek", "preislisten-import", "kalkulationsfaktoren", "lieferanten", "artikelkalkulation", "sicherung", "einstellungen", "abonnement", "kontakt", "tipps"];
+const TOC_IDS = ["ueberblick", "ek", "preislisten-import", "kalkulationsfaktoren", "lieferanten", "artikelkalkulation", "sicherung", "einstellungen", "abonnement", "kontingent", "rechtliches", "kontakt", "tipps"];
 
 function renderManual(m) {
   const O = [];
@@ -209,6 +209,7 @@ function renderManual(m) {
   O.push(`<h2 id="${TOC_IDS[5]}">🏷 ${a.title}</h2>`);
   O.push(p(a.desc));
   O.push(warn(`⚠ ${a.disclaimerNote}`));
+  O.push(tip(`ℹ️ ${a.quotaNote}`));
   O.push(sub(a.factorInputTitle), ul([a.factorInput1, a.factorInput2]));
   O.push(sub(a.derivedTitle), p(a.derivedDesc));
   O.push(sub(a.ekChangeTitle), tip(`💡 ${a.ekChangeTip}`));
@@ -250,6 +251,7 @@ function renderManual(m) {
   O.push(sub(e.roundingTitle), p(e.roundingDesc), p(e.roundingNote), tip(`🔒 ${e.roundingPlan}`));
   O.push(sub(e.productPageSizeTitle), p(e.productPageSizeDesc));
   O.push(sub(e.langTitle), p(e.langDesc));
+  O.push(sub(e.mailTitle), p(e.mailDesc));
   O.push(sub(e.removeTitle), p(e.removeDesc), warn(e.removeWarn));
 
   // Abonnement
@@ -258,20 +260,46 @@ function renderManual(m) {
   O.push(`<h2 id="${TOC_IDS[8]}">💳 ${ab.title}</h2>`);
   O.push(p(ab.desc));
   O.push(sub(ab.selectTitle), p(ab.selectDesc));
+  O.push(sub(ab.changeTitle), p(ab.changeDesc));
   O.push(sub(ab.trialTitle), p(ab.trialDesc));
   O.push(sub(ab.usageTitle), p(ab.usageDesc));
   O.push(sub(ab.cancelTitle), p(ab.cancelDesc), tip(`💡 ${t.planNote}`));
+  O.push(sub(ab.dataTitle), p(ab.dataDesc));
+
+  // Artikel-Kontingent
+  const kt = m.kontingent;
+  O.push(`<h2 id="${TOC_IDS[9]}">📦 ${kt.title}</h2>`);
+  O.push(p(kt.desc));
+  O.push(sub(kt.slotTitle), p(kt.slotDesc));
+  O.push(sub(kt.freeTitle), p(kt.freeDesc));
+  O.push(sub(kt.badgeTitle), defTable(kt.badgeRows.map(([l, d], i) => [badge(["green", "blue", "orange"][i] ?? "blue", l), d])));
+  O.push(sub(kt.fullTitle), p(kt.fullDesc));
+  O.push(sub(kt.paketTitle), p(kt.paketDesc));
+  O.push(sub(kt.ruhenTitle), p(kt.ruhenDesc));
+  O.push(sub(kt.schutzTitle), p(kt.schutzDesc));
+  O.push(sub(kt.extraTitle), p(kt.extraDesc));
+  O.push(sub(kt.checkTitle), p(kt.checkDesc));
+  O.push(sub(kt.restoreTitle), p(kt.restoreDesc));
+
+  // Rechtliches
+  const r = m.rechtliches;
+  O.push(`<h2 id="${TOC_IDS[10]}">⚖️ ${r.title}</h2>`);
+  O.push(p(r.desc));
+  O.push(sub(r.agbTitle), p(r.agbDesc), tip(`ℹ️ ${r.agbNote}`));
+  O.push(sub(r.ankuendigungTitle), p(r.ankuendigungDesc));
+  O.push(sub(r.mailTitle), p(r.mailDesc));
+  O.push(sub(r.langTitle), p(r.langDesc));
 
   // Feedback & Kontakt
   const k = m.kontakt;
-  O.push(`<h2 id="${TOC_IDS[9]}">💬 ${k.title}</h2>`);
+  O.push(`<h2 id="${TOC_IDS[11]}">💬 ${k.title}</h2>`);
   O.push(p(k.desc));
   O.push(sub(k.formTitle), p(k.formDesc), p(`<span style="font-size:.85rem;color:var(--muted)">${k.formNote}</span>`));
   O.push(sub(k.bubbleTitle), p(k.bubbleDesc));
   O.push(sub(k.supportTitle), p(k.supportDesc), tip(`💡 ${k.tip}`));
 
   // Tipps
-  O.push(`<h2 id="${TOC_IDS[10]}">💡 ${t.title}</h2>`);
+  O.push(`<h2 id="${TOC_IDS[12]}">💡 ${t.title}</h2>`);
   O.push(sub(t.workflowTitle), ol([t.workflow1, t.workflow2, t.workflow3, t.workflow4, t.workflow5]));
   O.push(`<hr class="m-div" />`);
   O.push(sub(t.planTitle), p(t.planDesc), table(t.planTableHead, t.planRows), p(`<span style="font-size:.85rem;color:var(--muted)">${t.planNote}</span>`));
