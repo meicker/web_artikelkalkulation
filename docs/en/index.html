@@ -55,7 +55,7 @@
           "@type": "Offer",
           "price": "0",
           "priceCurrency": "EUR",
-          "description": "Free plan with 20 actions per month; paid plans billed via Shopify Billing."
+          "description": "Free plan with 25 calculated items; paid plans billed via Shopify Billing."
         },
         "publisher": {
           "@type": "Organization",
@@ -70,8 +70,8 @@
           { "@type": "Question", "name": "Are my prices really changed permanently?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Saved prices and metafields are written directly and permanently to your Shopify store and cannot be undone automatically by the app. That is why PriceCalc Pro can create an automatic backup before every save and offers a restore with diff check." } },
           { "@type": "Question", "name": "How does the 5-step calculation work?", "acceptedAnswer": { "@type": "Answer", "text": "From the purchase price, freight gives the landed cost, handling and profit margin give the base price, a buffer (discount) gives the net price, and VAT finally gives the gross price. Each percentage is adjustable per product — or you use the simple mode with a single factor." } },
           { "@type": "Question", "name": "Does the app process personal data?", "acceptedAnswer": { "@type": "Answer", "text": "PriceCalc Pro processes only business data (products, prices, metafields) and no end-customer data . Settings are stored locally in the browser. See the app's privacy policy, available in the app, for details." } },
-          { "@type": "Question", "name": "What counts as an “action”?", "acceptedAnswer": { "@type": "Answer", "text": "Every saved product counts as one action — whether purchase price, calculation or autosave, individually or via “Save all”. Discarding changes and restoring a backup do not count." } },
-          { "@type": "Question", "name": "Can I start small?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The Free plan is free forever and offers 20 actions per month with single save. You can switch to Basic, Premium or Unlimited at any time via Shopify — and cancel just as easily." } }
+          { "@type": "Question", "name": "What counts towards the item quota?", "acceptedAnswer": { "@type": "Answer", "text": "Each item takes up a slot the first time you calculate it and can then be edited as often as you like. Maintaining purchase prices is free. The quota does not reset monthly; Basic and Premium can be expanded with packs of 100 items." } },
+          { "@type": "Question", "name": "Can I start small?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The Free plan is free forever and lets you calculate up to 25 items; purchase prices can be maintained without limit. You can switch to Basic, Premium or Unlimited at any time via Shopify — and cancel just as easily." } }
         ]
       }
     ]
@@ -271,7 +271,7 @@
             <ul class="feat-list">
               <li>Automatic backup before saving</li>
               <li>Diff view: select or deselect individual values</li>
-              <li>Restore does not count against your quota</li>
+              <li>Restore with a check of every change</li>
             </ul>
           </div>
         </div>
@@ -284,16 +284,16 @@
         <div class="section-head center">
           <p class="eyebrow">Pricing</p>
           <h2>Four plans that grow with you.</h2>
-          <p>An “action” is one saved product. Billed monthly or annually via Shopify Billing.</p>
+          <p>Every plan counts calculated items, not saves. Maintaining purchase prices is free. Billed monthly or annually via Shopify Billing.</p>
         </div>
         <div class="plan-grid">
           <div class="plan free">
             <h3>Free</h3>
-            <div class="limit">20 actions / month</div>
+            <div class="limit">Calculate 25 items</div>
             <div class="price"><b>€0</b> · free forever</div>
             <ul>
-              <li>Single save</li>
-              <li>Purchase &amp; sell prices</li>
+              <li>Maintain purchase prices for free</li>
+              <li>View Shopify prices</li>
               <li>German &amp; English</li>
               <li class="muted">Save all</li>
               <li class="muted">Data backup</li>
@@ -301,26 +301,32 @@
           </div>
           <div class="plan basic">
             <h3>Basic</h3>
-            <div class="limit">150 actions / month</div>
+            <div class="limit">Calculate 250 items</div>
             <div class="price">monthly or annual</div>
             <ul>
               <li>Everything in Free</li>
+              <li>Expandable with packs of 100 items</li>
               <li>“Save all” (batch)</li>
               <li>5-step calculation</li>
               <li>Full backup &amp; restore</li>
               <li>Price rounding</li>
+              <li>Detect unusual calculations</li>
             </ul>
           </div>
           <div class="plan premium featured">
             <span class="ribbon">Popular</span>
             <h3>Premium</h3>
-            <div class="limit">500 actions / month</div>
+            <div class="limit">Calculate 1,000 items</div>
             <div class="price">monthly or annual</div>
             <ul>
               <li>Everything in Basic</li>
-              <li>Autosave (2 s / 10 s / tab)</li>
-              <li>Selective backup</li>
-              <li>Excel export &amp; import</li>
+              <li>Expandable with packs of 100 items</li>
+              <li>Autosave in the background</li>
+              <li>Selective backup of prices and factors</li>
+              <li>Excel export</li>
+              <li>Import supplier price lists</li>
+              <li>Factors per vendor and category</li>
+              <li>Work sessions</li>
             </ul>
           </div>
           <div class="plan unlim">
@@ -329,8 +335,8 @@
             <div class="price">monthly or annual</div>
             <ul>
               <li>Everything in Premium</li>
-              <li>Unlimited actions</li>
-              <li>Work sessions</li>
+              <li>Unlimited items</li>
+              <li>For large catalogues and busy times</li>
             </ul>
           </div>
         </div>
@@ -359,12 +365,12 @@
             <div class="a"><p>PriceCalc Pro processes only business data (products, prices, metafields) and <strong>no end-customer data</strong>. Settings are stored locally in the browser. See the app's privacy policy, available in the app, for details.</p></div>
           </details>
           <details class="faq-item">
-            <summary>What counts as an “action”?</summary>
-            <div class="a"><p>Every saved product counts as one action — whether purchase price, calculation or autosave, individually or via “Save all”. Discarding changes and restoring a backup do not count.</p></div>
+            <summary>What counts towards the item quota?</summary>
+            <div class="a"><p>Each item takes up a slot the first time you calculate it and can then be edited as often as you like. Maintaining purchase prices is free. The quota does not reset monthly; Basic and Premium can be expanded with packs of 100 items.</p></div>
           </details>
           <details class="faq-item">
             <summary>Can I start small?</summary>
-            <div class="a"><p>Yes. The Free plan is free forever and offers 20 actions per month with single save. You can switch to Basic, Premium or Unlimited at any time via Shopify — and cancel just as easily.</p></div>
+            <div class="a"><p>Yes. The Free plan is free forever and lets you calculate up to 25 items; purchase prices can be maintained without limit. You can switch to Basic, Premium or Unlimited at any time via Shopify — and cancel just as easily.</p></div>
           </details>
         </div>
       </div>

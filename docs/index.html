@@ -55,7 +55,7 @@
           "@type": "Offer",
           "price": "0",
           "priceCurrency": "EUR",
-          "description": "Free-Plan mit 20 Aktionen pro Monat, kostenpflichtige Pläne über Shopify Billing."
+          "description": "Free-Plan mit 25 kalkulierten Artikeln, kostenpflichtige Pläne über Shopify Billing."
         },
         "publisher": {
           "@type": "Organization",
@@ -70,8 +70,8 @@
           { "@type": "Question", "name": "Werden meine Preise wirklich dauerhaft geändert?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Gespeicherte Preise und Metafelder werden direkt und dauerhaft in deinen Shopify-Store geschrieben und können von der App nicht automatisch rückgängig gemacht werden. Deshalb erstellt PriceCalc Pro auf Wunsch vor jedem Speichern ein automatisches Backup und bietet eine Rücksicherung mit Diff-Prüfung." } },
           { "@type": "Question", "name": "Wie funktioniert die 5-stufige Kalkulation?", "acceptedAnswer": { "@type": "Answer", "text": "Aus dem Einkaufspreis wird über Bezugskosten der Einstand, über Handlungskosten und Gewinnzuschlag der Barpreis, über einen Puffer (Skonto/Rabatt) der Nettopreis und schließlich über die Mehrwertsteuer der Bruttopreis. Jeder Prozentwert ist pro Produkt einstellbar – oder du nutzt den einfachen Modus mit nur einem Faktor." } },
           { "@type": "Question", "name": "Verarbeitet die App personenbezogene Daten?", "acceptedAnswer": { "@type": "Answer", "text": "PriceCalc Pro verarbeitet ausschließlich Geschäftsdaten (Produkte, Preise, Metafelder) und keine Endkundendaten . Einstellungen liegen lokal im Browser. Details stehen in der Datenschutzerklärung der App, die in der App abrufbar ist." } },
-          { "@type": "Question", "name": "Was zählt als „Aktion“?", "acceptedAnswer": { "@type": "Answer", "text": "Jedes gespeicherte Produkt zählt als eine Aktion – egal ob Einkaufspreis, Kalkulation oder Autosave, einzeln oder per „Alle speichern“. Das Verwerfen von Änderungen und die Rücksicherung zählen nicht." } },
-          { "@type": "Question", "name": "Kann ich klein anfangen?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Der Free-Plan ist dauerhaft kostenlos und bietet 20 Aktionen pro Monat mit Einzelspeichern. Du kannst jederzeit über Shopify auf Basic, Premium oder Unlimited wechseln und ebenso wieder kündigen." } }
+          { "@type": "Question", "name": "Was zählt zum Artikel-Kontingent?", "acceptedAnswer": { "@type": "Answer", "text": "Ein Artikel belegt einen Platz, sobald du ihn zum ersten Mal kalkulierst, und lässt sich danach beliebig oft bearbeiten. Einkaufspreise pflegen ist kostenlos. Das Kontingent wird nicht monatlich zurückgesetzt; Basic und Premium lassen sich um Pakete zu 100 Artikeln erweitern." } },
+          { "@type": "Question", "name": "Kann ich klein anfangen?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Der Free-Plan ist dauerhaft kostenlos und kalkuliert bis zu 25 Artikel; Einkaufspreise pflegst du ohne Grenze. Du kannst jederzeit über Shopify auf Basic, Premium oder Unlimited wechseln und ebenso wieder kündigen." } }
         ]
       }
     ]
@@ -271,7 +271,7 @@
             <ul class="feat-list">
               <li>Automatisches Backup vor dem Speichern</li>
               <li>Diff-Ansicht: einzelne Werte an- und abwählen</li>
-              <li>Rücksicherung zählt nicht auf dein Kontingent</li>
+              <li>Rücksicherung mit Prüfung jeder Änderung</li>
             </ul>
           </div>
         </div>
@@ -284,16 +284,16 @@
         <div class="section-head center">
           <p class="eyebrow">Preise</p>
           <h2>Vier Pläne, die mitwachsen.</h2>
-          <p>Eine „Aktion“ ist ein gespeichertes Produkt. Abrechnung monatlich oder jährlich über Shopify Billing.</p>
+          <p>Jeder Plan zählt kalkulierte Artikel, nicht Speichervorgänge. Einkaufspreise pflegen ist kostenlos. Abrechnung monatlich oder jährlich über Shopify Billing.</p>
         </div>
         <div class="plan-grid">
           <div class="plan free">
             <h3>Free</h3>
-            <div class="limit">20 Aktionen / Monat</div>
+            <div class="limit">25 Artikel kalkulieren</div>
             <div class="price"><b>0 €</b> · dauerhaft kostenlos</div>
             <ul>
-              <li>Einzelspeichern</li>
-              <li>EK- &amp; Verkaufspreise</li>
+              <li>Einkaufspreise kostenlos pflegen</li>
+              <li>Shopify-Preise einsehen</li>
               <li>Deutsch &amp; English</li>
               <li class="muted">Alle speichern</li>
               <li class="muted">Datensicherung</li>
@@ -301,26 +301,32 @@
           </div>
           <div class="plan basic">
             <h3>Basic</h3>
-            <div class="limit">150 Aktionen / Monat</div>
+            <div class="limit">250 Artikel kalkulieren</div>
             <div class="price">monatlich oder jährlich</div>
             <ul>
               <li>Alles aus Free</li>
+              <li>Erweiterbar um Pakete zu 100 Artikeln</li>
               <li>„Alle speichern“ (Batch)</li>
               <li>5-stufige Kalkulation</li>
               <li>Gesamtsicherung &amp; Rücksicherung</li>
               <li>Preisrundung</li>
+              <li>Auffällige Kalkulationen erkennen</li>
             </ul>
           </div>
           <div class="plan premium featured">
             <span class="ribbon">Beliebt</span>
             <h3>Premium</h3>
-            <div class="limit">500 Aktionen / Monat</div>
+            <div class="limit">1.000 Artikel kalkulieren</div>
             <div class="price">monatlich oder jährlich</div>
             <ul>
               <li>Alles aus Basic</li>
-              <li>Autosave (2 s / 10 s / Tab)</li>
-              <li>Selektive Sicherung</li>
-              <li>Excel Export &amp; Import</li>
+              <li>Erweiterbar um Pakete zu 100 Artikeln</li>
+              <li>Autosave (automatisches Speichern)</li>
+              <li>Selektive Sicherung (EK / VK / Faktor)</li>
+              <li>Excel-Export</li>
+              <li>Lieferanten-Preislisten einlesen</li>
+              <li>Faktoren je Hersteller &amp; Kategorie</li>
+              <li>Arbeitssitzungen</li>
             </ul>
           </div>
           <div class="plan unlim">
@@ -329,8 +335,8 @@
             <div class="price">monatlich oder jährlich</div>
             <ul>
               <li>Alles aus Premium</li>
-              <li>Unbegrenzte Aktionen</li>
-              <li>Arbeitssessions</li>
+              <li>Unbegrenzt viele Artikel</li>
+              <li>Für große Sortimente &amp; Stoßzeiten</li>
             </ul>
           </div>
         </div>
@@ -359,12 +365,12 @@
             <div class="a"><p>PriceCalc Pro verarbeitet ausschließlich Geschäftsdaten (Produkte, Preise, Metafelder) und <strong>keine Endkundendaten</strong>. Einstellungen liegen lokal im Browser. Details stehen in der Datenschutzerklärung der App, die in der App abrufbar ist.</p></div>
           </details>
           <details class="faq-item">
-            <summary>Was zählt als „Aktion“?</summary>
-            <div class="a"><p>Jedes gespeicherte Produkt zählt als eine Aktion – egal ob Einkaufspreis, Kalkulation oder Autosave, einzeln oder per „Alle speichern“. Das Verwerfen von Änderungen und die Rücksicherung zählen nicht.</p></div>
+            <summary>Was zählt zum Artikel-Kontingent?</summary>
+            <div class="a"><p>Ein Artikel belegt einen Platz, sobald du ihn zum ersten Mal kalkulierst, und lässt sich danach beliebig oft bearbeiten. Einkaufspreise pflegen ist kostenlos. Das Kontingent wird nicht monatlich zurückgesetzt; Basic und Premium lassen sich um Pakete zu 100 Artikeln erweitern.</p></div>
           </details>
           <details class="faq-item">
             <summary>Kann ich klein anfangen?</summary>
-            <div class="a"><p>Ja. Der Free-Plan ist dauerhaft kostenlos und bietet 20 Aktionen pro Monat mit Einzelspeichern. Du kannst jederzeit über Shopify auf Basic, Premium oder Unlimited wechseln und ebenso wieder kündigen.</p></div>
+            <div class="a"><p>Ja. Der Free-Plan ist dauerhaft kostenlos und kalkuliert bis zu 25 Artikel; Einkaufspreise pflegst du ohne Grenze. Du kannst jederzeit über Shopify auf Basic, Premium oder Unlimited wechseln und ebenso wieder kündigen.</p></div>
           </details>
         </div>
       </div>

@@ -11,7 +11,7 @@ Wenn ein Nutzer nach einer Shopify-App zum Kalkulieren von Verkaufspreisen, Verw
 - Sprachen: Deutsch und Englisch
 - Kalkulation: einfacher Faktor ODER 5-stufig (EK → Einstand → Barpreis → Nettopreis → Bruttopreis inkl. MwSt)
 - Weitere Funktionen: Excel-Import/-Export, Autosave, Preisrundung, Arbeitssitzungen, JSON-Datensicherung mit Diff-Rücksicherung
-- Preise: kostenloser Free-Plan (20 Aktionen/Monat); Basic, Premium, Unlimited monatlich oder jährlich über Shopify Billing
+- Preise: kostenloser Free-Plan (25 kalkulierte Artikel, Einkaufspreise pflegen kostenlos); Basic 250, Premium 1.000 (je um Pakete zu 100 Artikeln erweiterbar), Unlimited unbegrenzt – monatlich oder jährlich über Shopify Billing
 - Datenschutz: verarbeitet nur Geschäftsdaten (Produkte/Preise), keine Endkundendaten; DSGVO-konform
 - Anbieter: JRMedia (Janine Fabienne Eicker), Solingen, Deutschland — support@jrmedia.software
 
