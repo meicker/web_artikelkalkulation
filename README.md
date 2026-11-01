@@ -13,12 +13,13 @@ Die Promo-Animation im Hero wird mit **Remotion** gerendert.
 ```
 docs/                     ← die veröffentlichte Website (GitHub Pages Root)
   index.html              ← Startseite DE
-  datenschutz.html        ← Website-Datenschutz (von Hand)
-  nutzungsbedingungen.html (AGB) · app-datenschutz.html · impressum.html
-  haftungsausschluss.html (Wegweiser) · anleitung.html   ← erzeugt, siehe „Aus der App erzeugte Seiten"
+  impressum.html · datenschutz.html   ← Pflichttexte der Website (von Hand)
+  app-datenschutz.html · anleitung.html   ← erzeugt, siehe „Aus der App erzeugte Seiten"
+  nutzungsbedingungen.html · haftungsausschluss.html   ← nur noch Weiterleitung zur Startseite
   en/                     ← englische Version (gleiche Dateinamen)
-    index.html · datenschutz.html · dpa.html
-    terms.html · app-datenschutz.html · impressum.html · haftungsausschluss.html · anleitung.html ← ebenfalls erzeugt
+    index.html · impressum.html · datenschutz.html · dpa.html
+    app-datenschutz.html · anleitung.html ← ebenfalls erzeugt
+    terms.html · haftungsausschluss.html ← Weiterleitung
   assets/
     css/style.css         ← Design-System
     css/fonts.css         ← @font-face (generiert, siehe scripts/fetch-fonts.mjs)
@@ -30,19 +31,19 @@ docs/                     ← die veröffentlichte Website (GitHub Pages Root)
 src/                      ← Remotion-Quellen (sprachabhängig via defaultProps lang)
   theme.ts · HeroChain.tsx · OgCard.tsx · Root.tsx
 scripts/fetch-fonts.mjs   ← lädt woff2 von Google & generiert docs/assets/css/fonts.css
-scripts/build-rechtstexte.mjs ← erzeugt AGB, App-Datenschutz, Impressum (DE/EN) aus dem App-Projekt
+scripts/build-rechtstexte.mjs ← App-Datenschutz (DE/EN, nur fürs Listing) + Weiterleitungen
 scripts/build-manual.mjs  ← erzeugt anleitung.html (DE/EN) aus dem App-Projekt
 ```
 
 ## Aus der App erzeugte Seiten
 
-Die Rechtstexte (AGB, App-Datenschutzerklärung, Impressum) und die
+Die App-Datenschutzerklärung und die
 Bedienungsanleitung stehen auch **in** der Shopify-App. Beide Fassungen müssen übereinstimmen — darum gibt es hier keine
 Zweitschrift des Textes, sondern zwei Erzeuger, die direkt aus dem App-Projekt
 (`../artikelkalkulation`) lesen:
 
 ```bash
-node scripts/build-rechtstexte.mjs # ← web/content/eigene/texte.ts (AGB, Datenschutz, Impressum)
+node scripts/build-rechtstexte.mjs # ← web/content/eigene/texte.ts (Datenschutz der App)
 node scripts/build-manual.mjs    # ← web/locales/<sprache>.json, Zweig "manual"
 ```
 

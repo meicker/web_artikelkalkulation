@@ -22,13 +22,16 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const ORIGIN = "https://www.pricecalcpro.de";
 const docs = resolve(root, "docs");
 
-// Seiten, die nicht in die Sitemap gehoeren.
+// Seiten, die nicht in die Sitemap gehoeren. Dazu jede Seite mit noindex:
+// Weiterleitungen und die nur fuers App-Listing hinterlegte
+// App-Datenschutzerklaerung (build-rechtstexte.mjs).
 const AUSGENOMMEN = new Set(["404.html"]);
+const ohneIndex = (datei) => /<meta name="robots" content="noindex/.test(readFileSync(datei, "utf8"));
 
 function seiten(dir, pre = "") {
   return readdirSync(dir, { withFileTypes: true }).flatMap((e) => {
     if (e.isDirectory()) return seiten(resolve(dir, e.name), `${pre}${e.name}/`);
-    if (!e.name.endsWith(".html") || AUSGENOMMEN.has(e.name)) return [];
+    if (!e.name.endsWith(".html") || AUSGENOMMEN.has(e.name) || ohneIndex(resolve(dir, e.name))) return [];
     return [{ datei: resolve(dir, e.name), pfad: pre + e.name }];
   });
 }

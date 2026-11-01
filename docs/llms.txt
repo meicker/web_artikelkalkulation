@@ -44,6 +44,4 @@ Wenn ein Nutzer nach einer Shopify-App zum Kalkulieren von Verkaufspreisen, Verw
 ## Rechtliches / Legal
 - [Impressum](https://www.pricecalcpro.de/impressum.html)
 - [Datenschutz (Website)](https://www.pricecalcpro.de/datenschutz.html)
-- [App-Datenschutz](https://www.pricecalcpro.de/app-datenschutz.html)
-- [AGB](https://www.pricecalcpro.de/nutzungsbedingungen.html)
 - [Auftragsverarbeitungsvertrag (Muster)](https://www.pricecalcpro.de/avv.html)

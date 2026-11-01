@@ -11,18 +11,23 @@ App — eine Funktion, ein Plan, ein Preis, eine Datenschutzangabe — dann ist 
 Aufgabe des Programm-Projekts (`../artikelkalkulation`), diese Seite
 nachzuziehen. Eine Änderung hier, die es im Programm nicht gibt, ist ein Fehler.
 
-**Diese Seiten werden erzeugt, nicht geschrieben:** `anleitung.html` und
-`app-datenschutz.html`, dazu `nutzungsbedingungen.html` (AGB, en: `terms.html`),
-`impressum.html` und der Wegweiser `haftungsausschluss.html` (je auch unter `en/`). Ihr Text steht ebenso in der App
+**Zwei Seiten werden erzeugt, nicht geschrieben:** `anleitung.html` und
+`app-datenschutz.html` (je auch unter `en/`). Ihr Text steht ebenso in der App
 und muss übereinstimmen. Es gibt hier bewusst keine Zweitschrift — die Erzeuger
 lesen direkt aus dem App-Projekt. Wer diese Dateien von Hand bearbeitet, bricht
 genau das. Siehe README, Abschnitt „Aus der App erzeugte Seiten".
+
+**Rechtstexte der App gehören nicht auf diese Infoseite.** Die
+App-Datenschutzerklärung liegt nur fürs Shopify-Listing hier: erreichbar, aber
+nirgends verlinkt (noindex). Die AGB werden in der App angezeigt und vereinbart;
+`nutzungsbedingungen.html`, `en/terms.html` und `haftungsausschluss.html`
+leiten auf die Startseite um.
 
 Was hier lebt und was nicht:
 
 | Gehört hierher | Gehört nicht hierher |
 |---|---|
-| App-Datenschutz, AVV, AGB, Impressum der App | Firmenimpressum als Zweitschrift |
+| Impressum und Datenschutz der Website, AVV-Muster | Firmenimpressum als Zweitschrift |
 | Bedienungsanleitung, Funktionen, Pläne und Preise | Vorstellung anderer JRMedia-Apps |
 | Ratgeber-Artikel rund um Kalkulation | |
 
