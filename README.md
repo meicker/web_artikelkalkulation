@@ -13,11 +13,12 @@ Die Promo-Animation im Hero wird mit **Remotion** gerendert.
 ```
 docs/                     ← die veröffentlichte Website (GitHub Pages Root)
   index.html              ← Startseite DE
-  impressum.html · datenschutz.html · haftungsausschluss.html
-  app-datenschutz.html · anleitung.html   ← erzeugt, siehe „Aus der App erzeugte Seiten"
+  datenschutz.html        ← Website-Datenschutz (von Hand)
+  nutzungsbedingungen.html (AGB) · app-datenschutz.html · impressum.html
+  haftungsausschluss.html (Wegweiser) · anleitung.html   ← erzeugt, siehe „Aus der App erzeugte Seiten"
   en/                     ← englische Version (gleiche Dateinamen)
-    index.html · impressum.html · datenschutz.html · haftungsausschluss.html
-    app-datenschutz.html · anleitung.html ← ebenfalls erzeugt
+    index.html · datenschutz.html · dpa.html
+    terms.html · app-datenschutz.html · impressum.html · haftungsausschluss.html · anleitung.html ← ebenfalls erzeugt
   assets/
     css/style.css         ← Design-System
     css/fonts.css         ← @font-face (generiert, siehe scripts/fetch-fonts.mjs)
@@ -29,19 +30,19 @@ docs/                     ← die veröffentlichte Website (GitHub Pages Root)
 src/                      ← Remotion-Quellen (sprachabhängig via defaultProps lang)
   theme.ts · HeroChain.tsx · OgCard.tsx · Root.tsx
 scripts/fetch-fonts.mjs   ← lädt woff2 von Google & generiert docs/assets/css/fonts.css
-scripts/build-privacy.mjs ← erzeugt app-datenschutz.html (DE/EN) aus dem App-Projekt
+scripts/build-rechtstexte.mjs ← erzeugt AGB, App-Datenschutz, Impressum (DE/EN) aus dem App-Projekt
 scripts/build-manual.mjs  ← erzeugt anleitung.html (DE/EN) aus dem App-Projekt
 ```
 
 ## Aus der App erzeugte Seiten
 
-Die App-Datenschutzerklärung und die Bedienungsanleitung stehen auch **in** der
-Shopify-App. Beide Fassungen müssen übereinstimmen — darum gibt es hier keine
+Die Rechtstexte (AGB, App-Datenschutzerklärung, Impressum) und die
+Bedienungsanleitung stehen auch **in** der Shopify-App. Beide Fassungen müssen übereinstimmen — darum gibt es hier keine
 Zweitschrift des Textes, sondern zwei Erzeuger, die direkt aus dem App-Projekt
 (`../artikelkalkulation`) lesen:
 
 ```bash
-node scripts/build-privacy.mjs   # ← web/content/privacy.<sprache>.json
+node scripts/build-rechtstexte.mjs # ← web/content/eigene/texte.ts (AGB, Datenschutz, Impressum)
 node scripts/build-manual.mjs    # ← web/locales/<sprache>.json, Zweig "manual"
 ```
 

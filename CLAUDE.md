@@ -11,8 +11,9 @@ App — eine Funktion, ein Plan, ein Preis, eine Datenschutzangabe — dann ist 
 Aufgabe des Programm-Projekts (`../artikelkalkulation`), diese Seite
 nachzuziehen. Eine Änderung hier, die es im Programm nicht gibt, ist ein Fehler.
 
-**Zwei Seiten werden erzeugt, nicht geschrieben:** `anleitung.html` und
-`app-datenschutz.html` (je auch unter `en/`). Ihr Text steht ebenso in der App
+**Diese Seiten werden erzeugt, nicht geschrieben:** `anleitung.html` und
+`app-datenschutz.html`, dazu `nutzungsbedingungen.html` (AGB, en: `terms.html`),
+`impressum.html` und der Wegweiser `haftungsausschluss.html` (je auch unter `en/`). Ihr Text steht ebenso in der App
 und muss übereinstimmen. Es gibt hier bewusst keine Zweitschrift — die Erzeuger
 lesen direkt aus dem App-Projekt. Wer diese Dateien von Hand bearbeitet, bricht
 genau das. Siehe README, Abschnitt „Aus der App erzeugte Seiten".
@@ -21,7 +22,7 @@ Was hier lebt und was nicht:
 
 | Gehört hierher | Gehört nicht hierher |
 |---|---|
-| App-Datenschutz, AVV, Nutzungsbedingungen, Haftungsausschluss | Firmenimpressum als Zweitschrift |
+| App-Datenschutz, AVV, AGB, Impressum der App | Firmenimpressum als Zweitschrift |
 | Bedienungsanleitung, Funktionen, Pläne und Preise | Vorstellung anderer JRMedia-Apps |
 | Ratgeber-Artikel rund um Kalkulation | |
 

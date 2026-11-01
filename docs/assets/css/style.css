@@ -324,6 +324,8 @@ ul { margin: 0; padding: 0; }
 .legal-card { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 30px 34px; box-shadow: var(--shadow-sm); }
 .legal-card h2 { font-size: 1.25rem; margin-top: 30px; padding-top: 22px; border-top: 1px solid var(--line); }
 .legal-card h2:first-of-type, .legal-card > h2:first-child { border-top: none; margin-top: 0; padding-top: 0; }
+/* Erzeugte Rechtstexte: Teil-Ueberschriften (App-Modul) stehen nach Abschnitten, nie oben - Linie und Abstand behalten. */
+.legal-card h2.teil { margin-top: 36px; padding-top: 26px; border-top: 1px solid var(--line); }
 .legal-card h3 { font-size: 1.05rem; margin-top: 20px; color: var(--ink-3); }
 .legal-card p, .legal-card li { color: var(--text); font-size: 0.98rem; }
 .legal-card ul { padding-left: 22px; margin-bottom: 14px; list-style: disc; }
