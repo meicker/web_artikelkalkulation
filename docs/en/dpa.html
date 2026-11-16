@@ -63,7 +63,7 @@
         <div class="legal-head">
           <a class="back" href="index.html">‹ Home</a>
           <h1>📄 Data Processing Agreement</h1>
-          <p class="stand">PriceCalc Pro – Shopify app · Template · Last updated: 26 August 2026</p>
+          <p class="stand">PriceCalc Pro – Shopify app · Template · Last updated: 17 November 2026</p>
         </div>
 
         <div class="legal-card">
@@ -196,8 +196,9 @@
             triggers <strong>48 hours after the app is uninstalled</strong>. Only a technical record
             without personal content remains (shop identifier and myshopify domain) so that a later
             reinstallation can be matched correctly.</p>
-          <p>(3) At the sub-processor named in Annex 3, deletion follows the periods applicable there,
-            at the latest 90 days after termination.</p>
+          <p>(3) Deleted data remains in the database backups of the sub-processor named in Annex 3
+            until it is overwritten in the regular cycle, for no longer than <strong>four
+            weeks</strong>. The backups are used only to restore operations after an outage.</p>
           <p>(4) Statutory retention obligations remain unaffected.</p>
 
           <h2>§ 10 Evidence and audits</h2>
@@ -210,17 +211,12 @@
             audit reports or self-assessments.</p>
           <p>(3) The cost of an on-site audit requested by the Customer is borne by the Customer.</p>
 
-          <h2>§ 11 Transfers to third countries</h2>
-          <p>(1) In the course of hosting by the sub-processor named in Annex 3, processing takes place
-            in <strong>Canada</strong> and in the <strong>USA</strong>.</p>
-          <p>(2) An adequacy decision of the European Commission is in place for Canada. For transfers
-            to the USA, the Standard Contractual Clauses of the European Commission (Implementing
-            Decision (EU) 2021/914, Modules 2 and 3) are relied upon as appropriate safeguards under
-            Art. 46(2)(c) GDPR. The Provider has concluded corresponding agreements with the
-            sub-processor.</p>
-          <p>(3) Should a transfer mechanism subsequently be amended, revoked or declared invalid, the
-            parties undertake to suspend the transfer or to agree on a suitable replacement
-            mechanism.</p>
+          <h2>§ 11 Place of processing</h2>
+          <p>(1) Processing takes place exclusively within the European Union. The app's data, its
+            database and the database backups are stored in <strong>France</strong>. No transfer to
+            third countries takes place.</p>
+          <p>(2) Processing may be relocated to a third country only after prior notice under
+            § 6(2) and only where the requirements of Art. 44 et seq. GDPR are met.</p>
 
           <h2>§ 12 Liability</h2>
           <p>Art. 82 GDPR applies. In all other respects, liability is governed by the
@@ -264,8 +260,7 @@
             </ul>
             <p><strong>Not processed</strong><br />Personal data of the Customer's end customers. The
               app requests no Shopify permissions for customer or order data; the permissions granted
-              are limited to reading and writing products and inventory and reading locations and
-              locales. Payment and bank data is not processed; billing runs exclusively through
+              are limited to reading and writing products and inventory and reading the shop's locales. Payment and bank data is not processed; billing runs exclusively through
               Shopify.</p>
             <p><strong>Duration</strong><br />For as long as the app is installed, plus the deletion
               periods set out in § 9.</p>
@@ -275,44 +270,58 @@
             <h2>Annex 2 — Technical and organisational measures</h2>
             <p><strong>Confidentiality</strong></p>
             <ul>
-              <li>Access to the app is only possible through an authenticated Shopify session within
-                the embedded Shopify Admin.</li>
-              <li>Tenant separation: access rules restrict every request to the requesting shop;
-                access to other shops' data is excluded.</li>
-              <li>Least privilege: the app requests only the Shopify permissions required for
-                operation. No permissions for customer or order data exist.</li>
+              <li>Access to the app is possible only through an authenticated Shopify session in the
+                embedded Shopify admin.</li>
+              <li>Tenant separation: every request carries a session token signed by Shopify; the shop
+                is determined from that token alone, and every request is restricted to the
+                requesting shop. Access to other shops' data is excluded.</li>
+              <li>Shopify access tokens are stored encrypted (AES-256-GCM); the key is held only in the
+                application's configuration.</li>
+              <li>Minimal permissions: the app requests only the Shopify permissions required for its
+                operation. There are no permissions for customer or order data.</li>
+              <li>Only the Provider has access to the hosting administration and the source code,
+                secured by two-factor authentication and SSH keys.</li>
               <li>The Provider's internal administration area is technically restricted to designated
                 administrator shops.</li>
-              <li>Development and production environments are fully separated.</li>
+              <li>Development and production environments are fully separated, with their own
+                applications, databases and credentials.</li>
             </ul>
             <p><strong>Integrity</strong></p>
             <ul>
               <li>All transmission between browser, app, hosting platform and Shopify is encrypted via
                 HTTPS/TLS.</li>
+              <li>The database accepts encrypted connections only and cannot be reached from the
+                internet.</li>
               <li>Changes to prices and metafields are made through the Shopify Admin API and are
                 traceable in the Customer's shop history.</li>
+              <li>The app's logs contain no IP addresses, no session tokens and no query
+                parameters.</li>
               <li>The app integrates no analytics, tracking, advertising or email marketing
                 services.</li>
             </ul>
             <p><strong>Availability and resilience</strong></p>
             <ul>
-              <li>Operation, redundancy, backup and restoration are the responsibility of the
-                sub-processor named in Annex 3, according to its security standards.</li>
+              <li>Operation, redundancy and backup are the responsibility of the sub-processor named
+                in Annex 3 (ISO 27001 certified). All data, including backups, is encrypted at rest
+                and stored in France.</li>
+              <li>The database can be restored to any point in time within the last 7 days; in
+                addition, daily backups are kept for 7 days and weekly backups for 4 weeks.</li>
               <li>Calculation results are stored as metafields in the Customer's Shopify store and are
                 therefore covered by the Customer's own backup.</li>
               <li>The app additionally offers a manual export of pricing data as a JSON file.</li>
-              <li>Per-plan usage quotas limit the load caused by individual shops.</li>
+              <li>Usage limits per shop protect availability for all users.</li>
             </ul>
             <p><strong>Regular review</strong></p>
             <ul>
-              <li>Automated test suite and static type checking before every production release.</li>
-              <li>Configuration and permission checks before every deployment.</li>
+              <li>Automated tests and static type checking before every production release.</li>
+              <li>Database changes only through versioned migrations.</li>
               <li>Annual review of the measures, the sub-processors and the legal texts.</li>
             </ul>
             <p><strong>Data minimisation</strong></p>
             <ul>
               <li>Product and price data is not stored permanently by the Provider; it is read from
-                Shopify, processed and written back there.</li>
+                Shopify, processed and written back there. Only the product identifiers of items
+                unlocked for the item allowance are stored, without names or prices.</li>
               <li>User settings remain in the browser's local storage.</li>
               <li>Abuse prevention counters are reset monthly.</li>
             </ul>
@@ -327,35 +336,26 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>Gadget Software Inc.<br />Vancouver, Canada</td>
-                  <td>Hosting and operation of the application including the database</td>
-                  <td>Canada (adequacy decision), USA (Standard Contractual Clauses)</td>
+                  <td>Scalingo SAS<br />13 rue Jacques Peirotes, 67000 Strasbourg, France</td>
+                  <td>Hosting and operation of the application, including database and backups</td>
+                  <td>France</td>
                 </tr>
               </tbody>
             </table>
-            <p>A Data Processing Addendum including the EU Standard Contractual Clauses (Modules 2 and
-              3) is in place with Gadget Software Inc.</p>
-            <p>Gadget in turn engages the sub-processors listed below. The table reflects the list
-              published by Gadget as at 26 August 2026; the current list is published by Gadget at
-              <a href="https://gadget.dev/privacy" target="_blank" rel="noreferrer">gadget.dev/privacy</a>.</p>
+            <p>A data processing agreement under Art. 28 GDPR is in place with Scalingo SAS (Data
+              Processing Agreement, available at
+              <a href="https://scalingo.com/data-processing-agreement" target="_blank" rel="noreferrer">scalingo.com/data-processing-agreement</a>).</p>
+            <p>For hosting, Scalingo in turn engages the following sub-processor:</p>
             <table>
               <thead>
                 <tr><th>Company</th><th>Service</th><th>Location</th></tr>
               </thead>
               <tbody>
-                <tr><td>Google Cloud</td><td>Infrastructure and data hosting</td><td>USA</td></tr>
-                <tr><td>Cloudflare (incl. Cloudflare Analytics)</td><td>CDN, security, web activity logs</td><td>USA</td></tr>
-                <tr><td>Crunchy Data</td><td>Database operations and logs</td><td>USA</td></tr>
-                <tr><td>Axiom</td><td>Product and operational logs</td><td>USA</td></tr>
-                <tr><td>Humio</td><td>Operational logs and web activity logs</td><td>USA</td></tr>
-                <tr><td>HubSpot</td><td>Email marketing (contact details of the Provider account)</td><td>USA</td></tr>
-                <tr><td>LaunchDarkly</td><td>Feature flags</td><td>USA</td></tr>
-                <tr><td>Fivetran</td><td>Business intelligence and warehousing</td><td>USA</td></tr>
+                <tr><td>OUTSCALE SAS<br />1 rue Royale, 92210 Saint-Cloud, France</td><td>Data centres, servers and data storage</td><td>France (Paris region)</td></tr>
               </tbody>
             </table>
-            <p style="font-size:.88rem;color:var(--muted)">HubSpot and LaunchDarkly process only the
-              contact details of the Provider's Gadget account. No data of the Customer, its shop or
-              its end customers is transmitted to these two services.</p>
+            <p style="font-size:.88rem;color:var(--muted)">The current list of Scalingo's
+              sub-processors is set out in Scalingo's Data Processing Agreement.</p>
           </div>
 
         </div>

@@ -26,7 +26,7 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const ORIGIN = "https://www.pricecalcpro.de";
 const app = process.env.PRICECALC_APP
   ? resolve(process.env.PRICECALC_APP)
-  : resolve(root, "..", "artikelkalkulation");
+  : resolve(root, "..", "artikelkalkulation-scalingo");
 
 function laden() {
   const datei = resolve(app, "web/content/eigene/texte.ts");

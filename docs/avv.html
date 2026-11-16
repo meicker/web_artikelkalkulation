@@ -63,7 +63,7 @@
         <div class="legal-head">
           <a class="back" href="index.html">‹ Startseite</a>
           <h1>📄 Auftragsverarbeitungsvertrag</h1>
-          <p class="stand">PriceCalc Pro – Shopify App · Muster · Stand: 26. August 2026</p>
+          <p class="stand">PriceCalc Pro – Shopify App · Muster · Stand: 17. November 2026</p>
         </div>
 
         <div class="legal-card">
@@ -206,8 +206,10 @@
             App auslöst. Es verbleibt ausschließlich ein technischer Datensatz ohne personenbezogenen
             Inhalt (Shop-Kennung und myshopify-Domain), damit eine spätere Neuinstallation korrekt
             zugeordnet werden kann.</p>
-          <p>(3) Bei den in Anlage 3 genannten Unterauftragnehmern erfolgt die Löschung nach den dort
-            geltenden Fristen, spätestens 90 Tage nach Beendigung.</p>
+          <p>(3) In den Datenbanksicherungen des in Anlage 3 genannten Unterauftragnehmers bleiben
+            gelöschte Daten enthalten, bis sie im regulären Ablauf überschrieben werden, längstens
+            <strong>vier Wochen</strong>. Die Sicherungen werden nur zur Wiederherstellung nach einem
+            Ausfall verwendet.</p>
           <p>(4) Gesetzliche Aufbewahrungspflichten bleiben unberührt.</p>
 
           <h2>§ 10 Nachweise und Kontrollen</h2>
@@ -223,17 +225,12 @@
           <p>(3) Die Kosten einer vom Auftraggeber veranlassten Vor-Ort-Kontrolle trägt der
             Auftraggeber.</p>
 
-          <h2>§ 11 Übermittlung in Drittländer</h2>
-          <p>(1) Die Verarbeitung findet im Rahmen des Hostings durch den in Anlage 3 genannten
-            Unterauftragnehmer in <strong>Kanada</strong> und in den <strong>USA</strong> statt.</p>
-          <p>(2) Für Kanada besteht ein Angemessenheitsbeschluss der Europäischen Kommission. Für
-            Übermittlungen in die USA werden die Standardvertragsklauseln der Europäischen Kommission
-            (Durchführungsbeschluss (EU) 2021/914, Module 2 und 3) als geeignete Garantien nach Art. 46
-            Abs. 2 lit. c DSGVO herangezogen. Der Auftragnehmer hat entsprechende Vereinbarungen mit
-            dem Unterauftragnehmer geschlossen.</p>
-          <p>(3) Wird ein Übermittlungsmechanismus nachträglich geändert, widerrufen oder für unwirksam
-            erklärt, verpflichten sich die Parteien, die Übermittlung auszusetzen oder einen geeigneten
-            Ersatzmechanismus zu vereinbaren.</p>
+          <h2>§ 11 Ort der Verarbeitung</h2>
+          <p>(1) Die Verarbeitung findet ausschließlich in der Europäischen Union statt. Die Daten der
+            App, ihre Datenbank und deren Sicherungen liegen in <strong>Frankreich</strong>. Eine
+            Übermittlung in Drittländer findet nicht statt.</p>
+          <p>(2) Eine Verlagerung der Verarbeitung in ein Drittland ist nur nach vorheriger Mitteilung
+            gemäß § 6 Abs. 2 und nur unter den Voraussetzungen der Art. 44 ff. DSGVO zulässig.</p>
 
           <h2>§ 12 Haftung</h2>
           <p>Es gilt Art. 82 DSGVO. Im Übrigen richtet sich die Haftung nach den Regelungen der
@@ -278,7 +275,7 @@
             <p><strong>Nicht verarbeitet werden</strong><br />Personenbezogene Daten der Endkunden des
               Auftraggebers. Die App fordert von Shopify keine Berechtigungen für Kunden- oder
               Bestelldaten an; die erteilten Berechtigungen beschränken sich auf das Lesen und
-              Schreiben von Produkten und Beständen sowie das Lesen von Standorten und Sprachen.
+              Schreiben von Produkten und Beständen sowie das Lesen der Sprachen des Shops.
               Zahlungs- und Bankdaten werden nicht verarbeitet; die Abrechnung erfolgt ausschließlich
               über Shopify.</p>
             <p><strong>Dauer</strong><br />Für die Dauer der Installation der App, zuzüglich der in
@@ -291,43 +288,58 @@
             <ul>
               <li>Der Zugang zur App erfolgt ausschließlich über eine authentifizierte Shopify-Sitzung
                 im eingebetteten Shopify Admin.</li>
-              <li>Mandantentrennung: Zugriffsregeln beschränken jeden Aufruf auf den jeweils eigenen
-                Shop; ein Zugriff auf Daten anderer Shops ist ausgeschlossen.</li>
+              <li>Mandantentrennung: Jeder Aufruf trägt ein von Shopify signiertes Sitzungstoken; der
+                Shop wird allein daraus bestimmt, und jeder Aufruf ist auf den eigenen Shop beschränkt.
+                Ein Zugriff auf Daten anderer Shops ist ausgeschlossen.</li>
+              <li>Die Zugangsschlüssel zu Shopify werden verschlüsselt gespeichert (AES-256-GCM); der
+                Schlüssel liegt nur in der Konfiguration der Anwendung.</li>
               <li>Minimale Berechtigungen: Die App fordert von Shopify nur die betrieblich
                 erforderlichen Berechtigungen an. Berechtigungen für Kunden- oder Bestelldaten
                 bestehen nicht.</li>
+              <li>Zugang zur Hosting-Verwaltung und zum Quellcode hat nur der Auftragnehmer, gesichert
+                mit Zwei-Faktor-Authentifizierung und SSH-Schlüssel.</li>
               <li>Der interne Verwaltungsbereich des Auftragnehmers ist technisch auf festgelegte
                 Administrator-Shops beschränkt.</li>
-              <li>Entwicklungs- und Produktivumgebung sind vollständig getrennt.</li>
+              <li>Entwicklungs- und Produktivumgebung sind vollständig getrennt, mit eigenen
+                Anwendungen, Datenbanken und Zugangsdaten.</li>
             </ul>
             <p><strong>Integrität</strong></p>
             <ul>
               <li>Sämtliche Übertragung zwischen Browser, App, Hosting-Plattform und Shopify erfolgt
                 ausschließlich verschlüsselt über HTTPS/TLS.</li>
+              <li>Die Datenbank nimmt nur verschlüsselte Verbindungen an und ist aus dem Internet nicht
+                erreichbar.</li>
               <li>Änderungen an Preisen und Metafeldern werden über die Shopify Admin API vorgenommen
                 und sind in der Shop-Historie des Auftraggebers nachvollziehbar.</li>
+              <li>Die Protokolle der App enthalten keine IP-Adressen, keine Sitzungstoken und keine
+                Abfrageparameter.</li>
               <li>Innerhalb der App werden keine Analyse-, Tracking-, Werbe- oder
                 E-Mail-Marketing-Dienste eingebunden.</li>
             </ul>
             <p><strong>Verfügbarkeit und Belastbarkeit</strong></p>
             <ul>
-              <li>Betrieb, Redundanz, Sicherung und Wiederherstellung verantwortet der in Anlage 3
-                genannte Unterauftragnehmer nach dessen Sicherheitsstandards.</li>
+              <li>Betrieb, Redundanz und Sicherung verantwortet der in Anlage 3 genannte
+                Unterauftragnehmer (zertifiziert nach ISO 27001). Alle Daten einschließlich der
+                Sicherungen sind im Ruhezustand verschlüsselt und liegen in Frankreich.</li>
+              <li>Die Datenbank lässt sich auf jeden Zeitpunkt der letzten 7 Tage zurücksetzen;
+                zusätzlich bestehen tägliche Sicherungen für 7 Tage und wöchentliche für 4 Wochen.</li>
               <li>Die Kalkulationsergebnisse liegen als Metafelder im Shopify-Store des Auftraggebers
                 und damit in dessen eigener Sicherung.</li>
               <li>Die App bietet zusätzlich einen manuellen Export der Preisdaten als JSON-Datei.</li>
-              <li>Nutzungskontingente je Plan begrenzen die Last einzelner Shops.</li>
+              <li>Nutzungsgrenzen je Shop schützen die Verfügbarkeit für alle Nutzer.</li>
             </ul>
             <p><strong>Regelmäßige Überprüfung</strong></p>
             <ul>
-              <li>Automatisierte Testsuite und statische Typprüfung vor jedem Produktivstand.</li>
-              <li>Prüfung auf Konfigurations- und Rechtefehler vor jeder Veröffentlichung.</li>
+              <li>Automatisierte Tests und statische Typprüfung vor jedem Produktivstand.</li>
+              <li>Datenbankänderungen nur über versionierte Migrationen.</li>
               <li>Jährliche Überprüfung der Maßnahmen, der Unterauftragnehmer und der Rechtstexte.</li>
             </ul>
             <p><strong>Datenminimierung</strong></p>
             <ul>
               <li>Produkt- und Preisdaten werden nicht dauerhaft beim Auftragnehmer gespeichert; sie
-                werden aus Shopify gelesen, verarbeitet und dorthin zurückgeschrieben.</li>
+                werden aus Shopify gelesen, verarbeitet und dorthin zurückgeschrieben. Gespeichert
+                werden nur die Produktkennungen der für das Artikel-Kontingent freigeschalteten
+                Artikel, ohne Namen und Preise.</li>
               <li>Nutzereinstellungen verbleiben im lokalen Speicher des Browsers.</li>
               <li>Zähler zur Missbrauchsabwehr werden monatlich zurückgesetzt.</li>
             </ul>
@@ -342,37 +354,26 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>Gadget Software Inc.<br />Vancouver, Kanada</td>
-                  <td>Hosting und Betrieb der Anwendung einschließlich Datenbank</td>
-                  <td>Kanada (Angemessenheitsbeschluss), USA (Standardvertragsklauseln)</td>
+                  <td>Scalingo SAS<br />13 rue Jacques Peirotes, 67000 Straßburg, Frankreich</td>
+                  <td>Hosting und Betrieb der Anwendung einschließlich Datenbank und Sicherungen</td>
+                  <td>Frankreich</td>
                 </tr>
               </tbody>
             </table>
-            <p>Mit Gadget Software Inc. besteht ein Data Processing Addendum einschließlich der
-              EU-Standardvertragsklauseln in den Modulen 2 und 3.</p>
-            <p>Gadget setzt seinerseits die folgenden Unterauftragnehmer ein. Die Übersicht gibt den von
-              Gadget benannten Stand zum 26. August 2026 wieder; die jeweils aktuelle Liste
-              veröffentlicht Gadget unter
-              <a href="https://gadget.dev/privacy" target="_blank" rel="noreferrer">gadget.dev/privacy</a>.</p>
+            <p>Mit Scalingo SAS besteht ein Vertrag über die Auftragsverarbeitung nach Art. 28 DSGVO
+              (Data Processing Agreement, abrufbar unter
+              <a href="https://scalingo.com/data-processing-agreement" target="_blank" rel="noreferrer">scalingo.com/data-processing-agreement</a>).</p>
+            <p>Scalingo setzt für das Hosting seinerseits folgenden Unterauftragnehmer ein:</p>
             <table>
               <thead>
                 <tr><th>Unternehmen</th><th>Leistung</th><th>Standort</th></tr>
               </thead>
               <tbody>
-                <tr><td>Google Cloud</td><td>Infrastruktur und Datenhosting</td><td>USA</td></tr>
-                <tr><td>Cloudflare (inkl. Cloudflare Analytics)</td><td>CDN, Sicherheit, Web-Aktivitätsprotokolle</td><td>USA</td></tr>
-                <tr><td>Crunchy Data</td><td>Datenbank-Betrieb und Protokolle</td><td>USA</td></tr>
-                <tr><td>Axiom</td><td>Produkt- und Betriebs-Logs</td><td>USA</td></tr>
-                <tr><td>Humio</td><td>Betriebs-Logs und Web-Aktivitätsprotokolle</td><td>USA</td></tr>
-                <tr><td>HubSpot</td><td>E-Mail-Marketing (Kontaktdaten des Anbieter-Accounts)</td><td>USA</td></tr>
-                <tr><td>LaunchDarkly</td><td>Feature Flags</td><td>USA</td></tr>
-                <tr><td>Fivetran</td><td>Business Intelligence und Data Warehousing</td><td>USA</td></tr>
+                <tr><td>OUTSCALE SAS<br />1 rue Royale, 92210 Saint-Cloud, Frankreich</td><td>Rechenzentren, Server und Datenhaltung</td><td>Frankreich (Region Paris)</td></tr>
               </tbody>
             </table>
-            <p style="font-size:.88rem;color:var(--muted)">HubSpot und LaunchDarkly verarbeiten
-              ausschließlich die Kontaktdaten des Anbieter-Accounts bei Gadget. Daten des
-              Auftraggebers, seines Shops oder seiner Endkunden werden an diese beiden Dienste nicht
-              übermittelt.</p>
+            <p style="font-size:.88rem;color:var(--muted)">Die jeweils aktuelle Liste der
+              Unterauftragnehmer von Scalingo steht im Data Processing Agreement von Scalingo.</p>
           </div>
 
         </div>
